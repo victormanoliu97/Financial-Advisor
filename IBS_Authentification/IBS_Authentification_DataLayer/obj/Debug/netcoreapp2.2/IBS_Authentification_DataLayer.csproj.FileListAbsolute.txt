@@ -1,0 +1,9 @@
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_DataLayer\bin\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.deps.json
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_DataLayer\bin\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.dll
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_DataLayer\obj\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.csprojAssemblyReference.cache
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_DataLayer\obj\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.csproj.CoreCompileInputs.cache
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_DataLayer\obj\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.AssemblyInfoInputs.cache
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_DataLayer\obj\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.AssemblyInfo.cs
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_DataLayer\bin\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.pdb
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_DataLayer\obj\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.dll
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_DataLayer\obj\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.pdb
