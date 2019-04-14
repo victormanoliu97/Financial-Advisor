@@ -1,0 +1,8 @@
+<div class="section-background">
+  <div class="login">
+    <h1 class="title">Welcome!</h1>
+    <input type="text"  placeholder="email" [(ngModel)]="email"/>
+    <input type="password" placeholder="password" [(ngModel)]="password" />
+    <button type="submit" class="btn btn-primary btn-block btn-large" (click)="getLogin(email,password);">Log in</button>
+  </div>
+</div>

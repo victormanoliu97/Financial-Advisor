@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\victo\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\victo\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\victo\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_IBS_Authentification.-482169627.00" t="ExcludeRecursive" />
+    <e p="D:\Facultate\Intelligent-Banking-System\IBS_Authentification" t="IncludeFlat">
+      <e p="IBS_Authentification" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="LoginController.cs" t="Include" />
+          <e p="RegisterController.cs" t="Include" />
+          <e p="ValuesController.cs" t="Include" />
+        </e>
+        <e p="IBS_Authentification.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IBS_Authentification.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="IBS_Authentification.sln" t="IncludeFlat" />
+      <e p="IBS_Authentification_BusinessLayer" t="IncludeRecursive">
+        <e p="AuthRequests" t="Include">
+          <e p="LoginAccountRequest.cs" t="Include" />
+          <e p="RegisterAccountRequest.cs" t="Include" />
+        </e>
+        <e p="AuthResponses" t="Include">
+          <e p="LoginRequestResponse.cs" t="Include" />
+          <e p="RegisterRequestResponse.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Class1.cs" t="Include" />
+        <e p="IBS_Authentification_BusinessLayer.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IBS_Authentification_BusinessLayer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repository" t="Include">
+          <e p="AuthRepository.cs" t="Include" />
+          <e p="IAuthRepository.cs" t="Include" />
+        </e>
+        <e p="Service" t="Include">
+          <e p="Login" t="Include">
+            <e p="ILoginService.cs" t="Include" />
+            <e p="LoginService.cs" t="Include" />
+          </e>
+          <e p="Register" t="Include">
+            <e p="IRegisterService.cs" t="Include" />
+            <e p="RegisterService.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="IBS_Authentification_DataLayer" t="IncludeRecursive">
+        <e p="AppAccountData" t="Include">
+          <e p="AppAccount.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Class1.cs" t="Include" />
+        <e p="CustomerData" t="Include">
+          <e p="Customer.cs" t="Include" />
+        </e>
+        <e p="IBS_Authentification_DataLayer.csproj" t="IncludeRecursive" />
+        <e p="JoinCustomerAccountsData" t="Include">
+          <e p="JoinCustomerAppAccounts.cs" t="Include" />
+        </e>
+        <e p="Management" t="Include">
+          <e p="AppDbContext.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="IBS_Authentification_DataLayer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
