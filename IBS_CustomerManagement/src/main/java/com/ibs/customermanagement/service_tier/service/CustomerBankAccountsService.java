@@ -1,6 +1,7 @@
 package com.ibs.customermanagement.service_tier.service;
 
 import com.ibs.customermanagement.service_tier.model.CustomerBankAccountsDTO;
+import com.ibs.customermanagement.web_tier.response.BaseRequestResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public interface CustomerBankAccountsService {
 
     List<CustomerBankAccountsDTO> getCustomerBankAccounts(Integer customerId);
 
-    void saveCustomerBankAccount(CustomerBankAccountsDTO customerBankAccountsModel);
+    BaseRequestResponse saveCustomerBankAccount(CustomerBankAccountsDTO customerBankAccountsModel);
 
-    void deleteCustomerBankAccount(Integer accountId);
+    BaseRequestResponse deleteCustomerBankAccount(Integer accountId);
 }

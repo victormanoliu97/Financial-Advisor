@@ -14,7 +14,7 @@ public class TIbsCustomersBankAccountsEntity {
 
     @Id
     @Column(name = "id_account")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idAccount;
 
     @Column(name = "account_type")

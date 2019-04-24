@@ -14,6 +14,7 @@ public class TIbsCustomersCustomerFinancialEstatesEntity {
 
     @Id
     @Column(name = "id_estate")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idEstate;
 
     @Basic

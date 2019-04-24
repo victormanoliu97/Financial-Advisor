@@ -2,9 +2,12 @@ package com.ibs.customermanagement.service_tier.service;
 
 import com.ibs.customermanagement.data_tier.dao.CustomerBankAccountsDAO;
 import com.ibs.customermanagement.data_tier.repository.CustomerBankAccountsRepository;
+import com.ibs.customermanagement.service_tier.constants.GeneralConstants;
 import com.ibs.customermanagement.service_tier.mapper.CustomerBankAccountsMapper;
 import com.ibs.customermanagement.service_tier.model.CustomerBankAccountsDTO;
+import com.ibs.customermanagement.web_tier.response.BaseRequestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,16 +33,21 @@ public class CustomerBankAccountsServiceImpl implements CustomerBankAccountsServ
     }
 
     @Override
-    public void saveCustomerBankAccount(CustomerBankAccountsDTO customerBankAccountsModel) {
-        if(customerBankAccountsModel != null) {
-            customerBankAccountsDAO.save(new CustomerBankAccountsMapper().fromDTOToEntity(customerBankAccountsModel));
+    public BaseRequestResponse saveCustomerBankAccount(CustomerBankAccountsDTO customerBankAccountsModel) {
+        if(customerBankAccountsModel == null) {
+            return new BaseRequestResponse(HttpStatus.UNPROCESSABLE_ENTITY.value(), HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase());
         }
+        customerBankAccountsModel.setStatus(GeneralConstants.CREATED_ACCOUNT.getStatus());
+        customerBankAccountsDAO.save(new CustomerBankAccountsMapper().fromDTOToEntity(customerBankAccountsModel));
+        return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
     }
 
     @Override
-    public void deleteCustomerBankAccount(Integer accountId) {
-        if(accountId != null) {
-            customerBankAccountsDAO.deleteByIdAccount(accountId);
+    public BaseRequestResponse deleteCustomerBankAccount(Integer accountId) {
+        if(accountId == null) {
+            return new BaseRequestResponse(HttpStatus.UNPROCESSABLE_ENTITY.value(), HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase());
         }
+        customerBankAccountsDAO.updateCustomerAccountStatus(GeneralConstants.CLOSED_ACCOUNT.getStatus(), accountId);
+        return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
     }
 }

@@ -9,6 +9,7 @@ public class TIbsCustomersCustomerFinancialIncomeEntity {
 
     @Id
     @Column(name = "id_financial_income")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idFinancialIncome;
 
     @Basic

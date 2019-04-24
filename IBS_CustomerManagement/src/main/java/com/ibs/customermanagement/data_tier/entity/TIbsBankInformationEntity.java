@@ -13,6 +13,7 @@ public class TIbsBankInformationEntity {
 
     @Id
     @Column(name = "id_bank")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getIdBank() {
         return idBank;
     }
