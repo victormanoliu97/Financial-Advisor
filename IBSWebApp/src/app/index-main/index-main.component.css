@@ -1,0 +1,306 @@
+body{
+  font-family: 'Roboto Slab', serif;
+  overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+#nav{
+  background-color: #222;
+  border: 0;
+}
+#nav .navbar-header a{
+  font-family: 'Kaushan Script', cursive;
+  color: #fed136;
+  font-size: 1.5em;
+}
+#nav .container li a{
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+#nav .container li a:hover{
+  color: #fec503;
+}
+#nav .container li.active a{
+  color: #fff;
+  background-color: #fed136;
+}
+.intro-header{
+  color: #fff;
+  text-align: center;
+  background-image: url('../../assets/images/index-background2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+}
+.intro-message h3{
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+  color: yellow;
+  margin-top: 0;
+}
+.intro-message h1{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 50px;
+  margin-bottom: 25px;
+  color: yellow;
+  margin-top: 0;
+}
+.intro-divider{
+  width: 400px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.intro-message{
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+ul.intro-social-buttons > li {
+  display: block;
+  margin-bottom: 20px;
+}
+ul.intro-social-buttons > li:last-child {
+  margin-bottom: 0;
+}
+.btn{
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px outset rgba(0,0,0,0.9);
+  background: #fed136;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.btn:hover,.btn:active,.btn:focus{
+  color: #000;
+  border: 0;
+  background: #fec503;
+  transform:scale(1.1);
+}
+.img-container,#about-row{
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.timeline-img{
+  border: 7px solid #f1f1f1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about{
+  padding: 150px 0;
+}
+.about .text-center h2,.portfolio .text-center h2{
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.about .text-center h3,.portfolio .text-center h3,.contact h3{
+  text-transform: none;
+  font-size: 16px;
+  margin-bottom: 75px;
+  color: #777;
+  font-style: italic;
+  font-family: 'Droid Serif', serif;
+}
+#about-row div{
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+#about-row h4{
+  margin-top: 0;
+
+}
+.portfolio{
+  background-color: #eee;
+}
+.portfolio .portfolio-item{
+  margin: 0 0 15px;
+}
+.portfolio .portfolio-link{
+  display: block;
+  max-width: 400px;
+  position: relative;
+  margin: 0 auto;
+}
+.portfolio .portfolio-hover{
+  background: rgba(254,209,54,0.9);
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: all ease .5s;
+}
+.portfolio .portfolio-hover:hover{
+  opacity: 1;
+}
+.portfolio .portfolio-hover-content{
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  height: 20px;
+  margin-top: -10px;
+}
+.portfolio .portfolio-hover-content i{
+  margin-top: -18px;
+}
+.portfolio .portfolio-caption{
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+  padding: 25px;
+}
+.portfolio .portfolio-caption p{
+  color: #777;
+  font-size: 16px;
+  font-style: italic;
+  font-family: 'Droid Serif', serif;
+  margin: 0;
+}
+.contact{
+  background-color: #222;
+  background-image: url(https://blackrockdigital.github.io/startbootstrap-agency/img/map-image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contact h2{
+  color: #fff;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.contact .form-group{
+  margin-bottom: 25px;
+}
+.contact .form-group .form-control{
+  height: auto;
+  padding: 20px;
+}
+.contact .form-group textarea.form-control{
+  height: 236px;
+}
+div.contact ::-webkit-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+div.contact :-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+div.contact ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+div.contact :-ms-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+button[type="submit"]{
+  color: #fff;
+  background-color: #fed136;
+  border-color: #fed136;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 20px 40px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.copyright{
+  font-family: 'Montserrat', sans-serif;
+  line-height: 40px;
+  color: #333;
+}
+footer ul.list-inline{
+  margin-bottom: 0;
+  margin-left: 0;
+}
+footer ul.list-inline li a{
+  line-height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: #fed136;
+  text-transform: capitalize;
+}
+footer ul.list-inline li a:hover{
+  color: #b5962c;
+}
+footer ul.list-inline li a:active{
+  color: #b5962c;
+}
+footer{
+  text-align: center;
+  padding: 25px 0;
+}
+@media (min-width: 768px) {
+  #nav{
+    padding: 10px 0;
+  }
+  #nav .container li.active a{
+    border-radius: 3px;
+  }
+  .intro-message{
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+  .intro-message h3{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+  .intro-message h1{
+    font-size: 75px;
+    line-height: 75px;
+    margin-bottom: 50px;
+  }
+  .intro-divider{
+    width: 100%;
+  }
+  ul.intro-social-buttons > li {
+    display: inline-block;
+  }
+  .about,.portfolio,.contact{
+    padding: 150px 0;
+  }
+  .portfolio .portfolio-item{
+    margin: 0 0 30px;
+  }
+}

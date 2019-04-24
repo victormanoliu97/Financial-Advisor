@@ -7,10 +7,12 @@ import {FormsModule} from '@angular/forms';
 import {AuthModule} from './auth/auth.module';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing/app-routing.module';
+import { IndexMainComponent } from './index-main/index-main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    IndexMainComponent,
   ],
   imports: [
     BrowserModule,
