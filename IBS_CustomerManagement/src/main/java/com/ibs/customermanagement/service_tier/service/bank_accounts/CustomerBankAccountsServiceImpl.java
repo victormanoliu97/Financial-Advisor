@@ -1,10 +1,11 @@
-package com.ibs.customermanagement.service_tier.service;
+package com.ibs.customermanagement.service_tier.service.bank_accounts;
 
 import com.ibs.customermanagement.data_tier.dao.CustomerBankAccountsDAO;
 import com.ibs.customermanagement.data_tier.repository.CustomerBankAccountsRepository;
 import com.ibs.customermanagement.service_tier.constants.GeneralConstants;
 import com.ibs.customermanagement.service_tier.mapper.CustomerBankAccountsMapper;
 import com.ibs.customermanagement.service_tier.model.CustomerBankAccountsDTO;
+import com.ibs.customermanagement.service_tier.utils.GeneralUtills;
 import com.ibs.customermanagement.web_tier.response.BaseRequestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -38,6 +39,7 @@ public class CustomerBankAccountsServiceImpl implements CustomerBankAccountsServ
             return new BaseRequestResponse(HttpStatus.UNPROCESSABLE_ENTITY.value(), HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase());
         }
         customerBankAccountsModel.setStatus(GeneralConstants.CREATED_ACCOUNT.getStatus());
+        customerBankAccountsModel.setIban(new GeneralUtills().generateIban());
         customerBankAccountsDAO.save(new CustomerBankAccountsMapper().fromDTOToEntity(customerBankAccountsModel));
         return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
     }

@@ -1,48 +1,33 @@
 package com.ibs.customermanagement.data_tier.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "t_ibs_customers_customer_financial_liabilities", schema = "ibs_local_schema", catalog = "")
+@Getter
+@Setter
 public class TIbsCustomersCustomerFinancialLiabilitiesEntity {
+
+    @Id
+    @Column(name = "id_financial_liability")
     private int idFinancialLiability;
+
+    @Basic
+    @Column(name = "liabilities_amount")
     private double liabilitiesAmount;
+
+    @Basic
+    @Column(name = "liabilities_source")
     private String liabilitiesSource;
 
     @Column(name = "id_customer")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer customerId;
 
-    @Id
-    @Column(name = "id_financial_liability")
-    public int getIdFinancialLiability() {
-        return idFinancialLiability;
-    }
-
-    public void setIdFinancialLiability(int idFinancialLiability) {
-        this.idFinancialLiability = idFinancialLiability;
-    }
-
-    @Basic
-    @Column(name = "liabilities_amount")
-    public double getLiabilitiesAmount() {
-        return liabilitiesAmount;
-    }
-
-    public void setLiabilitiesAmount(double liabilitiesAmount) {
-        this.liabilitiesAmount = liabilitiesAmount;
-    }
-
-    @Basic
-    @Column(name = "liabilities_source")
-    public String getLiabilitiesSource() {
-        return liabilitiesSource;
-    }
-
-    public void setLiabilitiesSource(String liabilitiesSource) {
-        this.liabilitiesSource = liabilitiesSource;
-    }
 
     @Override
     public boolean equals(Object o) {

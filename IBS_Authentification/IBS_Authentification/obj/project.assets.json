@@ -2,6 +2,105 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "Cookie/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Discord.Net": "2.0.0-beta2-00977",
+          "Newtonsoft.Json": "11.0.2",
+          "RavenDB.Embedded": "4.1.0-nightly-20180725-0734"
+        },
+        "compile": {
+          "lib/netstandard2.0/Cookie.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Cookie.dll": {}
+        }
+      },
+      "Discord.Net/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Discord.Net.Commands": "2.0.0",
+          "Discord.Net.Core": "2.0.0",
+          "Discord.Net.Rest": "2.0.0",
+          "Discord.Net.WebSocket": "2.0.0",
+          "Discord.Net.Webhook": "2.0.0"
+        }
+      },
+      "Discord.Net.Commands/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Discord.Net.Core": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Discord.Net.Commands.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Discord.Net.Commands.dll": {}
+        }
+      },
+      "Discord.Net.Core/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "System.Collections.Immutable": "1.3.1",
+          "System.Interactive.Async": "3.1.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Discord.Net.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Discord.Net.Core.dll": {}
+        }
+      },
+      "Discord.Net.Rest/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Discord.Net.Core": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Discord.Net.Rest.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Discord.Net.Rest.dll": {}
+        }
+      },
+      "Discord.Net.Webhook/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Discord.Net.Core": "2.0.0",
+          "Discord.Net.Rest": "2.0.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Discord.Net.Webhook.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Discord.Net.Webhook.dll": {}
+        }
+      },
+      "Discord.Net.WebSocket/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Discord.Net.Core": "2.0.0",
+          "Discord.Net.Rest": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Discord.Net.WebSocket.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Discord.Net.WebSocket.dll": {}
+        }
+      },
+      "DotNet.Cookies/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net461/DotNet.Cookies.dll": {}
+        },
+        "runtime": {
+          "lib/net461/DotNet.Cookies.dll": {}
+        }
+      },
       "EntityFramework/6.2.0": {
         "type": "package",
         "compile": {
@@ -11,6 +110,34 @@
         "runtime": {
           "lib/net45/EntityFramework.SqlServer.dll": {},
           "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "JWT/5.0.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "9.0.1",
+          "System.ComponentModel.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
+          "System.Security.Cryptography.Csp": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/JWT.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/JWT.dll": {}
+        }
+      },
+      "Lambda2Js.Signed/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/Lambda2Js.Signed.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Lambda2Js.Signed.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi/5.2.7": {
@@ -2823,6 +2950,46 @@
           "lib/netstandard2.0/Pomelo.JsonObject.dll": {}
         }
       },
+      "RavenDB.Client/4.1.0-rc-41000": {
+        "type": "package",
+        "dependencies": {
+          "Lambda2Js.Signed": "3.1.0",
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Buffers": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
+          "System.Security.Cryptography.Cng": "4.5.0",
+          "System.Threading.Tasks.Extensions": "4.5.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/Raven.Client.dll": {},
+          "lib/netcoreapp2.1/Sparrow.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/Raven.Client.dll": {},
+          "lib/netcoreapp2.1/Sparrow.dll": {}
+        }
+      },
+      "RavenDB.Embedded/4.1.0-rc-41000": {
+        "type": "package",
+        "dependencies": {
+          "RavenDB.Client": "4.1.0-rc-41000"
+        },
+        "compile": {
+          "lib/netstandard2.0/Raven.Embedded.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Raven.Embedded.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2843,6 +3010,15 @@
         },
         "runtime": {
           "lib/netstandard1.0/Remotion.Linq.dll": {}
+        }
+      },
+      "Rsft.HttpCookieSecure/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/Rsft.HttpCookieSecure.dll": {}
+        },
+        "runtime": {
+          "lib/net40/Rsft.HttpCookieSecure.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -3148,6 +3324,18 @@
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
         }
       },
+      "System.ComponentModel/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
+        }
+      },
       "System.ComponentModel.Annotations/4.5.0": {
         "type": "package",
         "compile": {
@@ -3155,6 +3343,20 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "System.ComponentModel.Primitives/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.ComponentModel.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {}
         }
       },
       "System.Console/4.3.0": {
@@ -3757,17 +3959,13 @@
           "ref/netstandard1.0/System.Reflection.Primitives.dll": {}
         }
       },
-      "System.Reflection.TypeExtensions/4.3.0": {
+      "System.Reflection.TypeExtensions/4.5.1": {
         "type": "package",
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
+          "ref/netcoreapp2.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
+          "lib/netcoreapp2.0/_._": {}
         }
       },
       "System.Resources.ResourceManager/4.3.0": {
@@ -4017,7 +4215,7 @@
           "System.Threading": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Security.Cryptography.Csp.dll": {}
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {
@@ -4520,9 +4718,14 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "Cookie": "4.0.0",
+          "DotNet.Cookies": "1.0.0",
           "EntityFramework": "6.2.0",
           "IBS_Authentification_DataLayer": "1.0.0",
-          "Pomelo.EntityFrameworkCore.MySql": "2.2.0"
+          "JWT": "5.0.1",
+          "Pomelo.EntityFrameworkCore.MySql": "2.2.0",
+          "Rsft.HttpCookieSecure": "1.0.2",
+          "System.Security.Cryptography.Primitives": "4.3.0"
         },
         "compile": {
           "bin/placeholder/IBS_Authentification_BusinessLayer.dll": {}
@@ -4549,6 +4752,126 @@
     }
   },
   "libraries": {
+    "Cookie/4.0.0": {
+      "sha512": "UpsudJyLBaiFfvXeVb1RyolltCIMNIPC7wNNbcnQxlX7gu9l0ysFdawOrDpWthp/pgf/1FwVNca/StdU8Wl5qQ==",
+      "type": "package",
+      "path": "cookie/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cookie.4.0.0.nupkg.sha512",
+        "cookie.nuspec",
+        "lib/netstandard2.0/Cookie.dll"
+      ]
+    },
+    "Discord.Net/2.0.0": {
+      "sha512": "ovztvMVRg5q1TzB3P1Oqwn1YpiTzpwnHREaG8h100vvRYwbBIAavNjOR2Ee5N3a2Y7p9GC3z6FBdy8DzLcO7rQ==",
+      "type": "package",
+      "path": "discord.net/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "discord.net.2.0.0.nupkg.sha512",
+        "discord.net.nuspec"
+      ]
+    },
+    "Discord.Net.Commands/2.0.0": {
+      "sha512": "ZPJeZhqMcpvDcqr/a9G0vhADa7pVHLsE6A1t2L4VWTGOZCO0cBGUTQpiYuK1JFOeufMuPWYfIuLuPYBgUS7p9Q==",
+      "type": "package",
+      "path": "discord.net.commands/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "discord.net.commands.2.0.0.nupkg.sha512",
+        "discord.net.commands.nuspec",
+        "lib/net46/Discord.Net.Commands.dll",
+        "lib/net46/Discord.Net.Commands.xml",
+        "lib/netstandard1.3/Discord.Net.Commands.dll",
+        "lib/netstandard1.3/Discord.Net.Commands.xml",
+        "lib/netstandard2.0/Discord.Net.Commands.dll",
+        "lib/netstandard2.0/Discord.Net.Commands.xml"
+      ]
+    },
+    "Discord.Net.Core/2.0.0": {
+      "sha512": "B5s4GQiSw1V359gBYvkrnkEotE/sAcJKxwnzYEA+HjlQyYn2ayddTO9g5HrcT9KwFWNYTC1smK0TUqHuGNuQRw==",
+      "type": "package",
+      "path": "discord.net.core/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "discord.net.core.2.0.0.nupkg.sha512",
+        "discord.net.core.nuspec",
+        "lib/net46/Discord.Net.Core.dll",
+        "lib/net46/Discord.Net.Core.xml",
+        "lib/netstandard1.3/Discord.Net.Core.dll",
+        "lib/netstandard1.3/Discord.Net.Core.xml",
+        "lib/netstandard2.0/Discord.Net.Core.dll",
+        "lib/netstandard2.0/Discord.Net.Core.xml"
+      ]
+    },
+    "Discord.Net.Rest/2.0.0": {
+      "sha512": "vMvrcdp/Bh8nt7zbR2sfL+tFfQJoocR3C9nO2c9A0qb2R4Dl2AZyWkAO6F+bQ3suGxnWk2MwRgwNf1KfHO62jg==",
+      "type": "package",
+      "path": "discord.net.rest/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "discord.net.rest.2.0.0.nupkg.sha512",
+        "discord.net.rest.nuspec",
+        "lib/net46/Discord.Net.Rest.dll",
+        "lib/net46/Discord.Net.Rest.xml",
+        "lib/netstandard1.3/Discord.Net.Rest.dll",
+        "lib/netstandard1.3/Discord.Net.Rest.xml",
+        "lib/netstandard2.0/Discord.Net.Rest.dll",
+        "lib/netstandard2.0/Discord.Net.Rest.xml"
+      ]
+    },
+    "Discord.Net.Webhook/2.0.0": {
+      "sha512": "EfruMvXLhe37/dDLKuKwxJljP47as4MTsyykcU1QmZ5i5DY3p8Tg01Js3Rx0dKCnk6k6A8BvHq/8pbXcdDn3VA==",
+      "type": "package",
+      "path": "discord.net.webhook/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "discord.net.webhook.2.0.0.nupkg.sha512",
+        "discord.net.webhook.nuspec",
+        "lib/netstandard1.3/Discord.Net.Webhook.dll",
+        "lib/netstandard1.3/Discord.Net.Webhook.xml"
+      ]
+    },
+    "Discord.Net.WebSocket/2.0.0": {
+      "sha512": "hJt98sJwCpBOl64UP7w+dZTs0Gs5AK/Ph1Qy0yD8U9jFhwvSpNv571wH7T9cLABtMlA5tsRga9Nn7GjuyjfsOw==",
+      "type": "package",
+      "path": "discord.net.websocket/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "discord.net.websocket.2.0.0.nupkg.sha512",
+        "discord.net.websocket.nuspec",
+        "lib/net46/Discord.Net.WebSocket.dll",
+        "lib/net46/Discord.Net.WebSocket.xml",
+        "lib/netstandard1.3/Discord.Net.WebSocket.dll",
+        "lib/netstandard1.3/Discord.Net.WebSocket.xml",
+        "lib/netstandard2.0/Discord.Net.WebSocket.dll",
+        "lib/netstandard2.0/Discord.Net.WebSocket.xml"
+      ]
+    },
+    "DotNet.Cookies/1.0.0": {
+      "sha512": "MO7EadLpQjM3u8iEV/mfxgQX+GWsf9EcgDMzuZhlEZPZNu7mMIGtwYeCey/g3j8L7X0aE3JwHvbRzgG2IeUfbQ==",
+      "type": "package",
+      "path": "dotnet.cookies/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotnet.cookies.1.0.0.nupkg.sha512",
+        "dotnet.cookies.nuspec",
+        "lib/net45/DotNet.Cookies.dll",
+        "lib/net451/DotNet.Cookies.dll",
+        "lib/net452/DotNet.Cookies.dll",
+        "lib/net46/DotNet.Cookies.dll",
+        "lib/net461/DotNet.Cookies.dll"
+      ]
+    },
     "EntityFramework/6.2.0": {
       "sha512": "+aB/cnEAr9KqVMjmZwu+Fzy3EOPjCIzNsPAUyn19WbB2u3LFHd2OB3X56ohAj7EBf2hppl9M27nlRnkQxOhoAA==",
       "type": "package",
@@ -4577,6 +4900,36 @@
         "tools/init.ps1",
         "tools/install.ps1",
         "tools/migrate.exe"
+      ]
+    },
+    "JWT/5.0.1": {
+      "sha512": "0rDXizf96UrvR15jNwWgkM91JHgZ8SZnGDQIDzGw7c4rfdwcLvp0ZLXLTwIxwij7ywV+Ufb5iHPpyB5Na1n6SQ==",
+      "type": "package",
+      "path": "jwt/5.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jwt.5.0.1.nupkg.sha512",
+        "jwt.nuspec",
+        "lib/net46/JWT.dll",
+        "lib/net46/JWT.xml",
+        "lib/netstandard1.3/JWT.dll",
+        "lib/netstandard1.3/JWT.xml"
+      ]
+    },
+    "Lambda2Js.Signed/3.1.0": {
+      "sha512": "KEwZQvFPv4H8d/YGMpA6IxgWtczZpv2dGhUicOsxHH3+SvPHWEjCteLCSv4cOzahGxETib/c6xIFfKyi+xCFxg==",
+      "type": "package",
+      "path": "lambda2js.signed/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lambda2js.signed.3.1.0.nupkg.sha512",
+        "lambda2js.signed.nuspec",
+        "lib/net40/Lambda2Js.Signed.dll",
+        "lib/net40/Lambda2Js.Signed.xml",
+        "lib/netstandard1.0/Lambda2Js.Signed.dll",
+        "lib/netstandard1.0/Lambda2Js.Signed.xml"
       ]
     },
     "Microsoft.AspNet.WebApi/5.2.7": {
@@ -7596,6 +7949,134 @@
         "pomelo.jsonobject.nuspec"
       ]
     },
+    "RavenDB.Client/4.1.0-rc-41000": {
+      "sha512": "l6mchQ8AhgZURA4g6/jCjR7vk0BDuHHFHLTrfmtuPWEeV3oVu/7GIuTuaeJ6F8/tgFpC5gY6BEfIFzEebonjsQ==",
+      "type": "package",
+      "path": "ravendb.client/4.1.0-rc-41000",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.1/Raven.Client.dll",
+        "lib/netcoreapp2.1/Sparrow.dll",
+        "lib/netstandard1.3/Sparrow.dll",
+        "lib/netstandard2.0/Raven.Client.dll",
+        "lib/netstandard2.0/Sparrow.dll",
+        "ravendb.client.4.1.0-rc-41000.nupkg.sha512",
+        "ravendb.client.nuspec"
+      ]
+    },
+    "RavenDB.Embedded/4.1.0-rc-41000": {
+      "sha512": "be6Xpq3QR0YRnDLntuWwIaEiwmS5exLmFtA4UanOo20OZ6iGNbzmWIYIFO7phex41vZbu328JENGI4wL/IZOIw==",
+      "type": "package",
+      "path": "ravendb.embedded/4.1.0-rc-41000",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "contentFiles/any/any/RavenDBServer/BouncyCastle.Crypto.dll",
+        "contentFiles/any/any/RavenDBServer/CsvHelper.dll",
+        "contentFiles/any/any/RavenDBServer/DasMulli.Win32.ServiceUtils.dll",
+        "contentFiles/any/any/RavenDBServer/Esprima.dll",
+        "contentFiles/any/any/RavenDBServer/GeoAPI.dll",
+        "contentFiles/any/any/RavenDBServer/Google.Protobuf.dll",
+        "contentFiles/any/any/RavenDBServer/Jint.dll",
+        "contentFiles/any/any/RavenDBServer/Lambda2Js.Signed.dll",
+        "contentFiles/any/any/RavenDBServer/Lucene.Net.Contrib.Spatial.NTS.dll",
+        "contentFiles/any/any/RavenDBServer/Lucene.Net.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Connections.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Hosting.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Hosting.Server.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Hosting.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Http.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Http.Extensions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Http.Features.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Http.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.ResponseCompression.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Server.Kestrel.Core.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Server.Kestrel.Https.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.Server.Kestrel.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.WebSockets.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.AspNetCore.WebUtilities.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.CodeAnalysis.CSharp.Workspaces.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.CodeAnalysis.CSharp.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.CodeAnalysis.Workspaces.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.CodeAnalysis.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.CommandLineUtils.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Configuration.Binder.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Configuration.CommandLine.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Configuration.EnvironmentVariables.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Configuration.FileExtensions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Configuration.Json.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Configuration.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.DependencyInjection.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.FileProviders.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.FileProviders.Physical.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Hosting.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Logging.Abstractions.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Logging.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.ObjectPool.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Options.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Extensions.Primitives.dll",
+        "contentFiles/any/any/RavenDBServer/Microsoft.Net.Http.Headers.dll",
+        "contentFiles/any/any/RavenDBServer/MySql.Data.dll",
+        "contentFiles/any/any/RavenDBServer/NCrontab.Advanced.dll",
+        "contentFiles/any/any/RavenDBServer/NetTopologySuite.dll",
+        "contentFiles/any/any/RavenDBServer/Newtonsoft.Json.dll",
+        "contentFiles/any/any/RavenDBServer/Npgsql.dll",
+        "contentFiles/any/any/RavenDBServer/Oracle.ManagedDataAccess.dll",
+        "contentFiles/any/any/RavenDBServer/Raven.Client.dll",
+        "contentFiles/any/any/RavenDBServer/Raven.Server.deps.json",
+        "contentFiles/any/any/RavenDBServer/Raven.Server.dll",
+        "contentFiles/any/any/RavenDBServer/Raven.Server.runtimeconfig.json",
+        "contentFiles/any/any/RavenDBServer/Raven.Studio.zip",
+        "contentFiles/any/any/RavenDBServer/SharpSnmpLib.dll",
+        "contentFiles/any/any/RavenDBServer/Sparrow.dll",
+        "contentFiles/any/any/RavenDBServer/Spatial4n.Core.NTS.dll",
+        "contentFiles/any/any/RavenDBServer/System.Composition.AttributedModel.dll",
+        "contentFiles/any/any/RavenDBServer/System.Composition.Convention.dll",
+        "contentFiles/any/any/RavenDBServer/System.Composition.Hosting.dll",
+        "contentFiles/any/any/RavenDBServer/System.Composition.Runtime.dll",
+        "contentFiles/any/any/RavenDBServer/System.Composition.TypedParts.dll",
+        "contentFiles/any/any/RavenDBServer/System.Configuration.ConfigurationManager.dll",
+        "contentFiles/any/any/RavenDBServer/System.Data.SqlClient.dll",
+        "contentFiles/any/any/RavenDBServer/System.IO.Pipelines.dll",
+        "contentFiles/any/any/RavenDBServer/System.Net.WebSockets.WebSocketProtocol.dll",
+        "contentFiles/any/any/RavenDBServer/System.Runtime.CompilerServices.Unsafe.dll",
+        "contentFiles/any/any/RavenDBServer/System.Security.Cryptography.ProtectedData.dll",
+        "contentFiles/any/any/RavenDBServer/System.Security.Permissions.dll",
+        "contentFiles/any/any/RavenDBServer/System.Text.Encoding.CodePages.dll",
+        "contentFiles/any/any/RavenDBServer/System.Text.Encodings.Web.dll",
+        "contentFiles/any/any/RavenDBServer/Voron.dll",
+        "contentFiles/any/any/RavenDBServer/libsodium.arm.so",
+        "contentFiles/any/any/RavenDBServer/libsodium.x64.dll",
+        "contentFiles/any/any/RavenDBServer/libsodium.x64.so",
+        "contentFiles/any/any/RavenDBServer/libsodium.x86.dll",
+        "contentFiles/any/any/RavenDBServer/libsodium.x86.so",
+        "contentFiles/any/any/RavenDBServer/runtimes/linux-arm/native/libuv.so",
+        "contentFiles/any/any/RavenDBServer/runtimes/linux-arm64/native/libuv.so",
+        "contentFiles/any/any/RavenDBServer/runtimes/linux-armel/native/libuv.so",
+        "contentFiles/any/any/RavenDBServer/runtimes/linux-x64/native/libuv.so",
+        "contentFiles/any/any/RavenDBServer/runtimes/osx/native/libuv.dylib",
+        "contentFiles/any/any/RavenDBServer/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "contentFiles/any/any/RavenDBServer/runtimes/win-arm/native/libuv.dll",
+        "contentFiles/any/any/RavenDBServer/runtimes/win-arm64/native/sni.dll",
+        "contentFiles/any/any/RavenDBServer/runtimes/win-x64/native/libuv.dll",
+        "contentFiles/any/any/RavenDBServer/runtimes/win-x64/native/sni.dll",
+        "contentFiles/any/any/RavenDBServer/runtimes/win-x86/native/libuv.dll",
+        "contentFiles/any/any/RavenDBServer/runtimes/win-x86/native/sni.dll",
+        "contentFiles/any/any/RavenDBServer/runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "contentFiles/any/any/RavenDBServer/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll",
+        "contentFiles/any/any/RavenDBServer/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/Raven.Embedded.dll",
+        "ravendb.embedded.4.1.0-rc-41000.nupkg.sha512",
+        "ravendb.embedded.nuspec"
+      ]
+    },
     "Remotion.Linq/2.2.0": {
       "sha512": "fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "type": "package",
@@ -7615,6 +8096,21 @@
         "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.xml",
         "remotion.linq.2.2.0.nupkg.sha512",
         "remotion.linq.nuspec"
+      ]
+    },
+    "Rsft.HttpCookieSecure/1.0.2": {
+      "sha512": "HYJ3XsYqn214/RgdEVQyXAHvIgD1zLkN+uF05oE1AFTuqpWe4aubPQh1WlXKEH8kuU27YBIx7bXiqOh+J6lbIQ==",
+      "type": "package",
+      "path": "rsft.httpcookiesecure/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/readme.txt",
+        "lib/net40/Rsft.HttpCookieSecure.XML",
+        "lib/net40/Rsft.HttpCookieSecure.dll",
+        "readme.txt",
+        "rsft.httpcookiesecure.1.0.2.nupkg.sha512",
+        "rsft.httpcookiesecure.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -8201,6 +8697,65 @@
         "system.collections.specialized.nuspec"
       ]
     },
+    "System.ComponentModel/4.3.0": {
+      "sha512": "VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+      "type": "package",
+      "path": "system.componentmodel/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.ComponentModel.dll",
+        "lib/netstandard1.3/System.ComponentModel.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.ComponentModel.dll",
+        "ref/netcore50/System.ComponentModel.xml",
+        "ref/netcore50/de/System.ComponentModel.xml",
+        "ref/netcore50/es/System.ComponentModel.xml",
+        "ref/netcore50/fr/System.ComponentModel.xml",
+        "ref/netcore50/it/System.ComponentModel.xml",
+        "ref/netcore50/ja/System.ComponentModel.xml",
+        "ref/netcore50/ko/System.ComponentModel.xml",
+        "ref/netcore50/ru/System.ComponentModel.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.xml",
+        "ref/netstandard1.0/System.ComponentModel.dll",
+        "ref/netstandard1.0/System.ComponentModel.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.4.3.0.nupkg.sha512",
+        "system.componentmodel.nuspec"
+      ]
+    },
     "System.ComponentModel.Annotations/4.5.0": {
       "sha512": "UxYQ3FGUOtzJ7LfSdnYSFd7+oEv6M8NgUatatIN2HxNtDdlcvFAf+VIq4Of9cDMJEJC0aSRv/x898RYhB4Yppg==",
       "type": "package",
@@ -8288,6 +8843,44 @@
         "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.ComponentModel.Primitives/4.3.0": {
+      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "type": "package",
+      "path": "system.componentmodel.primitives/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/System.ComponentModel.Primitives.dll",
+        "lib/netstandard1.0/System.ComponentModel.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.ComponentModel.Primitives.dll",
+        "ref/netstandard1.0/System.ComponentModel.Primitives.dll",
+        "ref/netstandard1.0/System.ComponentModel.Primitives.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.Primitives.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.Primitives.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.Primitives.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.Primitives.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.Primitives.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.Primitives.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.Primitives.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.Primitives.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.Primitives.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.primitives.4.3.0.nupkg.sha512",
+        "system.componentmodel.primitives.nuspec"
       ]
     },
     "System.Console/4.3.0": {
@@ -10168,20 +10761,26 @@
         "system.reflection.primitives.nuspec"
       ]
     },
-    "System.Reflection.TypeExtensions/4.3.0": {
-      "sha512": "7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
+    "System.Reflection.TypeExtensions/4.5.1": {
+      "sha512": "oRC4IBj4y7gcY9UXxTcIvBLhRJuntL6CfPWazTmtY4dXoXpRS6pI2Y+tu07+p2bUn5abyd5wf5LvpnyrDZdTsQ==",
       "type": "package",
-      "path": "system.reflection.typeextensions/4.3.0",
+      "path": "system.reflection.typeextensions/4.5.1",
       "files": [
         ".nupkg.metadata",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
         "lib/net46/System.Reflection.TypeExtensions.dll",
-        "lib/net462/System.Reflection.TypeExtensions.dll",
+        "lib/net461/System.Reflection.TypeExtensions.dll",
         "lib/netcore50/System.Reflection.TypeExtensions.dll",
+        "lib/netcoreapp1.0/System.Reflection.TypeExtensions.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/System.Reflection.TypeExtensions.dll",
         "lib/netstandard1.5/System.Reflection.TypeExtensions.dll",
+        "lib/netstandard2.0/System.Reflection.TypeExtensions.dll",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -10189,7 +10788,9 @@
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net46/System.Reflection.TypeExtensions.dll",
-        "ref/net462/System.Reflection.TypeExtensions.dll",
+        "ref/net461/System.Reflection.TypeExtensions.dll",
+        "ref/net461/System.Reflection.TypeExtensions.xml",
+        "ref/netcoreapp2.0/_._",
         "ref/netstandard1.3/System.Reflection.TypeExtensions.dll",
         "ref/netstandard1.3/System.Reflection.TypeExtensions.xml",
         "ref/netstandard1.3/de/System.Reflection.TypeExtensions.xml",
@@ -10212,13 +10813,19 @@
         "ref/netstandard1.5/ru/System.Reflection.TypeExtensions.xml",
         "ref/netstandard1.5/zh-hans/System.Reflection.TypeExtensions.xml",
         "ref/netstandard1.5/zh-hant/System.Reflection.TypeExtensions.xml",
+        "ref/netstandard2.0/System.Reflection.TypeExtensions.dll",
+        "ref/netstandard2.0/System.Reflection.TypeExtensions.xml",
+        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Reflection.TypeExtensions.dll",
-        "system.reflection.typeextensions.4.3.0.nupkg.sha512",
-        "system.reflection.typeextensions.nuspec"
+        "runtimes/aot/lib/uap10.0.16299/_._",
+        "system.reflection.typeextensions.4.5.1.nupkg.sha512",
+        "system.reflection.typeextensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Resources.ResourceManager/4.3.0": {
@@ -12390,6 +12997,36 @@
   },
   "logs": [
     {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Cookie 4.0.0 depends on Discord.Net (>= 2.0.0-beta2-00977) but Discord.Net 2.0.0-beta2-00977 was not found. An approximate best match of Discord.Net 2.0.0 was resolved.",
+      "libraryId": "Discord.Net",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Cookie 4.0.0 depends on RavenDB.Embedded (>= 4.1.0-nightly-20180725-0734) but RavenDB.Embedded 4.1.0-nightly-20180725-0734 was not found. An approximate best match of RavenDB.Embedded 4.1.0-rc-41000 was resolved.",
+      "libraryId": "RavenDB.Embedded",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DotNet.Cookies 1.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "DotNet.Cookies",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
@@ -12415,6 +13052,16 @@
       "warningLevel": 1,
       "message": "Package 'Microsoft.AspNet.WebApi.WebHost 5.2.7' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.AspNet.WebApi.WebHost",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Rsft.HttpCookieSecure 1.0.2' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "Rsft.HttpCookieSecure",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"
       ]

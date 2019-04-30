@@ -61,6 +61,9 @@
             <e p="IRegisterService.cs" t="Include" />
             <e p="RegisterService.cs" t="Include" />
           </e>
+          <e p="Token" t="Include">
+            <e p="TokenManager.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="IBS_Authentification_DataLayer" t="IncludeRecursive">

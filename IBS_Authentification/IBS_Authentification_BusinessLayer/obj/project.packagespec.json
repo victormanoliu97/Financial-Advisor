@@ -30,9 +30,21 @@
   "frameworks": {
     "netcoreapp2.2": {
       "dependencies": {
+        "Cookie": {
+          "target": "Package",
+          "version": "[4.0.0, )"
+        },
+        "DotNet.Cookies": {
+          "target": "Package",
+          "version": "[1.0.0, )"
+        },
         "EntityFramework": {
           "target": "Package",
           "version": "[6.2.0, )"
+        },
+        "JWT": {
+          "target": "Package",
+          "version": "[5.0.1, )"
         },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
@@ -43,6 +55,14 @@
         "Pomelo.EntityFrameworkCore.MySql": {
           "target": "Package",
           "version": "[2.2.0, )"
+        },
+        "Rsft.HttpCookieSecure": {
+          "target": "Package",
+          "version": "[1.0.2, )"
+        },
+        "System.Security.Cryptography.Primitives": {
+          "target": "Package",
+          "version": "[4.3.0, )"
         }
       },
       "imports": [

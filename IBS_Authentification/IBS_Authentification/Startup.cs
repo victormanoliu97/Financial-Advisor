@@ -2,6 +2,7 @@
 using IBS_Authentification_BusinessLayer.Repository;
 using IBS_Authentification_BusinessLayer.Service;
 using IBS_Authentification_BusinessLayer.Service.Register;
+using IBS_Authentification_BusinessLayer.Service.Token;
 using IBS_Authentification_DataLayer.Management;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,7 @@ namespace IBS_Authentification
             services.AddTransient<AuthRepository, AuthRepository>();
             services.AddTransient<ILoginService, LoginService>();
             services.AddTransient<IRegisterService, RegisterService>();
+            services.AddTransient<TokenManager>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddCors(o => o.AddPolicy("AuthCorsPolicy", builder =>
             {

@@ -1,4 +1,4 @@
-package com.ibs.customermanagement.service_tier.service;
+package com.ibs.customermanagement.service_tier.service.bank_accounts;
 
 import com.ibs.customermanagement.service_tier.model.CustomerBankAccountsDTO;
 import com.ibs.customermanagement.web_tier.response.BaseRequestResponse;

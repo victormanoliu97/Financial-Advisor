@@ -12,7 +12,7 @@ export class CustomerBankAccountsService {
   constructor(private http: HttpClient) { }
 
   async getCustomerBankAccounts(customerId: number): Promise<any> {
-   this.http.get(this.getCustomerBankAccountsUrl + `?CustomerId=${customerId}`);
+   return this.http.get(this.getCustomerBankAccountsUrl + `/${customerId}`).toPromise<any>();
   }
 
   async deleteCustomerBankAccount(accountId: number): Promise<any> {

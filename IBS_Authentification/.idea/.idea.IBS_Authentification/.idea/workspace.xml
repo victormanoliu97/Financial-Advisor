@@ -2,74 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="701b4f45-6feb-4307-b10e-edb3c5911de0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_9_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_javassist_javassist_3_23_1_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_aop_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_aspects_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_beans_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_context_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_core_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_expression_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_orm_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_test_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_springframework_spring_tx_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/IBS_CustomerManagement_DT/src/main/java/com/ibs/customermanagement/entity/BankInformation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/IBS_CustomerManagement_DT/src/main/java/com/ibs/customermanagement/entity/CustomerBankAccounts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Token/TokenManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/mapper/CustomerFinancialIncomeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/model/CustomerFinancialIncomeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/income/CustomerFinancialIncomeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/income/CustomerFinancialIncomeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/utils/GeneralUtills.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/app-routing/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/app-routing/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/auth/auth.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/auth/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-bank-accounts/customer-bank-accounts.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-bank-accounts/customer-bank-accounts.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-bank-accounts/customer-bank-accounts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-bank-accounts/customer-bank-accounts.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-bank-accounts/customer-bank-accounts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-bank-accounts/customer-bank-accounts.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/services/customer-bank-accounts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/services/customer-bank-accounts.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/shared/models/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/shared/models/customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IBS_Authentification/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IBS_Authentification/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IBS_Authentification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IBS_Authentification/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/IBS_Authentification.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/IBS_Authentification.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/obj/IBS_Authentification.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/obj/IBS_Authentification.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/IBS_Authentification_BusinessLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/IBS_Authentification_BusinessLayer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/bin/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/IBS_Authentification_BusinessLayer.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/IBS_Authentification_BusinessLayer.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IBS_Authentification_DataLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_DataLayer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_DataLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_DataLayer.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBS_StatisticalService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_StatisticalService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/data_tier/entity/TIbsCustomersCustomerFinancialIncomeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/data_tier/entity/TIbsCustomersCustomerFinancialIncomeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/data_tier/entity/TIbsCustomersCustomerFinancialLiabilitiesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/data_tier/entity/TIbsCustomersCustomerFinancialLiabilitiesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/CustomerBankAccountsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/bank_accounts/CustomerBankAccountsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/CustomerBankAccountsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/bank_accounts/CustomerBankAccountsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/web_tier/controller/CustomerBankAccountsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/web_tier/controller/CustomerBankAccountsController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,68 +72,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/ILoginService.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="8" column="106" selection-start-line="8" selection-start-column="106" selection-end-line="8" selection-end-column="106" />
-              <folding>
-                <marker date="1554940146209" expanded="false" signature="6:110" ph="..." />
-                <marker date="1554940146209" expanded="true" signature="164:403" ph="{...}" />
-                <marker date="1554940146209" expanded="true" signature="201:401" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Register/IRegisterService.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-              <folding>
-                <marker date="1554940094496" expanded="true" signature="117:230" ph="{...}" />
-                <marker date="1554940094496" expanded="true" signature="157:228" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Register/RegisterService.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-              <folding>
-                <marker date="1554940130257" expanded="false" signature="6:107" ph="..." />
-                <marker date="1554940130257" expanded="true" signature="170:712" ph="{...}" />
-                <marker date="1554940130257" expanded="true" signature="224:710" ph="{...}" />
-                <marker date="1554940130257" expanded="true" signature="350:416" ph="{...}" />
-                <marker date="1554940130257" expanded="true" signature="482:704" ph="{...}" />
-                <marker date="1554940130257" expanded="true" signature="608:694" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/IAuthRepository.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-              <folding>
-                <marker date="1554939848041" expanded="false" signature="6:177" ph="..." />
-                <marker date="1554939848041" expanded="true" signature="234:569" ph="{...}" />
-                <marker date="1554939848041" expanded="true" signature="273:567" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/LoginService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+            <state relative-caret-position="377">
+              <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
               <folding>
                 <marker date="1554940146204" expanded="false" signature="6:181" ph="..." />
                 <marker date="1554940146204" expanded="true" signature="235:1375" ph="{...}" />
@@ -157,28 +91,67 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/AuthRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
+              <folding>
+                <marker date="1554940916710" expanded="false" signature="6:382" ph="..." />
+                <marker date="1554940916710" expanded="true" signature="439:4299" ph="{...}" />
+                <marker date="1554940916710" expanded="true" signature="491:4297" ph="{...}" />
+                <marker date="1554940916710" expanded="true" signature="608:670" ph="{...}" />
+                <marker date="1554940916710" expanded="true" signature="744:1081" ph="{...}" />
+                <marker date="1554940916710" expanded="true" signature="988:1046" ph="{...}" />
+                <marker date="1554940916710" expanded="true" signature="1185:2506" ph="{...}" />
+                <marker date="1554940916710" expanded="true" signature="1473:2461" ph="{...}" />
+                <marker date="1554940916710" expanded="true" signature="2559:2745" ph="{...}" />
+                <marker date="1554940916710" expanded="true" signature="2814:4291" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+            <state relative-caret-position="391">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <marker date="1554935024454" expanded="true" signature="350:719" ph="{...}" />
-                <marker date="1554935024454" expanded="true" signature="470:532" ph="{...}" />
-                <marker date="1554935024454" expanded="true" signature="617:713" ph="{...}" />
+                <marker date="1556657876794" expanded="false" signature="6:280" ph="..." />
+                <marker date="1556657876794" expanded="true" signature="362:1204" ph="{...}" />
+                <marker date="1556657876794" expanded="true" signature="462:1202" ph="{...}" />
+                <marker date="1556657876794" expanded="true" signature="662:766" ph="{...}" />
+                <marker date="1556657876794" expanded="true" signature="851:1196" ph="{...}" />
+                <marker date="1556657876794" expanded="true" signature="1008:1141" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/LoginAccountRequest.cs">
+        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="292">
+              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
               <folding>
-                <marker date="1554932741330" expanded="true" signature="125:412" ph="{...}" />
-                <marker date="1554932741330" expanded="true" signature="164:410" ph="{...}" />
-                <marker date="1554932741330" expanded="true" signature="236:316" ph="{...}" />
+                <marker date="1556653802588" expanded="false" signature="6:41" ph="..." />
+                <marker date="1556653802588" expanded="true" signature="101:1322" ph="{...}" />
+                <marker date="1556653802588" expanded="true" signature="141:1320" ph="{...}" />
+                <marker date="1556653802588" expanded="true" signature="705:1314" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/ILoginService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+              <folding>
+                <marker date="1554940146209" expanded="false" signature="6:110" ph="..." />
+                <marker date="1554940146209" expanded="true" signature="164:403" ph="{...}" />
+                <marker date="1554940146209" expanded="true" signature="201:401" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -187,44 +160,64 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+            <state relative-caret-position="306">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding>
-                <marker date="1554940307773" expanded="true" signature="275:663" ph="{...}" />
-                <marker date="1554940307773" expanded="true" signature="410:478" ph="{...}" />
-                <marker date="1554940307773" expanded="true" signature="570:657" ph="{...}" />
+                <marker date="1556652491512" expanded="false" signature="6:228" ph="..." />
+                <marker date="1556652491512" expanded="true" signature="272:761" ph="{...}" />
+                <marker date="1556652491512" expanded="true" signature="358:759" ph="{...}" />
+                <marker date="1556652491512" expanded="true" signature="493:561" ph="{...}" />
+                <marker date="1556652491512" expanded="true" signature="653:753" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/RegisterAccountRequest.cs">
+        <entry file="file://$PROJECT_DIR$/IBS_Authentification/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+            <state relative-caret-position="340">
+              <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
               <folding>
-                <marker date="1554939316457" expanded="true" signature="125:630" ph="{...}" />
-                <marker date="1554939316457" expanded="true" signature="167:628" ph="{...}" />
+                <marker date="1556653286900" expanded="false" signature="6:566" ph="..." />
+                <marker date="1556653286900" expanded="true" signature="598:2291" ph="{...}" />
+                <marker date="1556653286900" expanded="true" signature="625:2289" ph="{...}" />
+                <marker date="1556653286900" expanded="true" signature="684:747" ph="{...}" />
+                <marker date="1556653286900" expanded="true" signature="970:1934" ph="{...}" />
+                <marker date="1556653286900" expanded="true" signature="1775:1921" ph="{...}" />
+                <marker date="1556653286900" expanded="true" signature="2122:2283" ph="{...}" />
+                <marker date="1556653286900" expanded="true" signature="2169:2246" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IBS_Authentification/Startup.cs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Token/TokenManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="102">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding>
-                <marker date="1555193384398" expanded="false" signature="6:510" ph="..." />
-                <marker date="1555193384398" expanded="true" signature="542:2184" ph="{...}" />
-                <marker date="1555193384398" expanded="true" signature="569:2182" ph="{...}" />
-                <marker date="1555193384398" expanded="true" signature="628:691" ph="{...}" />
-                <marker date="1555193384398" expanded="true" signature="914:1827" ph="{...}" />
-                <marker date="1555193384398" expanded="true" signature="1668:1814" ph="{...}" />
-                <marker date="1555193384398" expanded="true" signature="2015:2176" ph="{...}" />
-                <marker date="1555193384398" expanded="true" signature="2062:2139" ph="{...}" />
+                <marker date="1556657610315" expanded="false" signature="6:276" ph="..." />
+                <marker date="1556657610315" expanded="true" signature="336:837" ph="{...}" />
+                <marker date="1556657610315" expanded="true" signature="368:835" ph="{...}" />
+                <marker date="1556657610315" expanded="true" signature="438:829" ph="{...}" />
+                <marker date="1556657610315" expanded="true" signature="702:783" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IBS_Authentification/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+              <folding>
+                <marker date="1551641644170" expanded="false" signature="6:255" ph="..." />
+                <marker date="1551641644170" expanded="true" signature="287:614" ph="{...}" />
+                <marker date="1551641644170" expanded="true" signature="314:612" ph="{...}" />
+                <marker date="1551641644170" expanded="true" signature="367:441" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -242,44 +235,53 @@
       <find>CreateLoginResponse</find>
       <find>LoginResponse</find>
       <find>User</find>
+      <find>HttpStatus</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/IBS_Authentification/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IBS_Authentification_DataLayer/Management/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/AuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/IAuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/LoginAccountRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/863B81D8-9327-499B-9618-D9BE52F0AC42/d3/1ab39313/IHeaderDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0E94C77-1034-4038-A253-68FFB4247542/a1/107b1868/ResponseCookies.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification_DataLayer/CustomerData/Customer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/RegisterAccountRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification_DataLayer/AppAccountData/AppAccount.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D70A7D9E-B5F0-4C89-B0EA-698947CAE270/5/JwtSecurityToken.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification_DataLayer/JoinCustomerAccountsData/JoinCustomerAppAccounts.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/RegisterRequestResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/ILoginService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/863B81D8-9327-499B-9618-D9BE52F0AC42/9c/fafdce95/CookieOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/LoginService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Token/TokenManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Register/IRegisterService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Register/RegisterService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IBS_Authentification/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IBS_Authentification_DataLayer/Management/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E60A4475-B63D-43EC-99CA-343DCBA46D2F/10/ad4ce827/IJwtAlgorithm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/AuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/IAuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/LoginAccountRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/RegisterAccountRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E60A4475-B63D-43EC-99CA-343DCBA46D2F/9e/59087cbc/HMACSHA256Algorithm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/27E7636A-9DA1-4A33-A1E9-6CF853BAA8F1/be/4fb04cca/HttpStatusCode.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/LoginAccountRequest.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_DataLayer/AppAccountData/AppAccount.cs" />
-        <option value="$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_DataLayer/JoinCustomerAccountsData/JoinCustomerAppAccounts.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_DataLayer/Management/AppDbContext.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_DataLayer/CustomerData/Customer.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginResponse.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/RegisterResponse.cs" />
-        <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/RegisterRequestResponse.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/RegisterAccountRequest.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/ILoginService.cs" />
@@ -289,9 +291,14 @@
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Register/RegisterService.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/ILoginService.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/LoginService.cs" />
-        <option value="$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/AuthRepository.cs" />
+        <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Token/TokenGenerator.cs" />
+        <option value="$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs" />
+        <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Token/TokenHandler.cs" />
         <option value="$PROJECT_DIR$/IBS_Authentification/Startup.cs" />
+        <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs" />
+        <option value="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Token/TokenManager.cs" />
+        <option value="$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs" />
       </list>
     </option>
   </component>
@@ -307,10 +314,53 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="IBS_Authentification_BusinessLayer" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="IBS_Authentification_BusinessLayer" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Service" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="IBS_Authentification_BusinessLayer" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Service" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Token" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="IBS_Authentification_DataLayer" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
     </panes>
   </component>
@@ -361,6 +411,9 @@
       <workItem from="1554924222282" duration="15603000" />
       <workItem from="1555185822402" duration="4281000" />
       <workItem from="1555210474644" duration="58000" />
+      <workItem from="1556207666928" duration="1244000" />
+      <workItem from="1556538895421" duration="1241000" />
+      <workItem from="1556640469522" duration="9136000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Register Users Service are up and running">
       <created>1554943713021</created>
@@ -380,7 +433,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19942000" />
+    <option name="totallyTimeSpent" value="31563000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,15 +446,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.3290461" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290461" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -409,14 +464,14 @@
       <window_info anchor="bottom" id="Build" order="7" weight="0.3290461" />
       <window_info anchor="bottom" id="REST Client" order="8" weight="0.3290461" />
       <window_info active="true" anchor="bottom" id="GitHub Pull Requests" order="9" weight="0.3290461" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3290461" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Performance Profiler" order="12" />
+      <window_info anchor="bottom" id="Performance Profiler" order="12" weight="0.3290461" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="NuGet" order="14" weight="0.3290461" />
-      <window_info anchor="bottom" id="Unit Tests" order="15" />
+      <window_info anchor="bottom" id="Unit Tests" order="15" weight="0.3290461" />
       <window_info anchor="bottom" id="Database Changes" order="16" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="17" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Version Control" order="17" weight="0.3290461" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -448,6 +503,18 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>loginResponse.StatusCode.Equals(HttpStatusCode.OK)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>loginResponse.StatusCode</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>jointAccount</expression-string>
         <language-id>C#</language-id>
@@ -482,19 +549,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <marker date="1551641644170" expanded="false" signature="6:255" ph="..." />
-            <marker date="1551641644170" expanded="true" signature="287:614" ph="{...}" />
-            <marker date="1551641644170" expanded="true" signature="314:612" ph="{...}" />
-            <marker date="1551641644170" expanded="true" signature="367:441" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification/IBS_Authentification.csproj">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -578,23 +632,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs">
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Register/IRegisterService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="68">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
           <folding>
-            <marker date="1554937781922" expanded="false" signature="6:41" ph="..." />
-            <marker date="1554937781922" expanded="true" signature="101:1215" ph="{...}" />
-            <marker date="1554937781922" expanded="true" signature="141:1213" ph="{...}" />
-            <marker date="1554937781922" expanded="true" signature="648:1207" ph="{...}" />
+            <marker date="1554940094496" expanded="true" signature="117:230" ph="{...}" />
+            <marker date="1554940094496" expanded="true" signature="157:228" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Register/RegisterService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
+          <folding>
+            <marker date="1554940130257" expanded="false" signature="6:107" ph="..." />
+            <marker date="1554940130257" expanded="true" signature="170:712" ph="{...}" />
+            <marker date="1554940130257" expanded="true" signature="224:710" ph="{...}" />
+            <marker date="1554940130257" expanded="true" signature="350:416" ph="{...}" />
+            <marker date="1554940130257" expanded="true" signature="482:704" ph="{...}" />
+            <marker date="1554940130257" expanded="true" signature="608:694" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/IAuthRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <marker date="1554939848041" expanded="false" signature="6:177" ph="..." />
+            <marker date="1554939848041" expanded="true" signature="234:569" ph="{...}" />
+            <marker date="1554939848041" expanded="true" signature="273:567" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/LoginAccountRequest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <marker date="1554932741330" expanded="false" signature="6:66" ph="..." />
+            <marker date="1554932741330" expanded="true" signature="125:412" ph="{...}" />
+            <marker date="1554932741330" expanded="true" signature="164:410" ph="{...}" />
+            <marker date="1554932741330" expanded="true" signature="236:316" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/RegisterAccountRequest.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <marker date="1554939316457" expanded="false" signature="6:66" ph="..." />
+            <marker date="1554939316457" expanded="true" signature="125:630" ph="{...}" />
+            <marker date="1554939316457" expanded="true" signature="167:628" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D70A7D9E-B5F0-4C89-B0EA-698947CAE270/5/JwtSecurityToken.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="198" column="15" selection-start-line="198" selection-start-column="15" selection-end-line="198" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E60A4475-B63D-43EC-99CA-343DCBA46D2F/10/ad4ce827/IJwtAlgorithm.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E60A4475-B63D-43EC-99CA-343DCBA46D2F/9e/59087cbc/HMACSHA256Algorithm.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/863B81D8-9327-499B-9618-D9BE52F0AC42/9c/fafdce95/CookieOptions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <marker date="1556643649218" expanded="true" signature="0:418" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1556643649218" expanded="true" signature="470:2695" ph="{...}" />
+            <marker date="1556643649218" expanded="true" signature="563:2693" ph="{...}" />
+            <marker date="1556643649218" expanded="true" signature="666:701" ph="{...}" />
+            <marker date="1556643649218" expanded="true" signature="707:851" ph="///Gets or sets the domain to associate the cookie with. ... " />
+            <marker date="1556643649218" expanded="true" signature="896:992" ph="///Gets or sets the cookie path. ... " />
+            <marker date="1556643649218" expanded="true" signature="1035:1205" ph="/// Gets or sets the expiration date and time for the cookie. ... " />
+            <marker date="1556643649218" expanded="true" signature="1260:1537" ph="/// Gets or sets a value that indicates whether to transmit the cookie using Secure Sockets Layer (SSL)--that is, ... " />
+            <marker date="1556643649218" expanded="true" signature="1580:1902" ph="/// Gets or sets the value for the SameSite attribute of the cookie. The default value is &lt;see cref=&quot;F:Microsoft. ... " />
+            <marker date="1556643649218" expanded="true" signature="1975:2213" ph="/// Gets or sets a value that indicates whether a cookie is accessible by client-side script. ... " />
+            <marker date="1556643649218" expanded="true" signature="2258:2390" ph="///Gets or sets the max-age for the cookie. ... " />
+            <marker date="1556643649218" expanded="true" signature="2438:2647" ph="/// Indicates if this cookie is essential for the application to function correctly. If true then ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/LoginService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+          <folding>
+            <marker date="1554940146204" expanded="false" signature="6:181" ph="..." />
+            <marker date="1554940146204" expanded="true" signature="235:1375" ph="{...}" />
+            <marker date="1554940146204" expanded="true" signature="283:1373" ph="{...}" />
+            <marker date="1554940146204" expanded="true" signature="406:472" ph="{...}" />
+            <marker date="1554940146204" expanded="true" signature="560:1108" ph="{...}" />
+            <marker date="1554940146204" expanded="true" signature="766:900" ph="{...}" />
+            <marker date="1554940146204" expanded="true" signature="917:1057" ph="{...}" />
+            <marker date="1554940146204" expanded="true" signature="1222:1367" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/AuthRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        <state relative-caret-position="357">
+          <caret line="53" column="59" lean-forward="true" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
           <folding>
             <marker date="1554940916710" expanded="false" signature="6:382" ph="..." />
             <marker date="1554940916710" expanded="true" signature="439:4299" ph="{...}" />
@@ -610,10 +773,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <marker date="1556652491512" expanded="false" signature="6:228" ph="..." />
+            <marker date="1556652491512" expanded="true" signature="272:761" ph="{...}" />
+            <marker date="1556652491512" expanded="true" signature="358:759" ph="{...}" />
+            <marker date="1556652491512" expanded="true" signature="493:561" ph="{...}" />
+            <marker date="1556652491512" expanded="true" signature="653:753" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/863B81D8-9327-499B-9618-D9BE52F0AC42/d3/1ab39313/IHeaderDictionary.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <marker date="1556652475047" expanded="true" signature="0:422" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1556652475047" expanded="false" signature="430:522" ph="..." />
+            <marker date="1556652475047" expanded="true" signature="559:1391" ph="{...}" />
+            <marker date="1556652475047" expanded="true" signature="818:1389" ph="{...}" />
+            <marker date="1556652475047" expanded="true" signature="827:1126" ph="/// IHeaderDictionary has a different indexer contract than IDictionary, where it will return StringValues.Empty  ... " />
+            <marker date="1556652475047" expanded="true" signature="1184:1347" ph="/// Strongly typed access to the Content-Length header. Implementations must keep this in sync with the string re ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0E94C77-1034-4038-A253-68FFB4247542/a1/107b1868/ResponseCookies.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <marker date="1556652463726" expanded="true" signature="0:402" ph="/* Decompiled with JetBrains decompiler ... */" />
+            <marker date="1556652463726" expanded="false" signature="410:543" ph="..." />
+            <marker date="1556652463726" expanded="true" signature="589:4834" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="712:4832" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="721:1009" ph="///Create a new wrapper. ... " />
+            <marker date="1556652463726" expanded="true" signature="1134:1262" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="1388:1814" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="1533:1577" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="1910:2699" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="2141:2462" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="2758:2830" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="2912:4828" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="3483:3700" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="3784:4005" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="4110:4470" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="4274:4385" ph="{...}" />
+            <marker date="1556652463726" expanded="true" signature="4534:4820" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/ILoginService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="106" selection-start-line="8" selection-start-column="106" selection-end-line="8" selection-end-column="106" />
+        <state relative-caret-position="102">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding>
             <marker date="1554940146209" expanded="false" signature="6:110" ph="..." />
             <marker date="1554940146209" expanded="true" signature="164:403" ph="{...}" />
@@ -622,119 +840,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Register/IRegisterService.cs">
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
-            <marker date="1554940094496" expanded="true" signature="157:228" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Register/RegisterService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="54" selection-start-line="7" selection-start-column="54" selection-end-line="7" selection-end-column="54" />
-          <folding>
-            <marker date="1554940130257" expanded="false" signature="6:107" ph="..." />
-            <marker date="1554940130257" expanded="true" signature="224:710" ph="{...}" />
-            <marker date="1554940130257" expanded="true" signature="350:416" ph="{...}" />
-            <marker date="1554940130257" expanded="true" signature="482:704" ph="{...}" />
-            <marker date="1554940130257" expanded="true" signature="608:694" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/IAuthRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <marker date="1554939848041" expanded="false" signature="6:177" ph="..." />
-            <marker date="1554939848041" expanded="true" signature="234:569" ph="{...}" />
-            <marker date="1554939848041" expanded="true" signature="273:567" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/LoginService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <marker date="1554940146204" expanded="false" signature="6:181" ph="..." />
-            <marker date="1554940146204" expanded="true" signature="235:1375" ph="{...}" />
-            <marker date="1554940146204" expanded="true" signature="283:1373" ph="{...}" />
-            <marker date="1554940146204" expanded="true" signature="406:472" ph="{...}" />
-            <marker date="1554940146204" expanded="true" signature="560:1108" ph="{...}" />
-            <marker date="1554940146204" expanded="true" signature="766:900" ph="{...}" />
-            <marker date="1554940146204" expanded="true" signature="917:1057" ph="{...}" />
-            <marker date="1554940146204" expanded="true" signature="1222:1367" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-          <folding>
-            <marker date="1554935024454" expanded="true" signature="350:719" ph="{...}" />
-            <marker date="1554935024454" expanded="true" signature="470:532" ph="{...}" />
-            <marker date="1554935024454" expanded="true" signature="617:713" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/LoginAccountRequest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <marker date="1554932741330" expanded="true" signature="125:412" ph="{...}" />
-            <marker date="1554932741330" expanded="true" signature="164:410" ph="{...}" />
-            <marker date="1554932741330" expanded="true" signature="236:316" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-          <folding>
-            <marker date="1554940307773" expanded="true" signature="275:663" ph="{...}" />
-            <marker date="1554940307773" expanded="true" signature="410:478" ph="{...}" />
-            <marker date="1554940307773" expanded="true" signature="570:657" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthRequests/RegisterAccountRequest.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
-          <folding>
-            <marker date="1554939316457" expanded="true" signature="125:630" ph="{...}" />
-            <marker date="1554939316457" expanded="true" signature="167:628" ph="{...}" />
+            <marker date="1551641644170" expanded="false" signature="6:255" ph="..." />
+            <marker date="1551641644170" expanded="true" signature="287:614" ph="{...}" />
+            <marker date="1551641644170" expanded="true" signature="314:612" ph="{...}" />
+            <marker date="1551641644170" expanded="true" signature="367:441" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="340">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
           <folding>
-            <marker date="1555193384398" expanded="false" signature="6:510" ph="..." />
-            <marker date="1555193384398" expanded="true" signature="542:2184" ph="{...}" />
-            <marker date="1555193384398" expanded="true" signature="569:2182" ph="{...}" />
-            <marker date="1555193384398" expanded="true" signature="628:691" ph="{...}" />
-            <marker date="1555193384398" expanded="true" signature="914:1827" ph="{...}" />
-            <marker date="1555193384398" expanded="true" signature="1668:1814" ph="{...}" />
-            <marker date="1555193384398" expanded="true" signature="2015:2176" ph="{...}" />
-            <marker date="1555193384398" expanded="true" signature="2062:2139" ph="{...}" />
+            <marker date="1556653286900" expanded="false" signature="6:566" ph="..." />
+            <marker date="1556653286900" expanded="true" signature="598:2291" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="625:2289" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="684:747" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="970:1934" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="1775:1921" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="2122:2283" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="2169:2246" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <folding>
+            <marker date="1556653802588" expanded="false" signature="6:41" ph="..." />
+            <marker date="1556653802588" expanded="true" signature="101:1322" ph="{...}" />
+            <marker date="1556653802588" expanded="true" signature="141:1320" ph="{...}" />
+            <marker date="1556653802588" expanded="true" signature="705:1314" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Token/TokenManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <marker date="1556657610315" expanded="false" signature="6:276" ph="..." />
+            <marker date="1556657610315" expanded="true" signature="336:837" ph="{...}" />
+            <marker date="1556657610315" expanded="true" signature="368:835" ph="{...}" />
+            <marker date="1556657610315" expanded="true" signature="438:829" ph="{...}" />
+            <marker date="1556657610315" expanded="true" signature="702:783" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/27E7636A-9DA1-4A33-A1E9-6CF853BAA8F1/be/4fb04cca/HttpStatusCode.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <marker date="1556657876794" expanded="false" signature="6:280" ph="..." />
+            <marker date="1556657876794" expanded="true" signature="362:1204" ph="{...}" />
+            <marker date="1556657876794" expanded="true" signature="462:1202" ph="{...}" />
+            <marker date="1556657876794" expanded="true" signature="662:766" ph="{...}" />
+            <marker date="1556657876794" expanded="true" signature="851:1196" ph="{...}" />
+            <marker date="1556657876794" expanded="true" signature="1008:1141" ph="{...}" />
           </folding>
         </state>
       </provider>

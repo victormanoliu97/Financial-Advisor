@@ -10,6 +10,11 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import { IndexMainComponent } from './index-main/index-main.component';
 import { CustomerPanelComponent } from './customer-panel/customer-panel.component';
 import { CustomerBankAccountsComponent } from './customer-bank-accounts/customer-bank-accounts.component';
+import { UserProfilingComponent } from './user-profiling/user-profiling.component';
+import {InputTextModule} from 'primeng/primeng';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import {VirtualScrollerModule} from 'primeng/virtualscroller';
+import { BankAccountDetailsComponent } from './bank-account-details/bank-account-details.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +22,18 @@ import { CustomerBankAccountsComponent } from './customer-bank-accounts/customer
     IndexMainComponent,
     CustomerPanelComponent,
     CustomerBankAccountsComponent,
+    UserProfilingComponent,
+    BankAccountDetailsComponent,
   ],
   imports: [
+    BsDropdownModule.forRoot(),
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AuthModule
+    AuthModule,
+    InputTextModule,
+    VirtualScrollerModule,
   ],
   providers: [AuthModule, CookieService],
   bootstrap: [AppComponent]

@@ -17,6 +17,8 @@ namespace IBS_Authentification_BusinessLayer.AuthResponses
         
         public int StatusCode { get; set; }
         
+        public string AccessToken { get; set; }
+        
         
         public override string ToString()
         {
@@ -31,6 +33,7 @@ namespace IBS_Authentification_BusinessLayer.AuthResponses
             jsonObject.City = City;
             jsonObject.Country = Country;
             jsonObject.StatusCode = StatusCode;
+            jsonObject.AccessToken = AccessToken;
             return jsonObject.ToString(Newtonsoft.Json.Formatting.None);
         }
     }

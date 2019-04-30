@@ -1,10 +1,15 @@
 package com.ibs.customermanagement.data_tier.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name = "t_ibs_customers_customer_financial_income", schema = "ibs_local_schema", catalog = "")
+@Getter
+@Setter
 public class TIbsCustomersCustomerFinancialIncomeEntity {
 
     @Id

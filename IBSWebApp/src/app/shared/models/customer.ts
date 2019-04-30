@@ -7,4 +7,5 @@ export class Customer {
   Street: string;
   City: string;
   Country: string;
+  AccessToken: string;
 }

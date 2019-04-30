@@ -10,3 +10,12 @@ D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentificatio
 D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.dll
 D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\IBS_Authentification_DataLayer.pdb
 D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\obj\Debug\netcoreapp2.2\IBS_Authentification_BusinessLayer.csproj.CopyComplete
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.dll
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Features.dll
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.dll
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.xml
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Abstractions.xml
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Http.Features.xml
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.pdb
+D:\Facultate\Intelligent-Banking-System\IBS_Authentification\IBS_Authentification_BusinessLayer\bin\Debug\netcoreapp2.2\System.IdentityModel.Tokens.Jwt.xml

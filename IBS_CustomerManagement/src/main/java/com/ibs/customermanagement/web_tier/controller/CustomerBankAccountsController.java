@@ -1,11 +1,10 @@
 package com.ibs.customermanagement.web_tier.controller;
 
 import com.ibs.customermanagement.service_tier.model.CustomerBankAccountsDTO;
-import com.ibs.customermanagement.service_tier.service.CustomerBankAccountsService;
+import com.ibs.customermanagement.service_tier.service.bank_accounts.CustomerBankAccountsService;
 import com.ibs.customermanagement.web_tier.handlers.http_exceptions.UnprocessableEntityException;
 import com.ibs.customermanagement.web_tier.response.BaseRequestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

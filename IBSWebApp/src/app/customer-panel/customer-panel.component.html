@@ -5,16 +5,16 @@
 </head>
 <body>
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Current bank accounts</a>
-  <a href="#">Open Bank Account</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <div id = "user-name">
+    <a>Welcome {{loggedUserName}} <i class="material-icons" style="font-size: 50px;">account_box</i> </a>
+  </div>
+  <a href="/bank-accounts">Current bank accounts <i class="material-icons" style="font-size: 50px;">account_balance</i></a>
+  <a href="#">Open Bank Account  <i class="material-icons" style="font-size: 50px;">control_point</i></a>
 </div>
 
 <div id="main">
-  <h2>Sidenav Push Example</h2>
-  <p>Click on the element below to open the side navigation menu, and push this content to the right.</p>
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <span style="font-size:50px;cursor:pointer" onclick="#">&#9776;</span>
 </div>
 </body>
+
+

@@ -1,3 +1,40 @@
-<p>
-  customer-bank-accounts works!
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <div id = "user-name">
+    <a>Welcome {{loggedUserName}}  <i class="material-icons" style="font-size: 50px;">account_box</i> </a>
+  </div>
+  <a href="#">Current bank accounts <i class="material-icons" style="font-size: 50px;">account_balance</i></a>
+  <a href="#">Open Bank Account  <i class="material-icons" style="font-size: 50px;">control_point</i></a>
+</div>
+
+<div id="main" style="margin-left: 600px;">
+  <div ngSwitch="{{bankAccounts}}">
+    <div *ngSwitchCase="bankAccounts.length === null">
+      <div class="bookViewContainer">
+        <h1 class="no-accounts-warn">You should add an account to get started !</h1>
+      </div>
+    </div>
+  <ng-container *ngFor="let index of bankAccounts">
+    <div class="bookViewContainer">
+      <div class="bookViewImage">
+      </div>
+      <div class="bookViewInfo">
+        <p class="bookViewTitle">{{index.iban}}</p>
+        <p class="bookViewAuthor">{{index.accountType}}</p>
+        <i class="material-icons" style="font-size: 40px; cursor: pointer;" (click)="onSelect(index);">search</i>
+      </div>
+    </div>
+  </ng-container>
+  </div>
+</div>
+
+<div id="content" style="position: relative; left:100em; top:50em;">
+</div>
+
+</body>
+

@@ -1,5 +1,7 @@
 using IBS_Authentification_BusinessLayer.AuthRequests;
 using IBS_Authentification_BusinessLayer.Service.Register;
+using Microsoft.AspNetCore.Http.Headers;
+using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IBS_Authentification.Controllers
@@ -18,6 +20,7 @@ namespace IBS_Authentification.Controllers
         public void RegisterUser([FromBody] RegisterAccountRequest registerAccountRequest)
         {
             _registerService.RegisterUser(registerAccountRequest);
+            
         }
     }
 }
