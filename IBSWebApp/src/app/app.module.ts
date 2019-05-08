@@ -9,21 +9,21 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { IndexMainComponent } from './index-main/index-main.component';
 import { CustomerPanelComponent } from './customer-panel/customer-panel.component';
-import { CustomerBankAccountsComponent } from './customer-bank-accounts/customer-bank-accounts.component';
 import { UserProfilingComponent } from './user-profiling/user-profiling.component';
 import {InputTextModule} from 'primeng/primeng';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
-import { BankAccountDetailsComponent } from './bank-account-details/bank-account-details.component';
+import {TooltipModule} from 'ngx-bootstrap';
+import { IncomeLiabilitiesComponent } from './income-liabilities/income-liabilities.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexMainComponent,
     CustomerPanelComponent,
-    CustomerBankAccountsComponent,
     UserProfilingComponent,
-    BankAccountDetailsComponent,
+    IncomeLiabilitiesComponent,
   ],
   imports: [
     BsDropdownModule.forRoot(),
@@ -34,6 +34,8 @@ import { BankAccountDetailsComponent } from './bank-account-details/bank-account
     AuthModule,
     InputTextModule,
     VirtualScrollerModule,
+    TooltipModule,
+    NgbModule,
   ],
   providers: [AuthModule, CookieService],
   bootstrap: [AppComponent]

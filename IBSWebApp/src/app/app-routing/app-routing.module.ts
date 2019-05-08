@@ -4,8 +4,7 @@ import {LoginComponent} from '../auth/login/login.component';
 import {IndexMainComponent} from '../index-main/index-main.component';
 import {UserProfilingComponent} from '../user-profiling/user-profiling.component';
 import {CustomerPanelComponent} from '../customer-panel/customer-panel.component';
-import {CustomerBankAccountsComponent} from '../customer-bank-accounts/customer-bank-accounts.component';
-import {BankAccountDetailsComponent} from '../bank-account-details/bank-account-details.component';
+import {IncomeLiabilitiesComponent} from '../income-liabilities/income-liabilities.component';
 
 const routes: Routes = [
   {
@@ -21,16 +20,12 @@ const routes: Routes = [
     component: UserProfilingComponent
   },
   {
+    path: 'income',
+    component: IncomeLiabilitiesComponent
+  },
+  {
     path: 'customer-panel',
     component: CustomerPanelComponent
-  },
-  {
-    path: 'bank-accounts',
-    component: CustomerBankAccountsComponent
-  },
-  {
-    path: 'account-details',
-    component: BankAccountDetailsComponent
   },
   {
     path: '',
