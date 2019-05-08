@@ -14,4 +14,8 @@ public interface CustomerFinancialIncomeService {
     BaseRequestResponse saveCustomerFinancialIncomeEntry(CustomerFinancialIncomeDTO customerFinancialIncomeDTO);
 
     BaseRequestResponse deleteCustomerFinancialIncomeEntity(Integer incomeId);
+
+    BaseRequestResponse updateCustomerFinancialIncomeEntity(CustomerFinancialIncomeDTO customerFinancialIncomeDTO);
+
+    CustomerFinancialIncomeDTO getCustomerFinancialIncomeById(Integer incomeId);
 }

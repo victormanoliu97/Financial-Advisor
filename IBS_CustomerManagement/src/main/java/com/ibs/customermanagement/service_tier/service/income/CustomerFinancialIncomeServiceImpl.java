@@ -15,11 +15,12 @@ import java.util.List;
 public class CustomerFinancialIncomeServiceImpl implements CustomerFinancialIncomeService {
 
     private final CustomerFinancialIncomeDAO customerFinancialIncomeDAO;
-    private CustomerFinancialIncomeRepository customerFinancialIncomeRepository;
+    private final CustomerFinancialIncomeRepository customerFinancialIncomeRepository;
 
     @Autowired
-    public CustomerFinancialIncomeServiceImpl(CustomerFinancialIncomeDAO customerFinancialIncomeDAO) {
+    public CustomerFinancialIncomeServiceImpl(CustomerFinancialIncomeDAO customerFinancialIncomeDAO, CustomerFinancialIncomeRepository customerFinancialIncomeRepository) {
         this.customerFinancialIncomeDAO = customerFinancialIncomeDAO;
+        this.customerFinancialIncomeRepository = customerFinancialIncomeRepository;
     }
 
     @Override
@@ -47,5 +48,26 @@ public class CustomerFinancialIncomeServiceImpl implements CustomerFinancialInco
         }
         customerFinancialIncomeDAO.deleteByIdFinancialIncome(incomeId);
         return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
+    }
+
+    @Override
+    public BaseRequestResponse updateCustomerFinancialIncomeEntity(CustomerFinancialIncomeDTO customerFinancialIncomeDTO) {
+        if(customerFinancialIncomeDTO == null || customerFinancialIncomeDTO.getCustomerId() == 0 || customerFinancialIncomeDTO.getIdFinancialIncome() == 0
+                || customerFinancialIncomeRepository.getAllByCustomerId(customerFinancialIncomeDTO.getCustomerId()) == null) {
+            return new BaseRequestResponse(HttpStatus.UNPROCESSABLE_ENTITY.value(), HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase());
+        }
+        customerFinancialIncomeDAO.save(new CustomerFinancialIncomeMapper().fromDTOToEntity(customerFinancialIncomeDTO));
+        return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
+    }
+
+    @Override
+    public CustomerFinancialIncomeDTO getCustomerFinancialIncomeById(Integer incomeId) {
+        if(incomeId == null) {
+            return null;
+        }
+        if(customerFinancialIncomeRepository.getByIdFinancialIncome(incomeId) == null) {
+            return null;
+        }
+        return new CustomerFinancialIncomeMapper().fromEntityToDTO(customerFinancialIncomeRepository.getByIdFinancialIncome(incomeId));
     }
 }
