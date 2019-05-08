@@ -1,0 +1,166 @@
+<div class="container">
+  <div class="sidebar">
+    <ul>
+      <li class="logo">
+        <a href="#">
+          <img src="https://cdn4.iconfinder.com/data/icons/top-search-3/128/_Bank_bank_account_banking_-128.png" />
+        </a>
+      <li>
+      <li class="current">
+        <a href="#">Home</a>
+      </li>
+
+      <li class="admin">
+        <a href="#" title="admin-only" class="tooltip-right" data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My Objectives</a>
+      </li>
+
+      <li class="spacer">Profiling<div class="hr"></div></li>
+      <li class="has-children">
+        <a href="#">Fill your profile</a>
+        <ul class="sub-menu">
+          <li>
+            <a href="#">General profiling</a>
+          </li>
+          <li>
+            <a href="/income">Incomes/Liabilities</a>
+          </li>
+          <li>
+            <a href="#">Estates</a>
+          </li>
+          <li>
+            <a href="#">Companies</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="spacer">Statistics<div class="hr"></div></li>
+      <li class="has-children">
+        <a href="#">Review Account Statistics</a>
+      </li>
+      <li class="has-children">
+      </li>
+      <li class="has-children">
+        <a href="#">Financial Instruments</a>
+        <ul class="sub-menu">
+          <li>
+            <a href="#">Stocks</a>
+          </li>
+          <li>
+            <a href="#">Forex</a>
+          </li>
+          <li>
+            <a href="#">Cryptocurrencies</a>
+          </li>
+        </ul>
+      </li>
+      <li class="spacer"><div class="hr"></div></li>
+      <li>
+        <a href="#" class="tooltip-right" data-tooltip="Ready to leave? :(">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="header">
+      <span class="label"><strong><a>{{loggedUserName}}</a></strong></span>
+      <span class="pipe"></span>
+      &nbsp;<span class="label">Dashboard</span>
+      <div class="menu">
+        <a class="faux wiggle-bug tooltip-bottom" data-tooltip="Report Bugs or Concerns." title="Report a Bug"><span class="bug"></span></a>
+        <a>Support</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="widget totals">
+        <h4 class="widget-title"><span data-tooltip="Analytical information about your profiling completion.">Profiling Completion Analysis</span> <a href="#" class="tooltip-left button" data-tooltip="Attempt to reload Analytical data.">Reload Data</a></h4>
+        <div class="widget-content text-center">
+          <div class="chart quarter">
+            <span class="label">General</span><br /><br />
+            <h2>0%</h2>
+          </div>
+          <div class="chart quarter">
+            <span class="label">Incomes/Liabilities</span><br /><br />
+            <h2>0%</h2>
+          </div>
+          <div class="chart quarter">
+            <span class="label">Real Estates</span>
+            <br /><br />
+            <h2>0%</h2>
+          </div>
+          <div class="chart quarter">
+            <span class="label">Companies</span><br /><br />
+            <h2>0%</h2>
+          </div>
+        </div>
+      </div>
+
+      <ngb-tabset>
+        <ngb-tab title="Income">
+          <ng-template ngbTabContent>
+            <ngb-accordion [closeOthers]="true" activeIds="static-1">
+              <ngb-panel id="static-1" type="secondary">
+                <ng-template ngbPanelTitle>
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">Open</div>
+                    <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
+                  </div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <form>
+                    <!-- Material input -->
+                    <div class="md-form form-group mt-5">
+                      <label for="formGroupExampleInputMD">Example label</label>
+                      <input mdbInput type="text" class="form-control" id="formGroupExampleInputMD"
+                             placeholder="Example input">
+                    </div>
+                    <!-- Material input -->
+                    <div class="md-form form-group mt-5">
+                      <input mdbInput type="text" class="form-control" id="formGroupExampleInput2MD"
+                             placeholder="Another input">
+                      <label for="formGroupExampleInput2MD">Another label</label>
+                    </div>
+                  </form>
+                </ng-template>
+              </ngb-panel>
+            </ngb-accordion>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="Liabilities">
+          <ng-template ngbTabContent>
+            <ngb-accordion [closeOthers]="true" activeIds="static-1">
+              <ngb-panel id="static-1" type="secondary">
+                <ng-template ngbPanelTitle>
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">Open</div>
+                    <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
+                  </div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <form>
+                    <!-- Material input -->
+                    <div class="md-form form-group mt-5">
+                      <label for="formGroupExampleInputMD">Example label</label>
+                      <input mdbInput type="text" class="form-control" id="formGroupExampleInputMD1"
+                             placeholder="Example input">
+                    </div>
+                    <!-- Material input -->
+                    <div class="md-form form-group mt-5">
+                      <input mdbInput type="text" class="form-control" id="formGroupExampleInput2MD1"
+                             placeholder="Another input">
+                      <label for="formGroupExampleInput2MD">Another label</label>
+                    </div>
+                    <div class="md-form form-group mt-5">
+                      <input mdbInput type="text" class="form-control" id="formGroupExampleInput2MD12"
+                             placeholder="Another input">
+                      <label for="formGroupExampleInput2MD">Another label</label>
+                    </div>
+                  </form>
+                </ng-template>
+              </ngb-panel>
+            </ngb-accordion>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+
+    </div>
+  </div>
+</div>
