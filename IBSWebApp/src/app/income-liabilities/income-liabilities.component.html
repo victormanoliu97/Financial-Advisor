@@ -97,37 +97,57 @@
         <ngb-tab title="Income">
           <ng-template ngbTabContent>
             <ngb-accordion [closeOthers]="true" activeIds="static-1">
-              <ngb-panel id="static-1" type="secondary">
-                <ng-template ngbPanelTitle>
-                  <div class="d-flex justify-content-between">
-                    <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">Open</div>
-                    <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
-                  </div>
-                </ng-template>
-                <ng-template ngbPanelContent>
-                  <form>
-                    <!-- Material input -->
-                    <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInputMD">Example label</label>
-                      <input mdbInput type="text" class="form-control" id="formGroupExampleInputMD"
-                             placeholder="Example input">
+              <ng-container *ngFor="let index of incomes">
+                <ngb-panel id="static-1" type="secondary">
+                  <ng-template ngbPanelTitle>
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">{{index.incomeSource}}</div>
+                      <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
                     </div>
-                    <!-- Material input -->
-                    <div class="md-form form-group mt-5">
-                      <input mdbInput type="text" class="form-control" id="formGroupExampleInput2MD"
-                             placeholder="Another input">
-                      <label for="formGroupExampleInput2MD">Another label</label>
-                    </div>
-                  </form>
-                </ng-template>
-              </ngb-panel>
+                  </ng-template>
+                  <ng-template ngbPanelContent>
+                      <!-- Income Amount !-->
+                      <div class="md-form form-group mt-5">
+                        <label for="incomeAmount">Income amount</label>
+                        <input type="text" class="form-control" id="incomeAmount" ngModel="{{index.incomeAmount}}" [(ngModel)]= "incomeAmount" >
+                      </div>
+
+                      <!-- Income source -->
+                      <div class="md-form form-group mt-5">
+                        <label for="formGroupExampleInputIncomeSourceMD">Income Source</label>
+                        <input type="text" class="form-control" id="formGroupExampleInputIncomeSourceMD"
+                               placeholder="Example input" ngModel="{{index.incomeSource}}" [(ngModel)] = "incomeSource" >
+                      </div>
+
+                      <!-- Compressible Costs -->
+                      <div class="md-form form-group mt-5">
+                        <label for="formGroupExampleInputMDCompressible">Compressible Costs</label>
+                        <input type="text" class="form-control" id="formGroupExampleInputMDCompressible"
+                               placeholder="Example input" ngModel="{{index.compressibleCosts}}" [(ngModel)] = "compressibleCosts">
+                      </div>
+
+                      <!-- Non Compressible Costs -->
+                      <div class="md-form form-group mt-5">
+                        <label for="formGroupExampleInputMDNonCompressible">Non Compressible Costs</label>
+                        <input type="text" class="form-control" id="formGroupExampleInputMDNonCompressible"
+                               placeholder="Example input" ngModel="{{index.nonCompressibleCosts}}" [(ngModel)] = "nonCompressibleCosts">
+                      </div>
+
+                      <br>
+                      <button class="btn btn-success" style="width: 40%; float:left" (click)="updateIncome(index.idFinancialIncome)">Save</button>
+                      <button class="btn btn-danger" style="width: 40%; float:right">Delete</button>
+                  </ng-template>
+                </ngb-panel>
+              </ng-container>
             </ngb-accordion>
           </ng-template>
         </ngb-tab>
+
+
         <ngb-tab title="Liabilities">
           <ng-template ngbTabContent>
             <ngb-accordion [closeOthers]="true" activeIds="static-1">
-              <ngb-panel id="static-1" type="secondary">
+              <ngb-panel id="static-70" type="secondary">
                 <ng-template ngbPanelTitle>
                   <div class="d-flex justify-content-between">
                     <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">Open</div>
@@ -144,18 +164,19 @@
                     </div>
                     <!-- Material input -->
                     <div class="md-form form-group mt-5">
+                      <label for="formGroupExampleInput2MD">Another label</label>
                       <input mdbInput type="text" class="form-control" id="formGroupExampleInput2MD1"
                              placeholder="Another input">
-                      <label for="formGroupExampleInput2MD">Another label</label>
                     </div>
                     <div class="md-form form-group mt-5">
+                      <label for="formGroupExampleInput2MD">Another label</label>
                       <input mdbInput type="text" class="form-control" id="formGroupExampleInput2MD12"
                              placeholder="Another input">
-                      <label for="formGroupExampleInput2MD">Another label</label>
                     </div>
                   </form>
                 </ng-template>
               </ngb-panel>
+
             </ngb-accordion>
           </ng-template>
         </ngb-tab>
