@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import {BankAccount} from '../shared/models/bank-account';
+import {BankAccount} from '../shared/models/account/bank-account';
 import {CustomerBankAccountsService} from '../services/customer-bank-accounts.service';
+import {SectionCompletion} from '../shared/models/completion/section-completion';
 
 @Component({
   selector: 'app-customer-panel',

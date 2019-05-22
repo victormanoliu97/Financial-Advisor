@@ -3,7 +3,7 @@
     <ul>
       <li class="logo">
         <a href="#">
-          <img src="https://cdn4.iconfinder.com/data/icons/top-search-3/128/_Bank_bank_account_banking_-128.png" />
+          <img src="https://cdn4.iconfinder.com/data/icons/top-search-3/128/_Bank_bank_account_banking_-128.png"/>
         </a>
       <li>
       <li class="current">
@@ -11,10 +11,14 @@
       </li>
 
       <li class="admin">
-        <a href="#" title="admin-only" class="tooltip-right" data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My Objectives</a>
+        <a href="#" title="admin-only" class="tooltip-right"
+           data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My
+          Objectives</a>
       </li>
 
-      <li class="spacer">Profiling<div class="hr"></div></li>
+      <li class="spacer">Profiling
+        <div class="hr"></div>
+      </li>
       <li class="has-children">
         <a href="#">Fill your profile</a>
         <ul class="sub-menu">
@@ -33,7 +37,9 @@
         </ul>
       </li>
 
-      <li class="spacer">Statistics<div class="hr"></div></li>
+      <li class="spacer">Statistics
+        <div class="hr"></div>
+      </li>
       <li class="has-children">
         <a href="#">Review Account Statistics</a>
       </li>
@@ -53,7 +59,9 @@
           </li>
         </ul>
       </li>
-      <li class="spacer"><div class="hr"></div></li>
+      <li class="spacer">
+        <div class="hr"></div>
+      </li>
       <li>
         <a href="#" class="tooltip-right" data-tooltip="Ready to leave? :(">Logout</a>
       </li>
@@ -65,29 +73,31 @@
       <span class="pipe"></span>
       &nbsp;<span class="label">Dashboard</span>
       <div class="menu">
-        <a class="faux wiggle-bug tooltip-bottom" data-tooltip="Report Bugs or Concerns." title="Report a Bug"><span class="bug"></span></a>
+        <a class="faux wiggle-bug tooltip-bottom" data-tooltip="Report Bugs or Concerns." title="Report a Bug"><span
+          class="bug"></span></a>
         <a>Support</a>
       </div>
     </div>
     <div class="main">
       <div class="widget totals">
-        <h4 class="widget-title"><span data-tooltip="Analytical information about your profiling completion.">Profiling Completion Analysis</span> <a href="#" class="tooltip-left button" data-tooltip="Attempt to reload Analytical data.">Reload Data</a></h4>
+        <h4 class="widget-title"><span data-tooltip="Analytical information about your profiling completion.">Profiling Completion Analysis</span>
+          <a href="#" class="tooltip-left button" data-tooltip="Attempt to reload Analytical data.">Reload Data</a></h4>
         <div class="widget-content text-center">
           <div class="chart quarter">
-            <span class="label">General</span><br /><br />
+            <span class="label">General</span><br/><br/>
             <h2>0%</h2>
           </div>
           <div class="chart quarter">
-            <span class="label">Incomes/Liabilities</span><br /><br />
+            <span class="label">Incomes/Liabilities</span><br/><br/>
             <h2>0%</h2>
           </div>
           <div class="chart quarter">
             <span class="label">Real Estates</span>
-            <br /><br />
+            <br/><br/>
             <h2>0%</h2>
           </div>
           <div class="chart quarter">
-            <span class="label">Companies</span><br /><br />
+            <span class="label">Companies</span><br/><br/>
             <h2>0%</h2>
           </div>
         </div>
@@ -106,36 +116,43 @@
                     </div>
                   </ng-template>
                   <ng-template ngbPanelContent>
-                      <!-- Income Amount !-->
-                      <div class="md-form form-group mt-5">
-                        <label for="incomeAmount">Income amount</label>
-                        <input type="text" class="form-control" id="incomeAmount" ngModel="{{index.incomeAmount}}" [(ngModel)]= "incomeAmount" >
-                      </div>
+                    <!-- Income Amount !-->
+                    <div class="md-form form-group mt-5">
+                      <label for="incomeAmount">Income amount *</label>
+                      <input type="text" class="form-control" id="incomeAmount" ngModel="{{index.incomeAmount}}"
+                             [(ngModel)]="incomeAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')" >
+                    </div>
 
-                      <!-- Income source -->
-                      <div class="md-form form-group mt-5">
-                        <label for="formGroupExampleInputIncomeSourceMD">Income Source</label>
-                        <input type="text" class="form-control" id="formGroupExampleInputIncomeSourceMD"
-                               placeholder="Example input" ngModel="{{index.incomeSource}}" [(ngModel)] = "incomeSource" >
-                      </div>
+                    <!-- Income source -->
+                    <div class="md-form form-group mt-5">
+                      <label for="formGroupExampleInputIncomeSourceMD">Income Source *</label>
+                      <input type="text" class="form-control" id="formGroupExampleInputIncomeSourceMD"
+                             placeholder="Example input" ngModel="{{index.incomeSource}}" [(ngModel)]="incomeSource">
+                    </div>
 
-                      <!-- Compressible Costs -->
-                      <div class="md-form form-group mt-5">
-                        <label for="formGroupExampleInputMDCompressible">Compressible Costs</label>
-                        <input type="text" class="form-control" id="formGroupExampleInputMDCompressible"
-                               placeholder="Example input" ngModel="{{index.compressibleCosts}}" [(ngModel)] = "compressibleCosts">
-                      </div>
+                    <!-- Compressible Costs -->
+                    <div class="md-form form-group mt-5">
+                      <label for="formGroupExampleInputMDCompressible">Compressible Costs</label>
+                      <input type="text" class="form-control" id="formGroupExampleInputMDCompressible"
+                             placeholder="Example input" ngModel="{{index.compressibleCosts}}"
+                             [(ngModel)]="compressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                    </div>
 
-                      <!-- Non Compressible Costs -->
-                      <div class="md-form form-group mt-5">
-                        <label for="formGroupExampleInputMDNonCompressible">Non Compressible Costs</label>
-                        <input type="text" class="form-control" id="formGroupExampleInputMDNonCompressible"
-                               placeholder="Example input" ngModel="{{index.nonCompressibleCosts}}" [(ngModel)] = "nonCompressibleCosts">
-                      </div>
+                    <!-- Non Compressible Costs -->
+                    <div class="md-form form-group mt-5">
+                      <label for="formGroupExampleInputMDNonCompressible">Non Compressible Costs</label>
+                      <input type="text" class="form-control" id="formGroupExampleInputMDNonCompressible"
+                             placeholder="Example input" ngModel="{{index.nonCompressibleCosts}}"
+                             [(ngModel)]="nonCompressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                    </div>
 
-                      <br>
+                    <br>
+                    <ngb-alert *ngIf="updateIncomeRequestResponse.responseCode == 200" type="success" (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+                    <ngb-alert *ngIf="updateIncomeRequestResponse.responseCode != 200 && updateIncomeRequestResponse.responseCode > 0" type="danger" (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
                       <button class="btn btn-success" style="width: 40%; float:left" (click)="updateIncome(index.idFinancialIncome)">Save</button>
                       <button class="btn btn-danger" style="width: 40%; float:right">Delete</button>
+
+
                   </ng-template>
                 </ngb-panel>
               </ng-container>

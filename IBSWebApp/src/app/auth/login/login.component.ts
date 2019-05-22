@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Customer} from '../../shared/models/customer';
+import {Customer} from '../../shared/models/customer/customer';
 import {LoginService} from '../../services/login.service';
 import {Router} from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
