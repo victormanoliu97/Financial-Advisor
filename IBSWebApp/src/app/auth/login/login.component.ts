@@ -4,7 +4,6 @@ import {LoginService} from '../../services/login.service';
 import {Router} from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import {sha256} from 'js-sha256';
-import {type} from 'os';
 
 
 @Component({

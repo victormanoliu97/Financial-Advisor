@@ -4,7 +4,6 @@ import {CookieService} from 'ngx-cookie-service';
 import {CustomerIncomeService} from '../services/customer-income.service';
 import {GenericResponse} from '../shared/models/responses/generic-response';
 import {MessageConstants} from '../shared/models/constant/message-constants';
-import {SectionCompletion} from '../shared/models/completion/section-completion';
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {Router} from '@angular/router';
 
@@ -31,7 +30,8 @@ export class IncomeLiabilitiesComponent implements OnInit {
   closeResult: string;
 
 
-  constructor(private cookieService: CookieService, private incomeService: CustomerIncomeService, public modalService: NgbModal, private router: Router) { }
+  constructor(private cookieService: CookieService, private incomeService: CustomerIncomeService,
+              public modalService: NgbModal, private router: Router) { }
 
   ngOnInit() {
     if (this.cookieService.get('Id') === '') {
@@ -67,6 +67,9 @@ export class IncomeLiabilitiesComponent implements OnInit {
 
   async deleteIncome(incomeId: number) {
     this.deleteIncomeRequestResponse = await this.incomeService.deleteCustomerIncome(incomeId);
+    if (this.deleteIncomeRequestResponse.responseCode === 200) {
+      window.location.reload();
+    }
   }
 
   open(content) {
