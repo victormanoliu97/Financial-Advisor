@@ -4,6 +4,7 @@ import {LoginService} from '../../services/login.service';
 import {Router} from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import {sha256} from 'js-sha256';
+import {type} from 'os';
 
 
 @Component({
@@ -19,7 +20,11 @@ export class LoginComponent implements OnInit {
   constructor(private loginService: LoginService, private router: Router,
               private cookieService: CookieService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    if (this.cookieService.get('Id') !== '') {
+      this.router.navigate(['customer-panel']);
+    }
+  }
 
   async getLogin(email: string, password: string) {
     this.loggedUser = await this.loginService.getCustomerDetails(email, password);

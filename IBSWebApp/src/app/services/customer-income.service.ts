@@ -11,6 +11,7 @@ export class CustomerIncomeService {
 
   getCustomerIncomesUrl = 'http://localhost:4444//get-customer-incomes/';
   updateCustomerIncomeUrl = 'http://localhost:4444/update-customer-income/';
+  deleteCustomerIncomeUrl = 'http://localhost:4444/delete-customer-income/';
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +19,8 @@ export class CustomerIncomeService {
     return this.http.get(this.getCustomerIncomesUrl + `/${customerId}`).toPromise<any>();
   }
 
-  async updateCustomerIncome(incomeAmount: number, incomeSource: string, compressibleCosts: number, nonCompressibleCosts: number, incomeId: number, customerId: number) {
+  async updateCustomerIncome(incomeAmount: number, incomeSource: string, compressibleCosts: number,
+                             nonCompressibleCosts: number, incomeId: number, customerId: number) {
     const request = new UpdateCustomerIncomeRequest();
     request.incomeAmount = incomeAmount;
     request.incomeSource = incomeSource;
@@ -27,13 +29,13 @@ export class CustomerIncomeService {
     request.idFinancialIncome = incomeId;
     request.customerId = customerId;
 
-    console.log('income amount ' + request.incomeAmount);
-    console.log('income source' + request.incomeSource);
-    console.log('compresible ' + request.compressibleCosts );
-    console.log('non', request.nonCompressibleCosts);
-    console.log('id' + request.idFinancialIncome);
-
     return this.http.put(this.updateCustomerIncomeUrl + `${incomeId}`, request).pipe(map((result: GenericResponse) => {
+      return result;
+    })).toPromise();
+  }
+
+  async deleteCustomerIncome(incomeId: number) {
+    return this.http.delete(this.deleteCustomerIncomeUrl + `/${incomeId}`).pipe(map((result: GenericResponse) => {
       return result;
     })).toPromise();
   }

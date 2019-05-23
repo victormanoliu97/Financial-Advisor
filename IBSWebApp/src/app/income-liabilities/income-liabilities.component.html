@@ -120,7 +120,7 @@
                     <div class="md-form form-group mt-5">
                       <label for="incomeAmount">Income amount *</label>
                       <input type="text" class="form-control" id="incomeAmount" ngModel="{{index.incomeAmount}}"
-                             [(ngModel)]="incomeAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')" >
+                             [(ngModel)]="incomeAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
                     </div>
 
                     <!-- Income source -->
@@ -147,14 +147,41 @@
                     </div>
 
                     <br>
-                    <ngb-alert *ngIf="updateIncomeRequestResponse.responseCode == 200" type="success" (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-                    <ngb-alert *ngIf="updateIncomeRequestResponse.responseCode != 200 && updateIncomeRequestResponse.responseCode > 0" type="danger" (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-                      <button class="btn btn-success" style="width: 40%; float:left" (click)="updateIncome(index.idFinancialIncome)">Save</button>
-                      <button class="btn btn-danger" style="width: 40%; float:right">Delete</button>
-
+                    <ngb-alert *ngIf="updateIncomeRequestResponse.responseCode == 200" type="success"
+                               (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+                    <ngb-alert
+                      *ngIf="updateIncomeRequestResponse.responseCode != 200 && updateIncomeRequestResponse.responseCode > 0"
+                      type="danger"
+                      (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+                    <button class="btn btn-success" style="width: 40%; float:left"
+                            (click)="updateIncome(index.idFinancialIncome)">Save
+                    </button>
+                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(content)">Delete
+                    </button>
 
                   </ng-template>
                 </ngb-panel>
+
+                <ng-template #content let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Add Comment</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="commentContent">Content</label>
+                      <div class="input-group">
+                        <h2>Are you sure you want to delete this income?</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" style="width: 100%;" (click)="deleteIncome(index.idFinancialIncome)">Delete </button>
+                  </div>
+                </ng-template>
+
               </ng-container>
             </ngb-accordion>
           </ng-template>
