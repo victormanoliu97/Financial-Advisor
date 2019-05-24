@@ -29,9 +29,11 @@ export class IncomeLiabilitiesComponent implements OnInit {
   liabilitiesAmount: number;
   liabilitiesSource: string;
 
+  addIncomeRequestResponse: GenericResponse;
   updateIncomeRequestResponse: GenericResponse;
   deleteIncomeRequestResponse: GenericResponse;
 
+  addLiabilityRequestResponse: GenericResponse;
   updateLiabilityRequestResponse: GenericResponse;
   deleteLiabilityRequestResponse: GenericResponse;
 
@@ -52,9 +54,12 @@ export class IncomeLiabilitiesComponent implements OnInit {
       this.loggedUserName = this.cookieService.get('Name');
       this.incomeService.getCustomerIncomes(this.customerId).then(incomes => this.incomes = incomes);
       this.liabilityService.getCustomerLiabilities(this.customerId).then(liabilities => this.liabilities = liabilities);
+      this.addIncomeRequestResponse = new GenericResponse();
       this.updateIncomeRequestResponse = new GenericResponse();
+      this.addLiabilityRequestResponse = new GenericResponse();
       this.updateLiabilityRequestResponse = new GenericResponse();
       this.updateIncomeRequestResponse.responseCode = 0;
+      this.addIncomeRequestResponse.responseCode = 0;
       this.updateLiabilityRequestResponse.responseCode = 0;
     }
   }
@@ -110,6 +115,34 @@ export class IncomeLiabilitiesComponent implements OnInit {
       this.requestResponseMessage = MessageConstants.LIABILITY_UPDATE_SUCCESSFUL;
     } else if (this.updateLiabilityRequestResponse.responseCode !== 422) {
       this.requestResponseMessage = MessageConstants.WEBSERVICE_ERROR + ' ' + this.updateLiabilityRequestResponse.responseMessage;
+    }
+  }
+
+  async addIncome() {
+    if (this.checkIncomeFieldsValid() === true) {
+      this.addIncomeRequestResponse = await this.incomeService.addCustomerIncome(this.incomeAmount, this.incomeSource,
+        this.compressibleCosts, this.nonCompressibleCosts, this.customerId);
+    } else {
+      this.addIncomeRequestResponse.responseCode = 422;
+      this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
+    }
+
+    if (this.addIncomeRequestResponse.responseCode === 200) {
+      window.location.reload();
+    }
+  }
+
+  async addLiability() {
+    if (this.checkLiabilityFieldsValid() === true) {
+      this.addLiabilityRequestResponse = await this.liabilityService.addCustomerLiability(this.liabilitiesAmount,
+        this.liabilitiesSource, this.customerId);
+    } else {
+      this.addLiabilityRequestResponse.responseCode = 422;
+      this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
+    }
+
+    if (this.addLiabilityRequestResponse.responseCode === 200) {
+      window.location.reload();
     }
   }
 

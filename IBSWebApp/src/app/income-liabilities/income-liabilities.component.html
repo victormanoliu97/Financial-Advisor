@@ -261,8 +261,104 @@
         <ngb-tab title="Add Liability/Income">
           <ng-template ngbTabContent>
             <br>
-            <button type="button" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+            <button type="button" (click)="open(add_liability)" class="btn btn-primary"><i class="fa fa-plus"> Add Liability</i></button>
+            <br>
+            <br>
+            <button type="button" (click)="open(add_income)" class="btn btn-primary"><i class="fa fa-plus"> Add Income</i></button>
           </ng-template>
+
+          <ng-template #add_income let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-add">Add Income</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="form-group">
+                <div class="md-form form-group mt-5">
+                  <label for="incomeAmountAdd">Income amount *</label>
+                  <input type="text" class="form-control" id="incomeAmountAdd"
+                         [(ngModel)]="incomeAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                </div>
+
+                <!-- Income source -->
+                <div class="md-form form-group mt-5">
+                  <label for="incomeSourceAdd">Income Source *</label>
+                  <input type="text" class="form-control" id="incomeSourceAdd"
+                         placeholder="Example input"  [(ngModel)]="incomeSource">
+                </div>
+
+                <!-- Compressible Costs -->
+                <div class="md-form form-group mt-5">
+                  <label for="compressibleCostsAdd">Compressible Costs</label>
+                  <input type="text" class="form-control" id="compressibleCostsAdd"
+                         placeholder="Example input"
+                         [(ngModel)]="compressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                </div>
+
+                <!-- Non Compressible Costs -->
+                <div class="md-form form-group mt-5">
+                  <label for="nonCompressibleAdd">Non Compressible Costs</label>
+                  <input type="text" class="form-control" id="nonCompressibleAdd"
+                         placeholder="Example input"
+                         [(ngModel)]="nonCompressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" style="width: 100%;"
+                      (click)="addIncome()"><i class="fa fa-save"></i>
+              </button>
+            </div>
+
+            <ngb-alert
+              *ngIf="addIncomeRequestResponse.responseCode != 200 && addIncomeRequestResponse.responseCode > 0"
+              type="danger"
+              (close)="addIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+          </ng-template>
+
+          <ng-template #add_liability let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-add-liability">Add Liability</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="form-group">
+
+                <!-- Liabilities amount -->
+                <div class="md-form form-group mt-5">
+                  <label for="liabilitiesAmountAdd">Liabilities Amount *</label>
+                  <input type="text" class="form-control" id="liabilitiesAmountAdd"
+                         [(ngModel)]="liabilitiesAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                </div>
+
+                <!-- Liabilities source -->
+                <div class="md-form form-group mt-5">
+                  <label for="liabilitiesSourceAdd">Liabilities Source *</label>
+                  <input type="text" class="form-control" id="liabilitiesSourceAdd"
+                         placeholder="Example input"  [(ngModel)]="liabilitiesSource">
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" style="width: 100%;"
+                      (click)="addLiability()"><i class="fa fa-save"></i>
+              </button>
+            </div>
+
+            <ngb-alert
+              *ngIf="addLiabilityRequestResponse.responseCode != 200 && addLiabilityRequestResponse.responseCode > 0"
+              type="danger"
+              (close)="addLiabilityRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+          </ng-template>
+
         </ngb-tab>
 
       </ngb-tabset>
