@@ -11,4 +11,6 @@ public interface CustomerFinancialLiabilitiesRepository extends JpaRepository<TI
 
     List<TIbsCustomersCustomerFinancialLiabilitiesEntity> getAllByCustomerId(Integer customerId);
 
+    TIbsCustomersCustomerFinancialLiabilitiesEntity getByIdFinancialLiability(Integer liabilityId);
+
 }

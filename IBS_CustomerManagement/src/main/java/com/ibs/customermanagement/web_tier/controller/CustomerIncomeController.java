@@ -50,7 +50,7 @@ public class CustomerIncomeController {
     }
 
     @DeleteMapping(value = "/delete-customer-income/{incomeId}")
-    public BaseRequestResponse deleteBankAccount(@PathVariable Integer incomeId) {
+    public BaseRequestResponse deleteCustomerIncome(@PathVariable Integer incomeId) {
         if(incomeId == null) {
             throw new UnprocessableEntityException("The requested account id cannot be null");
         }
