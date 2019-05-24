@@ -153,10 +153,11 @@
                       *ngIf="updateIncomeRequestResponse.responseCode != 200 && updateIncomeRequestResponse.responseCode > 0"
                       type="danger"
                       (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+
                     <button class="btn btn-success" style="width: 40%; float:left"
-                            (click)="updateIncome(index.idFinancialIncome)">Save
+                            (click)="updateIncome(index.idFinancialIncome)"><i class="fa fa-save"></i>
                     </button>
-                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(content)">Delete
+                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(content)"><i class="fa fa-trash"></i>
                     </button>
 
                   </ng-template>
@@ -164,7 +165,7 @@
 
                 <ng-template #content let-modal>
                   <div class="modal-header">
-                    <h4 class="modal-title" id="modal-basic-title">Delte Income</h4>
+                    <h4 class="modal-title" id="modal-basic-title">Delete Income</h4>
                     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -178,7 +179,9 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" style="width: 100%;" (click)="deleteIncome(index.idFinancialIncome)">Delete </button>
+                    <button type="button" class="btn btn-danger" style="width: 100%;"
+                            (click)="deleteIncome(index.idFinancialIncome)"><i class="fa fa-trash"></i>
+                    </button>
                   </div>
                 </ng-template>
 
@@ -191,39 +194,77 @@
         <ngb-tab title="Liabilities">
           <ng-template ngbTabContent>
             <ngb-accordion [closeOthers]="true" activeIds="static-1">
-              <ngb-panel id="static-70" type="secondary">
-                <ng-template ngbPanelTitle>
-                  <div class="d-flex justify-content-between">
-                    <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">Open</div>
-                    <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
+              <ng-container *ngFor="let index of liabilities">
+                <ngb-panel id="static-70" type="secondary">
+                  <ng-template ngbPanelTitle>
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">Open</div>
+                      <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
+                    </div>
+                  </ng-template>
+                  <ng-template ngbPanelContent>
+                      <!-- Liabilities Amount -->
+                      <div class="md-form form-group mt-5">
+                        <label for="liabilitiesAmount">Liabilities Amount *</label>
+                        <input type="text" class="form-control" id="liabilitiesAmount" ngModel="{{index.liabilitiesAmount}}" [(ngModel)]="liabilitiesAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                      </div>
+
+                      <!-- Liability source-->
+                      <div class="md-form form-group mt-5">
+                        <label for="liabilitySource">Liability Source</label>
+                        <input type="text" class="form-control" id="liabilitySource" ngModel="{{index.liabilitiesSource}}" [(ngModel)]="liabilitiesSource">
+                      </div>
+
+                    <br>
+                    <ngb-alert *ngIf="updateLiabilityRequestResponse.responseCode == 200" type="success"
+                               (close)="updateLiabilityRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+                    <ngb-alert
+                      *ngIf="updateLiabilityRequestResponse.responseCode != 200 && updateLiabilityRequestResponse.responseCode > 0"
+                      type="danger"
+                      (close)="updateLiabilityRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+
+                    <button class="btn btn-success" style="width: 40%; float:left"
+                            (click)="updateLiability(index.idFinancialLiability)"><i class="fa fa-save"></i>
+                    </button>
+                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(content_liability)"><i class="fa fa-trash"></i>
+                    </button>
+
+                  </ng-template>
+                </ngb-panel>
+
+                <ng-template #content_liability let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title-delete">Delete Liability</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <h3>Are you sure you want to delete this liability?</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" style="width: 100%;"
+                            (click)="deleteLiability(index.idFinancialLiability)"><i class="fa fa-trash"></i>
+                    </button>
                   </div>
                 </ng-template>
-                <ng-template ngbPanelContent>
-                  <form>
-                    <!-- Material input -->
-                    <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInputMD">Example label</label>
-                      <input mdbInput type="text" class="form-control" id="formGroupExampleInputMD1"
-                             placeholder="Example input">
-                    </div>
-                    <!-- Material input -->
-                    <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInput2MD">Another label</label>
-                      <input mdbInput type="text" class="form-control" id="formGroupExampleInput2MD1"
-                             placeholder="Another input">
-                    </div>
-                    <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInput2MD">Another label</label>
-                      <input mdbInput type="text" class="form-control" id="formGroupExampleInput2MD12"
-                             placeholder="Another input">
-                    </div>
-                  </form>
-                </ng-template>
-              </ngb-panel>
 
+              </ng-container>
             </ngb-accordion>
           </ng-template>
         </ngb-tab>
+
+        <ngb-tab title="Add Liability/Income">
+          <ng-template ngbTabContent>
+            <br>
+            <button type="button" class="btn btn-primary"><i class="fa fa-plus"></i></button>
+          </ng-template>
+        </ngb-tab>
+
       </ngb-tabset>
 
     </div>
