@@ -4,8 +4,6 @@ import com.ibs.customermanagement.data_tier.entity.TIbsCustomersProfilingEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
 public interface CustomerProfilingDAO extends CrudRepository<TIbsCustomersProfilingEntity, Integer> {
 
