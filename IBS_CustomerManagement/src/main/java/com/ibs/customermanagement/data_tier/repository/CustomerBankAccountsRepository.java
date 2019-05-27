@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface CustomerBankAccountsRepository extends JpaRepository<TIbsCustomersBankAccountsEntity, Integer> {
 
-    List<TIbsCustomersBankAccountsEntity> getAllByCustomerId(Integer customerId);
+    List<TIbsCustomersBankAccountsEntity> getAllByCustomerIdAndStatusNotLike(Integer customerId, String status);
 }

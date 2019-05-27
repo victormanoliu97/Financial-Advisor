@@ -1,6 +1,7 @@
 package com.ibs.customermanagement.service_tier.service.bank_accounts;
 
 import com.ibs.customermanagement.data_tier.dao.CustomerBankAccountsDAO;
+import com.ibs.customermanagement.data_tier.entity.TIbsCustomersBankAccountsEntity;
 import com.ibs.customermanagement.data_tier.repository.CustomerBankAccountsRepository;
 import com.ibs.customermanagement.service_tier.constants.GeneralConstants;
 import com.ibs.customermanagement.service_tier.mapper.CustomerBankAccountsMapper;
@@ -31,7 +32,8 @@ public class CustomerBankAccountsServiceImpl implements CustomerBankAccountsServ
         if(customerId == null) {
             return Collections.emptyList();
         }
-        return new CustomerBankAccountsMapper().fromEntityListToDTOList(customerBankAccountsRepository.getAllByCustomerId(customerId));
+        List<TIbsCustomersBankAccountsEntity> customersBankAccountsEntities = customerBankAccountsRepository.getAllByCustomerIdAndStatusNotLike(customerId, GeneralConstants.CLOSED_ACCOUNT.getStatus());
+        return new CustomerBankAccountsMapper().fromEntityListToDTOList(customersBankAccountsEntities);
     }
 
     @Override
