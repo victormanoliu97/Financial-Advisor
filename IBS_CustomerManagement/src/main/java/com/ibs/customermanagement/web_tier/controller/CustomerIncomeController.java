@@ -40,7 +40,7 @@ public class CustomerIncomeController {
         if(!incomeId.equals(customerFinancialIncomeDTO.getIdFinancialIncome())) {
             throw new ResourceNotFoundException("The id is not the same with id from object");
         }
-        CustomerFinancialIncomeDTO incomeDB = customerFinancialIncomeService.getCustomerFinancialIncomes(incomeId).get(0);
+        CustomerFinancialIncomeDTO incomeDB = customerFinancialIncomeService.getCustomerFinancialIncomeById(incomeId);
         if(incomeDB == null) {
             throw new ResourceNotFoundException("Not found");
         }

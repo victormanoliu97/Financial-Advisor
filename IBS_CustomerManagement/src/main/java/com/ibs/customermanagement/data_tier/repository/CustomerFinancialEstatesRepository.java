@@ -10,4 +10,6 @@ import java.util.List;
 public interface CustomerFinancialEstatesRepository extends JpaRepository<TIbsCustomersCustomerFinancialEstatesEntity, Integer> {
 
     List<TIbsCustomersCustomerFinancialEstatesEntity> getAllByCustomerId(Integer customerId);
+
+    TIbsCustomersCustomerFinancialEstatesEntity getByIdEstate(Integer estateId);
 }
