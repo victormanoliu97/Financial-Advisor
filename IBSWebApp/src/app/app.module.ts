@@ -16,6 +16,7 @@ import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import {TooltipModule} from 'ngx-bootstrap';
 import { IncomeLiabilitiesComponent } from './income-liabilities/income-liabilities.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { EstatesCompaniesComponent } from './estates-companies/estates-companies.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     CustomerPanelComponent,
     UserProfilingComponent,
     IncomeLiabilitiesComponent,
+    EstatesCompaniesComponent,
   ],
   imports: [
     BsDropdownModule.forRoot(),

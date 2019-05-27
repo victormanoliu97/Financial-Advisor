@@ -31,9 +31,9 @@ public class CustomerCompaniesController {
         return customerCompaniesService.saveCustomerCompany(companiesDTO);
     }
 
-    @DeleteMapping(value = "/delete-customer-company")
-    public BaseRequestResponse deleteCustomerCompany(@PathVariable Integer companyId) {
-        return customerCompaniesService.deleteCustomerCompany(companyId);
+    @DeleteMapping(value = "/delete-customer-company/{idCompany}")
+    public BaseRequestResponse deleteCustomerCompany(@PathVariable Integer idCompany) {
+        return customerCompaniesService.deleteCustomerCompany(idCompany);
     }
 
     @PutMapping(value = "/update-customer-company/{companyId}")

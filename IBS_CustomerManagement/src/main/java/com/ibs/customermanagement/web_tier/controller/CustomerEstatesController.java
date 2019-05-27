@@ -38,7 +38,7 @@ public class CustomerEstatesController {
 
     @PutMapping(value = "/update-customer-estate/{estateId}")
     public BaseRequestResponse updateCustomerEstate(@PathVariable("estateId") Integer estateId, @RequestBody CustomerEstatesDTO customerEstatesDTO) {
-        if(!estateId.equals(customerEstatesDTO.getIdEstate())) {
+        if(!estateId.equals(customerEstatesDTO.getEstateId())) {
             throw new ResourceNotFoundException("The id is not the same with id from object");
         }
         CustomerEstatesDTO estateDB = customerEstatesService.getEstateById(estateId);

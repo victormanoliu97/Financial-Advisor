@@ -101,66 +101,65 @@
       </div>
 
       <ngb-tabset>
-        <ngb-tab title="Income">
+        <ngb-tab title="Estates">
           <ng-template ngbTabContent>
             <ngb-accordion [closeOthers]="true" activeIds="static-1">
-              <ng-container *ngFor="let index of incomes">
+              <ng-container *ngFor="let index of estates">
                 <ngb-panel id="static-1" type="secondary">
+
                   <ng-template ngbPanelTitle>
                     <div class="d-flex justify-content-between">
-                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">{{index.incomeSource}}</div>
+                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">{{index.estateName}}</div>
                       <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
                     </div>
                   </ng-template>
                   <ng-template ngbPanelContent>
-                    <!-- Income Amount !-->
+                    <!-- Estate Name !-->
                     <div class="md-form form-group mt-5">
-                      <label for="incomeAmount">Income amount *</label>
-                      <input type="text" class="form-control" id="incomeAmount" ngModel="{{index.incomeAmount}}"
-                             [(ngModel)]="incomeAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                      <label for="estateName">Estate Name *</label>
+                      <input type="text" class="form-control" id="estateName" ngModel="{{index.estateName}}" [(ngModel)]="estateName"  />
                     </div>
 
-                    <!-- Income source -->
+                    <!-- Estate Description !-->
                     <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInputIncomeSourceMD">Income Source *</label>
-                      <input type="text" class="form-control" id="formGroupExampleInputIncomeSourceMD"
-                             placeholder="Example input" ngModel="{{index.incomeSource}}" [(ngModel)]="incomeSource">
+                      <label for="estateDescription">Estate Description</label>
+                      <input type="text" class="form-control" id="estateDescription" ngModel="{{index.estateDescription}}"
+                             [(ngModel)]="estateDescription">
                     </div>
 
-                    <!-- Compressible Costs -->
+                    <!-- Estate Type !-->
                     <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInputMDCompressible">Compressible Costs</label>
-                      <input type="text" class="form-control" id="formGroupExampleInputMDCompressible"
-                             placeholder="Example input" ngModel="{{index.compressibleCosts}}"
-                             [(ngModel)]="compressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                      <label for="estateType">Estate Type *</label>
+                      <input type="text" class="form-control" id="estateType" ngModel="{{index.estateType}}"
+                             [(ngModel)]="estateType">
                     </div>
 
-                    <!-- Non Compressible Costs -->
+                    <!-- Estate Value !-->
                     <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInputMDNonCompressible">Non Compressible Costs</label>
-                      <input type="text" class="form-control" id="formGroupExampleInputMDNonCompressible"
-                             placeholder="Example input" ngModel="{{index.nonCompressibleCosts}}"
-                             [(ngModel)]="nonCompressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                      <label for="estateValue">Estate Value *</label>
+                      <input type="text" class="form-control" id="estateValue" ngModel="{{index.estateValue}}"
+                             [(ngModel)]="estateValue" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
                     </div>
 
                     <br>
-                    <ngb-alert *ngIf="updateIncomeRequestResponse.responseCode == 200" type="success"
-                               (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+                    <ngb-alert *ngIf="updateEstateRequestResponse.responseCode == 200" type="success"
+                               (close)="updateEstateRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
                     <ngb-alert
-                      *ngIf="updateIncomeRequestResponse.responseCode != 200 && updateIncomeRequestResponse.responseCode > 0"
+                      *ngIf="updateEstateRequestResponse.responseCode != 200 && updateEstateRequestResponse.responseCode > 0"
                       type="danger"
-                      (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+                      (close)="updateEstateRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
 
                     <button class="btn btn-success" style="width: 40%; float:left"
-                            (click)="updateIncome(index.idFinancialIncome)"><i class="fa fa-save"></i>
+                            (click)="updateEstate(index.estateId)"><i class="fa fa-save"></i>
                     </button>
-                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(content)"><i class="fa fa-trash"></i>
+                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(delete_estate_content)"><i class="fa fa-trash"></i>
                     </button>
 
                   </ng-template>
+
                 </ngb-panel>
 
-                <ng-template #content let-modal>
+                <ng-template #delete_estate_content let-modal>
                   <div class="modal-header">
                     <h4 class="modal-title" id="modal-basic-title">Delete Income</h4>
                     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -169,15 +168,14 @@
                   </div>
                   <div class="modal-body">
                     <div class="form-group">
-                      <label for="commentContent">Content</label>
                       <div class="input-group">
-                        <h3>Are you sure you want to delete this income?</h3>
+                        <h3>Are you sure you want to delete this estate?</h3>
                       </div>
                     </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-danger" style="width: 100%;"
-                            (click)="deleteIncome(index.idFinancialIncome)"><i class="fa fa-trash"></i>
+                            (click)="deleteEstate(index.estateId)"><i class="fa fa-trash"></i>
                     </button>
                   </div>
                 </ng-template>
@@ -187,51 +185,63 @@
           </ng-template>
         </ngb-tab>
 
-
-        <ngb-tab title="Liabilities">
+        <ngb-tab title="Companies">
           <ng-template ngbTabContent>
             <ngb-accordion [closeOthers]="true" activeIds="static-1">
-              <ng-container *ngFor="let index of liabilities">
+              <ng-container *ngFor="let index of companies">
                 <ngb-panel id="static-70" type="secondary">
                   <ng-template ngbPanelTitle>
                     <div class="d-flex justify-content-between">
-                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">Open</div>
+                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">{{index.companyName}}</div>
                       <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
                     </div>
                   </ng-template>
-                  <ng-template ngbPanelContent>
-                      <!-- Liabilities Amount -->
-                      <div class="md-form form-group mt-5">
-                        <label for="liabilitiesAmount">Liabilities Amount *</label>
-                        <input type="text" class="form-control" id="liabilitiesAmount" ngModel="{{index.liabilitiesAmount}}" [(ngModel)]="liabilitiesAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
-                      </div>
 
-                      <!-- Liability source-->
-                      <div class="md-form form-group mt-5">
-                        <label for="liabilitySource">Liability Source</label>
-                        <input type="text" class="form-control" id="liabilitySource" ngModel="{{index.liabilitiesSource}}" [(ngModel)]="liabilitiesSource">
-                      </div>
+                  <ng-template ngbPanelContent>
+                    <!-- Company Name -->
+                    <div class="md-form form-group mt-5">
+                      <label for="companyName">Company Name *</label>
+                      <input type="text" class="form-control" id="companyName" ngModel="{{index.companyName}}" [(ngModel)]="companyName">
+                    </div>
+
+                    <!-- Company Description -->
+                    <div class="md-form form-group mt-5">
+                      <label for="companyDescription">Company Description</label>
+                      <input type="text" class="form-control" id="companyDescription" ngModel="{{index.companyDescription}}" [(ngModel)]="companyDescription">
+                    </div>
+
+                    <!-- Company Type -->
+                    <div class="md-form form-group mt-5">
+                      <label for="companyType">Company Type</label>
+                      <input type="text" class="form-control" id="companyType" ngModel="{{index.companyType}}" [(ngModel)]="companyType">
+                    </div>
+
+                    <!-- Company Revenue -->
+                    <div class="md-form form-group mt-5">
+                      <label for="companyRevenue">Company Revenue</label>
+                      <input type="text" class="form-control" id="companyRevenue" ngModel="{{index.companyRevenue}}" [(ngModel)]="companyRevenue" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                    </div>
 
                     <br>
-                    <ngb-alert *ngIf="updateLiabilityRequestResponse.responseCode == 200" type="success"
-                               (close)="updateLiabilityRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+                    <ngb-alert *ngIf="updateCompanyRequestResponse.responseCode == 200" type="success"
+                               (close)="updateCompanyRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
                     <ngb-alert
-                      *ngIf="updateLiabilityRequestResponse.responseCode != 200 && updateLiabilityRequestResponse.responseCode > 0"
+                      *ngIf="updateCompanyRequestResponse.responseCode != 200 && updateCompanyRequestResponse.responseCode > 0"
                       type="danger"
-                      (close)="updateLiabilityRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+                      (close)="updateCompanyRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
 
                     <button class="btn btn-success" style="width: 40%; float:left"
-                            (click)="updateLiability(index.idFinancialLiability)"><i class="fa fa-save"></i>
+                            (click)="updateCompany(index.idCompany)"><i class="fa fa-save"></i>
                     </button>
-                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(content_liability)"><i class="fa fa-trash"></i>
+                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(delete_company_content)"><i class="fa fa-trash"></i>
                     </button>
 
                   </ng-template>
                 </ngb-panel>
 
-                <ng-template #content_liability let-modal>
+                <ng-template #delete_company_content let-modal>
                   <div class="modal-header">
-                    <h4 class="modal-title" id="modal-basic-title-delete">Delete Liability</h4>
+                    <h4 class="modal-title" id="modal-basic-title-company">Delete Company</h4>
                     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -239,13 +249,13 @@
                   <div class="modal-body">
                     <div class="form-group">
                       <div class="input-group">
-                        <h3>Are you sure you want to delete this liability?</h3>
+                        <h3>Are you sure you want to delete this company?</h3>
                       </div>
                     </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-danger" style="width: 100%;"
-                            (click)="deleteLiability(index.idFinancialLiability)"><i class="fa fa-trash"></i>
+                            (click)="deleteCompany(index.idCompany)"><i class="fa fa-trash"></i>
                     </button>
                   </div>
                 </ng-template>
@@ -255,18 +265,18 @@
           </ng-template>
         </ngb-tab>
 
-        <ngb-tab title="Add Liability/Income">
+        <ngb-tab title="Add Estate/Company">
           <ng-template ngbTabContent>
             <br>
-            <button type="button" (click)="open(add_liability)" class="btn btn-primary"><i class="fa fa-plus"> Add Liability</i></button>
+            <button type="button" (click)="open(add_estate)" class="btn btn-primary"><i class="fa fa-plus"> Add Estate</i></button>
             <br>
             <br>
-            <button type="button" (click)="open(add_income)" class="btn btn-primary"><i class="fa fa-plus"> Add Income</i></button>
+            <button type="button" (click)="open(add_company)" class="btn btn-primary"><i class="fa fa-plus"> Add Company</i></button>
           </ng-template>
 
-          <ng-template #add_income let-modal>
+          <ng-template #add_company let-modal>
             <div class="modal-header">
-              <h4 class="modal-title" id="modal-basic-add">Add Income</h4>
+              <h4 class="modal-title" id="modal-basic-add">Add Company</h4>
               <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -274,50 +284,45 @@
 
             <div class="modal-body">
               <div class="form-group">
+                <!-- Company Name -->
                 <div class="md-form form-group mt-5">
-                  <label for="incomeAmountAdd">Income amount *</label>
-                  <input type="text" class="form-control" id="incomeAmountAdd"
-                         [(ngModel)]="incomeAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                  <label for="companyName">Company Name *</label>
+                  <input type="text" class="form-control" id="companyNameAdd" [(ngModel)]="companyName">
                 </div>
 
-                <!-- Income source -->
+                <!-- Company Description -->
                 <div class="md-form form-group mt-5">
-                  <label for="incomeSourceAdd">Income Source *</label>
-                  <input type="text" class="form-control" id="incomeSourceAdd"
-                         placeholder="Example input"  [(ngModel)]="incomeSource">
+                  <label for="companyDescription">Company Description</label>
+                  <input type="text" class="form-control" id="companyDescriptionAdd" [(ngModel)]="companyDescription">
                 </div>
 
-                <!-- Compressible Costs -->
+                <!-- Company Type -->
                 <div class="md-form form-group mt-5">
-                  <label for="compressibleCostsAdd">Compressible Costs</label>
-                  <input type="text" class="form-control" id="compressibleCostsAdd"
-                         placeholder="Example input"
-                         [(ngModel)]="compressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                  <label for="companyType">Company Type</label>
+                  <input type="text" class="form-control" id="companyTypeAdd"[(ngModel)]="companyType">
                 </div>
 
-                <!-- Non Compressible Costs -->
+                <!-- Company Revenue -->
                 <div class="md-form form-group mt-5">
-                  <label for="nonCompressibleAdd">Non Compressible Costs</label>
-                  <input type="text" class="form-control" id="nonCompressibleAdd"
-                         placeholder="Example input"
-                         [(ngModel)]="nonCompressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                  <label for="companyRevenue">Company Revenue</label>
+                  <input type="text" class="form-control" id="companyRevenueAdd" [(ngModel)]="companyRevenue" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
                 </div>
               </div>
             </div>
 
             <div class="modal-footer">
               <button type="button" class="btn btn-success" style="width: 100%;"
-                      (click)="addIncome()"><i class="fa fa-save"></i>
+                      (click)="addCompany()"><i class="fa fa-save"></i>
               </button>
             </div>
 
             <ngb-alert
-              *ngIf="addIncomeRequestResponse.responseCode != 200 && addIncomeRequestResponse.responseCode > 0"
+              *ngIf="addCompanyRequestResponse.responseCode != 200 && addCompanyRequestResponse.responseCode > 0"
               type="danger"
-              (close)="addIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+              (close)="addCompanyRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
           </ng-template>
 
-          <ng-template #add_liability let-modal>
+          <ng-template #add_estate let-modal>
             <div class="modal-header">
               <h4 class="modal-title" id="modal-basic-add-liability">Add Liability</h4>
               <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -328,38 +333,51 @@
             <div class="modal-body">
               <div class="form-group">
 
-                <!-- Liabilities amount -->
+                <!-- Estate Name !-->
                 <div class="md-form form-group mt-5">
-                  <label for="liabilitiesAmountAdd">Liabilities Amount *</label>
-                  <input type="text" class="form-control" id="liabilitiesAmountAdd"
-                         [(ngModel)]="liabilitiesAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                  <label for="estateName">Estate Name *</label>
+                  <input type="text" class="form-control" id="estateNameAdd" [(ngModel)]="estateName"  />
                 </div>
 
-                <!-- Liabilities source -->
+                <!-- Estate Description !-->
                 <div class="md-form form-group mt-5">
-                  <label for="liabilitiesSourceAdd">Liabilities Source *</label>
-                  <input type="text" class="form-control" id="liabilitiesSourceAdd"
-                         placeholder="Example input"  [(ngModel)]="liabilitiesSource">
+                  <label for="estateDescription">Estate Description</label>
+                  <input type="text" class="form-control" id="estateDescriptionAdd"
+                         [(ngModel)]="estateDescription">
                 </div>
+
+                <!-- Estate Type !-->
+                <div class="md-form form-group mt-5">
+                  <label for="estateType">Estate Type *</label>
+                  <input type="text" class="form-control" id="estateTypeAdd"
+                         [(ngModel)]="estateType">
+                </div>
+
+                <!-- Estate Value !-->
+                <div class="md-form form-group mt-5">
+                  <label for="estateValue">Estate Value *</label>
+                  <input type="text" class="form-control" id="estateValueAdd"
+                         [(ngModel)]="estateValue" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                </div>
+
               </div>
             </div>
 
             <div class="modal-footer">
               <button type="button" class="btn btn-success" style="width: 100%;"
-                      (click)="addLiability()"><i class="fa fa-save"></i>
+                      (click)="addEstate()"><i class="fa fa-save"></i>
               </button>
             </div>
 
             <ngb-alert
-              *ngIf="addLiabilityRequestResponse.responseCode != 200 && addLiabilityRequestResponse.responseCode > 0"
+              *ngIf="addEstateRequestResponse.responseCode != 200 && addEstateRequestResponse.responseCode > 0"
               type="danger"
-              (close)="addLiabilityRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+              (close)="addEstateRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
           </ng-template>
 
         </ngb-tab>
 
       </ngb-tabset>
-
     </div>
   </div>
 </div>

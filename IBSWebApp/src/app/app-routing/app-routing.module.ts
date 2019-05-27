@@ -5,6 +5,7 @@ import {IndexMainComponent} from '../index-main/index-main.component';
 import {UserProfilingComponent} from '../user-profiling/user-profiling.component';
 import {CustomerPanelComponent} from '../customer-panel/customer-panel.component';
 import {IncomeLiabilitiesComponent} from '../income-liabilities/income-liabilities.component';
+import {EstatesCompaniesComponent} from '../estates-companies/estates-companies.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'customer-panel',
     component: CustomerPanelComponent
+  },
+  {
+    path: 'estates',
+    component: EstatesCompaniesComponent
   },
   {
     path: '',

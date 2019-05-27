@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class CustomerEstatesDTO {
 
-    private int idEstate;
+    private int estateId;
     private String estateName;
     private String estateDescription;
     private String estateType;

@@ -1,4 +1,4 @@
-export class UpdateCustomerCompanyRequest {
+export class CustomerCompanies {
   idCompany: number;
   companyName: string;
   companyDescription: string;

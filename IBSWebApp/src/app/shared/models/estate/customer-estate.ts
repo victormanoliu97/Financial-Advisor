@@ -1,4 +1,4 @@
-export class UpdateCustomerEstateRequest {
+export class CustomerEstate {
   estateId: number;
   estateName: string;
   estateDescription: string;

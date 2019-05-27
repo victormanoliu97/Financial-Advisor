@@ -2,31 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="701b4f45-6feb-4307-b10e-edb3c5911de0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/data_tier/dao/CustomerProfilingDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/data_tier/entity/TIbsCustomersProfilingEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/data_tier/repository/CustomerProfilingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/mapper/CustomerProfilingMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/model/CustomerProfilingDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/customer_profiling/CustomerProfilingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/customer_profiling/CustomerProfilingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/web_tier/controller/CustomerProfilingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_StatisticalService/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_StatisticalService/config/dependencyInstaller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../IBS_StatisticalService/requests/ObjectiveRequest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBSWebApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBSWebApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/app-routing/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/app-routing/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-bank-accounts/customer-bank-accounts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-bank-accounts/customer-bank-accounts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/customer-panel/customer-panel.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/services/customer-companies.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/services/customer-companies.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/services/customer-estates.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/services/customer-estates.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/shared/models/constant/message-constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/shared/models/constant/message-constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/shared/models/requests/companies/update-customer-company-request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/shared/models/requests/companies/update-customer-company-request.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBSWebApp/src/app/shared/models/requests/estates/update-customer-estate-request.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IBSWebApp/src/app/shared/models/requests/estates/update-customer-estate-request.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IBS_Authentification/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IBS_Authentification/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IBS_Authentification_DataLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_DataLayer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_DataLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_DataLayer.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification/obj/Debug/netcoreapp2.2/IBS_Authentification.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/IBS_Authentification_BusinessLayer/obj/Debug/netcoreapp2.2/IBS_Authentification_BusinessLayer.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/mapper/CustomerEstatesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/mapper/CustomerEstatesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/model/CustomerEstatesDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/model/CustomerEstatesDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/estates/CustomerEstateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/service_tier/service/estates/CustomerEstateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/web_tier/controller/CustomerCompaniesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/web_tier/controller/CustomerCompaniesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/web_tier/controller/CustomerEstatesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_CustomerManagement/src/main/java/com/ibs/customermanagement/web_tier/controller/CustomerEstatesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../IBS_StatisticalService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_StatisticalService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../IBS_StatisticalService/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/../IBS_StatisticalService/venv/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +30,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/LoginService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="375">
               <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
               <folding>
                 <marker date="1554940146204" expanded="false" signature="6:181" ph="..." />
@@ -58,7 +49,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/AuthRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
+            <state relative-caret-position="630">
               <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
               <folding>
                 <marker date="1554940916710" expanded="false" signature="6:382" ph="..." />
@@ -76,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="330">
+              <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
               <folding>
                 <marker date="1556657876794" expanded="false" signature="6:318" ph="..." />
                 <marker date="1556657876794" expanded="true" signature="362:1204" ph="{...}" />
@@ -96,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="315">
               <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
               <folding>
                 <marker date="1556653802588" expanded="false" signature="6:41" ph="..." />
@@ -111,7 +102,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/ILoginService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="60">
               <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding>
                 <marker date="1554940146209" expanded="false" signature="6:110" ph="..." />
@@ -125,7 +116,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="225">
               <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding>
                 <marker date="1556652491512" expanded="false" signature="6:228" ph="..." />
@@ -138,11 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
+            <state relative-caret-position="420">
+              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
               <folding>
                 <marker date="1556653286900" expanded="false" signature="6:566" ph="..." />
                 <marker date="1556653286900" expanded="true" signature="598:2291" ph="{...}" />
@@ -160,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Token/TokenManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="60">
               <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding>
                 <marker date="1556657610315" expanded="false" signature="6:276" ph="..." />
@@ -176,7 +167,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IBS_Authentification/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="45">
               <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
               <folding>
                 <marker date="1551641644170" expanded="false" signature="6:255" ph="..." />
@@ -277,10 +268,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="IBS_Authentification" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
     </panes>
   </component>
@@ -335,6 +335,11 @@
       <workItem from="1556538895421" duration="1241000" />
       <workItem from="1556640469522" duration="9803000" />
       <workItem from="1557264763048" duration="530000" />
+      <workItem from="1558442101059" duration="647000" />
+      <workItem from="1558514115772" duration="1221000" />
+      <workItem from="1558601665397" duration="1846000" />
+      <workItem from="1558943159199" duration="649000" />
+      <workItem from="1558986042855" duration="641000" />
     </task>
     <task id="LOCAL-00001" summary="Login and Register Users Service are up and running">
       <created>1554943713021</created>
@@ -354,7 +359,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32760000" />
+    <option name="totallyTimeSpent" value="37764000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -369,14 +374,14 @@
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2803838" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290461" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -708,7 +713,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/LoginService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="375">
           <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
           <folding>
             <marker date="1554940146204" expanded="false" signature="6:181" ph="..." />
@@ -725,7 +730,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Repository/AuthRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
+        <state relative-caret-position="630">
           <caret line="53" column="59" selection-start-line="53" selection-start-column="59" selection-end-line="53" selection-end-column="59" />
           <folding>
             <marker date="1554940916710" expanded="false" signature="6:382" ph="..." />
@@ -742,13 +747,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding>
+            <marker date="1556657876794" expanded="false" signature="6:318" ph="..." />
+            <marker date="1556657876794" expanded="true" signature="462:1202" ph="{...}" />
+            <marker date="1556657876794" expanded="true" signature="662:766" ph="{...}" />
+            <marker date="1556657876794" expanded="true" signature="851:1196" ph="{...}" />
+            <marker date="1556657876794" expanded="true" signature="1008:1141" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/AuthResponses/LoginRequestResponse.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="315">
           <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
           <folding>
             <marker date="1556653802588" expanded="false" signature="6:41" ph="..." />
-            <marker date="1556653802588" expanded="true" signature="101:1322" ph="{...}" />
             <marker date="1556653802588" expanded="true" signature="141:1320" ph="{...}" />
             <marker date="1556653802588" expanded="true" signature="705:1314" ph="{...}" />
           </folding>
@@ -757,11 +775,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Login/ILoginService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="60">
           <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding>
             <marker date="1554940146209" expanded="false" signature="6:110" ph="..." />
-            <marker date="1554940146209" expanded="true" signature="164:403" ph="{...}" />
             <marker date="1554940146209" expanded="true" signature="201:401" ph="{...}" />
           </folding>
         </state>
@@ -769,11 +786,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/RegisterController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="225">
           <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
           <folding>
             <marker date="1556652491512" expanded="false" signature="6:228" ph="..." />
-            <marker date="1556652491512" expanded="true" signature="272:761" ph="{...}" />
             <marker date="1556652491512" expanded="true" signature="358:759" ph="{...}" />
             <marker date="1556652491512" expanded="true" signature="493:561" ph="{...}" />
             <marker date="1556652491512" expanded="true" signature="653:753" ph="{...}" />
@@ -781,30 +797,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="35" column="50" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
-          <folding>
-            <marker date="1556653286900" expanded="false" signature="6:566" ph="..." />
-            <marker date="1556653286900" expanded="true" signature="598:2291" ph="{...}" />
-            <marker date="1556653286900" expanded="true" signature="625:2289" ph="{...}" />
-            <marker date="1556653286900" expanded="true" signature="684:747" ph="{...}" />
-            <marker date="1556653286900" expanded="true" signature="970:1934" ph="{...}" />
-            <marker date="1556653286900" expanded="true" signature="1775:1921" ph="{...}" />
-            <marker date="1556653286900" expanded="true" signature="2122:2283" ph="{...}" />
-            <marker date="1556653286900" expanded="true" signature="2169:2246" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification_BusinessLayer/Service/Token/TokenManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="60">
           <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
             <marker date="1556657610315" expanded="false" signature="6:276" ph="..." />
-            <marker date="1556657610315" expanded="true" signature="336:837" ph="{...}" />
             <marker date="1556657610315" expanded="true" signature="368:835" ph="{...}" />
             <marker date="1556657610315" expanded="true" signature="438:829" ph="{...}" />
             <marker date="1556657610315" expanded="true" signature="702:783" ph="{...}" />
@@ -814,7 +812,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IBS_Authentification/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="45">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
           <folding>
             <marker date="1551641644170" expanded="false" signature="6:255" ph="..." />
@@ -825,17 +823,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Controllers/LoginController.cs">
+    <entry file="file://$PROJECT_DIR$/IBS_Authentification/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        <state relative-caret-position="420">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding>
-            <marker date="1556657876794" expanded="false" signature="6:318" ph="..." />
-            <marker date="1556657876794" expanded="true" signature="362:1204" ph="{...}" />
-            <marker date="1556657876794" expanded="true" signature="462:1202" ph="{...}" />
-            <marker date="1556657876794" expanded="true" signature="662:766" ph="{...}" />
-            <marker date="1556657876794" expanded="true" signature="851:1196" ph="{...}" />
-            <marker date="1556657876794" expanded="true" signature="1008:1141" ph="{...}" />
+            <marker date="1556653286900" expanded="false" signature="6:566" ph="..." />
+            <marker date="1556653286900" expanded="true" signature="598:2291" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="625:2289" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="684:747" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="970:1934" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="1775:1921" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="2122:2283" ph="{...}" />
+            <marker date="1556653286900" expanded="true" signature="2169:2246" ph="{...}" />
           </folding>
         </state>
       </provider>

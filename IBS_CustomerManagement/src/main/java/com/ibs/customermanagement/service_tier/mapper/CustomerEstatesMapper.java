@@ -21,7 +21,7 @@ public class CustomerEstatesMapper {
 
     public void mergeEntities(CustomerEstatesDTO estateDb, CustomerEstatesDTO estateRequest) {
         estateDb.setCustomerId(estateRequest.getCustomerId());
-        estateDb.setIdEstate(estateRequest.getIdEstate());
+        estateDb.setEstateId(estateRequest.getEstateId());
         estateDb.setEstateName(estateRequest.getEstateName());
         estateDb.setEstateDescription(estateRequest.getEstateDescription());
         estateDb.setEstateType(estateRequest.getEstateType());
