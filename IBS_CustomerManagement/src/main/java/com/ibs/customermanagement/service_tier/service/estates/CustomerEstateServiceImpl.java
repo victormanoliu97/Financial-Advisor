@@ -54,7 +54,7 @@ public class CustomerEstateServiceImpl implements CustomerEstatesService {
         if(estatesDTO == null || estatesDTO.getCustomerId() == 0 || estatesDTO.getIdEstate() == 0) {
             return new BaseRequestResponse(HttpStatus.UNPROCESSABLE_ENTITY.value(), HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase());
         }
-        if(customerFinancialEstatesRepository.getAllByCustomerId(estatesDTO.getCustomerId()) == null) {
+        if(customerFinancialEstatesRepository.getByIdEstate(estatesDTO.getIdEstate()) == null) {
             return new BaseRequestResponse(HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND.getReasonPhrase());
         }
         customerFinancialEstatesDAO.save(new CustomerEstatesMapper().fromDtoToEntity(estatesDTO));
