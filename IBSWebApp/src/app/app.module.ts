@@ -10,13 +10,14 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import { IndexMainComponent } from './index-main/index-main.component';
 import { CustomerPanelComponent } from './customer-panel/customer-panel.component';
 import { UserProfilingComponent } from './user-profiling/user-profiling.component';
-import {InputTextModule} from 'primeng/primeng';
+import {ChartModule, InputTextModule} from 'primeng/primeng';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import {TooltipModule} from 'ngx-bootstrap';
 import { IncomeLiabilitiesComponent } from './income-liabilities/income-liabilities.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { EstatesCompaniesComponent } from './estates-companies/estates-companies.component';
+import { AccountStatisticsComponent } from './account-statistics/account-statistics.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { EstatesCompaniesComponent } from './estates-companies/estates-companies
     UserProfilingComponent,
     IncomeLiabilitiesComponent,
     EstatesCompaniesComponent,
+    AccountStatisticsComponent,
   ],
   imports: [
     BsDropdownModule.forRoot(),
@@ -38,6 +40,7 @@ import { EstatesCompaniesComponent } from './estates-companies/estates-companies
     VirtualScrollerModule,
     TooltipModule,
     NgbModule,
+    ChartModule,
   ],
   providers: [AuthModule, CookieService],
   bootstrap: [AppComponent]

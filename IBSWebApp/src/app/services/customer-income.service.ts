@@ -4,6 +4,7 @@ import {UpdateCustomerIncomeRequest} from '../shared/models/requests/income/upda
 import {map} from 'rxjs/operators';
 import {GenericResponse} from '../shared/models/responses/generic-response';
 import {AddCustomerIncomeRequest} from '../shared/models/requests/income/add-customer-income-request';
+import {CustomerIncome} from '../shared/models/income/customer-income';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,7 @@ export class CustomerIncomeService {
   async getCustomerIncomes(customerId: number): Promise<any> {
     return this.http.get(this.getCustomerIncomesUrl + `/${customerId}`).toPromise<any>();
   }
+
 
   async updateCustomerIncome(incomeAmount: number, incomeSource: string, compressibleCosts: number,
                              nonCompressibleCosts: number, incomeId: number, customerId: number) {

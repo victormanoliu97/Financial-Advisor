@@ -1,6 +1,6 @@
 export class CustomerIncome {
   idFinancialIncome: Number;
-  incomeAmount: Number;
+  incomeAmount: number;
   incomeSource: string;
   compressibleCosts: Number;
   nonCompressibleCosts: Number;
