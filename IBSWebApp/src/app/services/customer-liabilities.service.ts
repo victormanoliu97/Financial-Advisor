@@ -29,13 +29,13 @@ export class CustomerLiabilitiesService {
     request.liabilitiesSource = liabilitiesSource;
     request.customerId = customerId;
 
-    return this.http.put(this.updateCustomerLiabilityUrl + `/${idFinancialLiability}`, request).pipe(map((result: GenericResponse) => {
+    return this.http.put(this.updateCustomerLiabilityUrl + `/${idFinancialLiability}`, request, {headers: this.serverService.requestHeaders}).pipe(map((result: GenericResponse) => {
       return result;
     })).toPromise();
   }
 
   async deleteCustomerLiability(liabilityId: number) {
-    return this.http.delete(this.deleteCustomerLiabilityUrl + `/${liabilityId}`).pipe(map((result: GenericResponse) => {
+    return this.http.delete(this.deleteCustomerLiabilityUrl + `/${liabilityId}`, {headers: this.serverService.requestHeaders}).pipe(map((result: GenericResponse) => {
       return result;
     })).toPromise();
   }
@@ -46,7 +46,7 @@ export class CustomerLiabilitiesService {
     request.liabilitiesSource = liabilitiesSource;
     request.customerId = customerId;
 
-    return this.http.post(this.addCustomerLiabilitiesUrl, request).pipe(map((result: GenericResponse) => {
+    return this.http.post(this.addCustomerLiabilitiesUrl, request, {headers: this.serverService.requestHeaders}).pipe(map((result: GenericResponse) => {
       return result;
     })).toPromise();
   }

@@ -5,6 +5,7 @@ import {map} from 'rxjs/operators';
 import {GenericResponse} from '../shared/models/responses/generic-response';
 import {AddCustomerIncomeRequest} from '../shared/models/requests/income/add-customer-income-request';
 import {CustomerIncome} from '../shared/models/income/customer-income';
+import {ServerService} from './server.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +17,11 @@ export class CustomerIncomeService {
   deleteCustomerIncomeUrl = 'http://localhost:4444/delete-customer-income/';
   addCustomerIncomeUrl = 'http://localhost:4444/create-customer-income/';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, public serverService: ServerService) {
   }
 
   async getCustomerIncomes(customerId: number): Promise<any> {
-    return this.http.get(this.getCustomerIncomesUrl + `/${customerId}`).toPromise<any>();
+    return this.http.get(this.getCustomerIncomesUrl + `/${customerId}`, {headers: this.serverService.requestHeaders}).toPromise<any>();
   }
 
 
@@ -34,13 +35,13 @@ export class CustomerIncomeService {
     request.idFinancialIncome = incomeId;
     request.customerId = customerId;
 
-    return this.http.put(this.updateCustomerIncomeUrl + `${incomeId}`, request).pipe(map((result: GenericResponse) => {
+    return this.http.put(this.updateCustomerIncomeUrl + `${incomeId}`, request, {headers: this.serverService.requestHeaders}).pipe(map((result: GenericResponse) => {
       return result;
     })).toPromise();
   }
 
   async deleteCustomerIncome(incomeId: number) {
-    return this.http.delete(this.deleteCustomerIncomeUrl + `/${incomeId}`).pipe(map((result: GenericResponse) => {
+    return this.http.delete(this.deleteCustomerIncomeUrl + `/${incomeId}`, {headers: this.serverService.requestHeaders}).pipe(map((result: GenericResponse) => {
       return result;
     })).toPromise();
   }
@@ -54,7 +55,7 @@ export class CustomerIncomeService {
     request.nonCompressibleCosts = nonCompressibleCosts;
     request.customerId = customerId;
 
-    return this.http.post(this.addCustomerIncomeUrl , request).pipe(map((result: GenericResponse) => {
+    return this.http.post(this.addCustomerIncomeUrl , request, {headers: this.serverService.requestHeaders}).pipe(map((result: GenericResponse) => {
       return result;
     })).toPromise();
   }
