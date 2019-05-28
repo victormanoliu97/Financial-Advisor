@@ -101,157 +101,195 @@
       </div>
 
       <ngb-tabset>
-        <ngb-tab title="Income">
+        <ngb-tab title="Liabilities">
           <ng-template ngbTabContent>
-            <ngb-accordion [closeOthers]="true" activeIds="static-1">
-              <ng-container *ngFor="let index of incomes">
-                <ngb-panel id="static-1" type="secondary">
-                  <ng-template ngbPanelTitle>
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">{{index.incomeSource}}</div>
-                      <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
-                    </div>
-                  </ng-template>
-                  <ng-template ngbPanelContent>
-                    <!-- Income Amount !-->
-                    <div class="md-form form-group mt-5">
-                      <label for="incomeAmount">Income amount *</label>
-                      <input type="text" class="form-control" id="incomeAmount" ngModel="{{index.incomeAmount}}"
-                             [(ngModel)]="incomeAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
-                    </div>
+            <ng-container *ngFor="let index of liabilities">
+            <div class="widget half local">
+              <div class="widget-content">
+                <div class="width-graph">
+                  <h4>Liability Source:{{index.liabilitiesSource}}</h4>
+                </div>
+                <div class="width-graph">
+                  <h4>Liability Amount:{{index.liabilitiesAmount}}</h4>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="traverse text-center">
+                  <button class="btn btn-primary" style="width: 40%; float:left" (click)="open(update_liability); selectedLiability=index;"><i class="fa fa-edit"></i></button>
+                  <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(delete_income); selectedLiability=index;"><i class="fa fa-trash"></i></button>
+                </div>
+              </div>
+              <br>
+            </div>
+            </ng-container>
+            <ng-template #update_liability let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title-update-liability">Update Liability</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
 
-                    <!-- Income source -->
-                    <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInputIncomeSourceMD">Income Source *</label>
-                      <input type="text" class="form-control" id="formGroupExampleInputIncomeSourceMD"
-                             placeholder="Example input" ngModel="{{index.incomeSource}}" [(ngModel)]="incomeSource">
-                    </div>
-
-                    <!-- Compressible Costs -->
-                    <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInputMDCompressible">Compressible Costs</label>
-                      <input type="text" class="form-control" id="formGroupExampleInputMDCompressible"
-                             placeholder="Example input" ngModel="{{index.compressibleCosts}}"
-                             [(ngModel)]="compressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
-                    </div>
-
-                    <!-- Non Compressible Costs -->
-                    <div class="md-form form-group mt-5">
-                      <label for="formGroupExampleInputMDNonCompressible">Non Compressible Costs</label>
-                      <input type="text" class="form-control" id="formGroupExampleInputMDNonCompressible"
-                             placeholder="Example input" ngModel="{{index.nonCompressibleCosts}}"
-                             [(ngModel)]="nonCompressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
-                    </div>
-
-                    <br>
-                    <ngb-alert *ngIf="updateIncomeRequestResponse.responseCode == 200" type="success"
-                               (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-                    <ngb-alert
-                      *ngIf="updateIncomeRequestResponse.responseCode != 200 && updateIncomeRequestResponse.responseCode > 0"
-                      type="danger"
-                      (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-
-                    <button class="btn btn-success" style="width: 40%; float:left"
-                            (click)="updateIncome(index.idFinancialIncome)"><i class="fa fa-save"></i>
-                    </button>
-                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(content)"><i class="fa fa-trash"></i>
-                    </button>
-
-                  </ng-template>
-                </ngb-panel>
-
-                <ng-template #content let-modal>
-                  <div class="modal-header">
-                    <h4 class="modal-title" id="modal-basic-title">Delete Income</h4>
-                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+                  <!-- Liability Amount !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="liabilityAmount">Liability amount *</label>
+                    <input type="text" class="form-control" id="liabilityAmount" value="{{selectedLiability.liabilitiesAmount}}"
+                           [(ngModel)]="selectedLiability.liabilitiesAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="liabilityAmount">
                   </div>
-                  <div class="modal-body">
-                    <div class="form-group">
-                      <label for="commentContent">Content</label>
-                      <div class="input-group">
-                        <h3>Are you sure you want to delete this income?</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" style="width: 100%;"
-                            (click)="deleteIncome(index.idFinancialIncome)"><i class="fa fa-trash"></i>
-                    </button>
-                  </div>
-                </ng-template>
 
-              </ng-container>
-            </ngb-accordion>
+                  <!-- Liability source -->
+                  <div class="md-form form-group mt-5">
+                    <label for="liabilitySource">Liability Source *</label>
+                    <input type="text" class="form-control" id="liabilitySource" value="{{selectedLiability.liabilitiesSource}}"
+                           placeholder="Example input" [(ngModel)]="selectedLiability.liabilitiesSource" name="liabilitySource">
+                  </div>
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" style="width: 100%;"
+                        (click)="updateLiability(selectedLiability.idFinancialLiability)"><i class="fa fa-edit"></i>
+                </button>
+              </div>
+
+              <br>
+              <ngb-alert *ngIf="updateIncomeRequestResponse.responseCode == 200" type="success"
+                         (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+              <ngb-alert
+                *ngIf="updateIncomeRequestResponse.responseCode != 200 && updateIncomeRequestResponse.responseCode > 0"
+                type="danger"
+                (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+            </ng-template>
+
+            <ng-template #delete_income let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title-delete-liability">Delete Liability</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <div class="input-group">
+                    <h3>Are you sure you want to delete this liablity?</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" style="width: 100%;"
+                        (click)="deleteLiability(selectedLiability.idFinancialLiability)"><i class="fa fa-trash"></i>
+                </button>
+              </div>
+            </ng-template>
+
           </ng-template>
         </ngb-tab>
 
 
-        <ngb-tab title="Liabilities">
+        <ngb-tab title="Income">
           <ng-template ngbTabContent>
-            <ngb-accordion [closeOthers]="true" activeIds="static-1">
-              <ng-container *ngFor="let index of liabilities">
-                <ngb-panel id="static-70" type="secondary">
-                  <ng-template ngbPanelTitle>
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">Open</div>
-                      <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
-                    </div>
-                  </ng-template>
-                  <ng-template ngbPanelContent>
-                      <!-- Liabilities Amount -->
-                      <div class="md-form form-group mt-5">
-                        <label for="liabilitiesAmount">Liabilities Amount *</label>
-                        <input type="text" class="form-control" id="liabilitiesAmount" ngModel="{{index.liabilitiesAmount}}" [(ngModel)]="liabilitiesAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
-                      </div>
-
-                      <!-- Liability source-->
-                      <div class="md-form form-group mt-5">
-                        <label for="liabilitySource">Liability Source</label>
-                        <input type="text" class="form-control" id="liabilitySource" ngModel="{{index.liabilitiesSource}}" [(ngModel)]="liabilitiesSource">
-                      </div>
-
-                    <br>
-                    <ngb-alert *ngIf="updateLiabilityRequestResponse.responseCode == 200" type="success"
-                               (close)="updateLiabilityRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-                    <ngb-alert
-                      *ngIf="updateLiabilityRequestResponse.responseCode != 200 && updateLiabilityRequestResponse.responseCode > 0"
-                      type="danger"
-                      (close)="updateLiabilityRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-
-                    <button class="btn btn-success" style="width: 40%; float:left"
-                            (click)="updateLiability(index.idFinancialLiability)"><i class="fa fa-save"></i>
-                    </button>
-                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(content_liability)"><i class="fa fa-trash"></i>
-                    </button>
-
-                  </ng-template>
-                </ngb-panel>
-
-                <ng-template #content_liability let-modal>
-                  <div class="modal-header">
-                    <h4 class="modal-title" id="modal-basic-title-delete">Delete Liability</h4>
-                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+            <ng-container *ngFor="let index of incomes">
+              <div class="widget half local">
+                <div class="widget-content">
+                  <div class="width-graph">
+                    <h4>Income Source:{{index.incomeSource}}</h4>
                   </div>
-                  <div class="modal-body">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <h3>Are you sure you want to delete this liability?</h3>
-                      </div>
-                    </div>
+                  <div class="width-graph">
+                    <h4>Income amount:{{index.incomeAmount}}</h4>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" style="width: 100%;"
-                            (click)="deleteLiability(index.idFinancialLiability)"><i class="fa fa-trash"></i>
-                    </button>
+                  <div class="width-graph">
+                    <h4>Compressible Costs:{{index.compressibleCosts}}</h4>
                   </div>
-                </ng-template>
+                  <div class="width-graph">
+                    <h4>Non-Compressible Costs:{{index.nonCompressibleCosts}}</h4>
+                  </div>
+                  <div style="clear:both;"></div>
+                  <div class="traverse text-center">
+                    <button class="btn btn-primary" style="width: 40%; float:left" (click)="open(update_income); selectedIncome=index;"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(delete_income); selectedIncome=index;"><i class="fa fa-trash"></i></button>
+                  </div>
+                </div>
+                <br>
+              </div>
+            </ng-container>
+            <ng-template #update_income let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Update Income</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
 
-              </ng-container>
-            </ngb-accordion>
+                  <!-- Income Amount !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="incomeAmount">Income amount *</label>
+                    <input type="text" class="form-control" id="incomeAmount" value="{{selectedIncome.incomeAmount}}"
+                           [(ngModel)]="selectedIncome.incomeAmount" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="incomeAmount">
+                  </div>
+
+                  <!-- Income source -->
+                  <div class="md-form form-group mt-5">
+                    <label for="incomeSource">Income Source *</label>
+                    <input type="text" class="form-control" id="incomeSource" value="{{selectedIncome.incomeSource}}"
+                           placeholder="Example input" [(ngModel)]="selectedIncome.incomeSource" name="incomeSource">
+                  </div>
+
+                  <!-- Compressible Costs -->
+                  <div class="md-form form-group mt-5">
+                    <label for="formGroupExampleInputMDCompressible">Compressible Costs</label>
+                    <input type="text" class="form-control" id="formGroupExampleInputMDCompressible"
+                           placeholder="Example input"
+                           [(ngModel)]="selectedIncome.compressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="compressibleCosts">
+                  </div>
+
+                  <!-- Non Compressible Costs -->
+                  <div class="md-form form-group mt-5">
+                    <label for="formGroupExampleInputMDNonCompressible">Non Compressible Costs</label>
+                    <input type="text" class="form-control" id="formGroupExampleInputMDNonCompressible"
+                           placeholder="Example input"
+                           [(ngModel)]="selectedIncome.nonCompressibleCosts" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="nonCompressibleCosts">
+                  </div>
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" style="width: 100%;"
+                        (click)="updateIncome(selectedIncome.idFinancialIncome)"><i class="fa fa-edit"></i>
+                </button>
+              </div>
+
+              <br>
+              <ngb-alert *ngIf="updateIncomeRequestResponse.responseCode == 200" type="success"
+                         (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+              <ngb-alert
+                *ngIf="updateIncomeRequestResponse.responseCode != 200 && updateIncomeRequestResponse.responseCode > 0"
+                type="danger"
+                (close)="updateIncomeRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+            </ng-template>
+
+            <ng-template #delete_income let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title-delete-income">Delete Income</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <div class="input-group">
+                    <h3>Are you sure you want to delete this income?</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" style="width: 100%;"
+                        (click)="deleteIncome(selectedIncome.idFinancialIncome)"><i class="fa fa-trash"></i>
+                </button>
+              </div>
+            </ng-template>
           </ng-template>
         </ngb-tab>
 

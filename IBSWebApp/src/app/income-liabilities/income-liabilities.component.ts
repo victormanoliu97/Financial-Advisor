@@ -8,6 +8,7 @@ import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {Router} from '@angular/router';
 import {CustomerLiability} from '../shared/models/liabilities/customer-liability';
 import {CustomerLiabilitiesService} from '../services/customer-liabilities.service';
+import {IncomeTypes} from '../shared/models/constant/income-types';
 
 @Component({
   selector: 'app-income-liabilities',
@@ -37,6 +38,9 @@ export class IncomeLiabilitiesComponent implements OnInit {
   updateLiabilityRequestResponse: GenericResponse;
   deleteLiabilityRequestResponse: GenericResponse;
 
+  selectedIncome: CustomerIncome;
+  selectedLiability: CustomerLiability;
+
 
   requestResponseMessage: string;
 
@@ -58,6 +62,8 @@ export class IncomeLiabilitiesComponent implements OnInit {
       this.updateIncomeRequestResponse = new GenericResponse();
       this.addLiabilityRequestResponse = new GenericResponse();
       this.updateLiabilityRequestResponse = new GenericResponse();
+      this.selectedIncome = new CustomerIncome();
+      this.selectedLiability = new CustomerLiability();
       this.updateIncomeRequestResponse.responseCode = 0;
       this.addIncomeRequestResponse.responseCode = 0;
       this.updateLiabilityRequestResponse.responseCode = 0;
@@ -65,17 +71,17 @@ export class IncomeLiabilitiesComponent implements OnInit {
   }
 
   private checkIncomeFieldsValid() {
-    return !(this.incomeSource == null || this.incomeAmount == null);
+    return !(this.selectedIncome.incomeAmount == null || this.selectedIncome.incomeSource == null);
   }
 
   private checkLiabilityFieldsValid() {
-    return !(this.liabilitiesSource == null || this.liabilitiesAmount == null);
+    return !(this.selectedLiability.liabilitiesSource == null || this.selectedLiability.liabilitiesAmount == null);
   }
 
   async updateIncome(incomeId: number) {
     if (this.checkIncomeFieldsValid() === true) {
-      this.updateIncomeRequestResponse = await this.incomeService.updateCustomerIncome(this.incomeAmount, this.incomeSource,
-        this.compressibleCosts, this.nonCompressibleCosts, incomeId, this.customerId);
+      this.updateIncomeRequestResponse = await this.incomeService.updateCustomerIncome(this.selectedIncome.incomeAmount, this.selectedIncome.incomeSource,
+        this.selectedIncome.compressibleCosts, this.selectedIncome.nonCompressibleCosts, incomeId, this.customerId);
     } else {
       this.updateIncomeRequestResponse.responseCode = 422;
       this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
@@ -104,8 +110,8 @@ export class IncomeLiabilitiesComponent implements OnInit {
 
   async updateLiability(liabilityId: number) {
     if (this.checkLiabilityFieldsValid() === true) {
-      this.updateLiabilityRequestResponse = await this.liabilityService.updateCustomerLiability(liabilityId, this.liabilitiesAmount,
-        this.liabilitiesSource, this.customerId);
+      this.updateLiabilityRequestResponse = await this.liabilityService.updateCustomerLiability(liabilityId,
+        this.selectedLiability.liabilitiesAmount, this.selectedLiability.liabilitiesSource, this.customerId);
     } else {
       this.updateLiabilityRequestResponse.responseCode = 422;
       this.requestResponseMessage = MessageConstants.MISSING_FIELDS;

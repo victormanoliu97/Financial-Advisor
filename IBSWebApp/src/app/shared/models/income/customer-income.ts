@@ -2,7 +2,7 @@ export class CustomerIncome {
   idFinancialIncome: Number;
   incomeAmount: number;
   incomeSource: string;
-  compressibleCosts: Number;
-  nonCompressibleCosts: Number;
+  compressibleCosts: number;
+  nonCompressibleCosts: number;
   customerId: Number;
 }
