@@ -114,6 +114,10 @@ export class EstatesCompaniesComponent implements OnInit {
       this.updateCompanyRequestResponse.responseCode = 422;
       this.updateCompanyRequestResponse.responseMessage = MessageConstants.MISSING_FIELDS;
     }
+    if (this.updateCompanyRequestResponse.responseCode === 409) {
+      this.updateCompanyRequestResponse.responseCode = 409;
+      this.requestResponseMessage = MessageConstants.COMPANY_TYPE_INVALID;
+    }
     if (this.updateCompanyRequestResponse.responseCode === 200) {
       this.requestResponseMessage =  MessageConstants.COMPANY_UPDATE_SUCCESSFUL;
     } else if (this.updateCompanyRequestResponse.responseCode !== 422) {
@@ -142,6 +146,10 @@ export class EstatesCompaniesComponent implements OnInit {
     } else {
       this.addCompanyRequestResponse.responseCode = 422;
       this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
+    }
+    if (this.addCompanyRequestResponse.responseCode === 409) {
+      this.addCompanyRequestResponse.responseCode = 409;
+      this.requestResponseMessage = MessageConstants.COMPANY_TYPE_INVALID;
     }
     if (this.addCompanyRequestResponse.responseCode === 200) {
       window.location.reload();

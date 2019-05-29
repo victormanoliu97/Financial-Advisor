@@ -96,6 +96,11 @@ export class IncomeLiabilitiesComponent implements OnInit {
       this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
     }
 
+    if (this.updateIncomeRequestResponse.responseCode === 409) {
+      this.updateIncomeRequestResponse.responseCode = 409;
+      this.requestResponseMessage = MessageConstants.INCOME_SOURCE_INVALID;
+    }
+
     if (this.updateIncomeRequestResponse.responseCode === 200) {
       this.requestResponseMessage = MessageConstants.INCOME_UPDATE_SUCCESSFUL;
     }  else if (this.updateIncomeRequestResponse.responseCode !== 422) {
@@ -140,6 +145,11 @@ export class IncomeLiabilitiesComponent implements OnInit {
     } else {
       this.addIncomeRequestResponse.responseCode = 422;
       this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
+    }
+
+    if (this.addIncomeRequestResponse.responseCode === 409) {
+      this.addIncomeRequestResponse.responseCode = 409;
+      this.requestResponseMessage = MessageConstants.INCOME_SOURCE_INVALID;
     }
 
     if (this.addIncomeRequestResponse.responseCode === 200) {

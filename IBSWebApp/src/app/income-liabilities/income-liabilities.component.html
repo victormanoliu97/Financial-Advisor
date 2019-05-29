@@ -141,7 +141,7 @@
                   <!-- Liability source -->
                   <div class="md-form form-group mt-5">
                     <label for="liabilitySource">Liability Source *</label>
-                    <input type="text" class="form-control" id="liabilitySource" value="{{selectedLiability.liabilitiesSource}}"
+                    <input type="text" class="form-control" id="liabilitySource" value="{{selectedLiability.liabilitiesSource}}" onkeyup="this.value=this.value.replace(/[^A-Za-z]/g,'');"
                            placeholder="Example input" [(ngModel)]="selectedLiability.liabilitiesSource" name="liabilitySource">
                   </div>
 
@@ -233,7 +233,7 @@
                   <!-- Income source -->
                   <div class="md-form form-group mt-5">
                     <label for="incomeSource">Income Source *</label>
-                    <input type="text" class="form-control" id="incomeSource" value="{{selectedIncome.incomeSource}}"
+                    <input type="text" class="form-control" id="incomeSource" value="{{selectedIncome.incomeSource}}" onkeyup="this.value=this.value.replace(/[^A-Za-z]/g,'');"
                            placeholder="Example input" [(ngModel)]="selectedIncome.incomeSource" name="incomeSource">
                   </div>
 
@@ -321,7 +321,7 @@
                 <!-- Income source -->
                 <div class="md-form form-group mt-5">
                   <label for="incomeSourceAdd">Income Source *</label>
-                  <input type="text" class="form-control" id="incomeSourceAdd"
+                  <input type="text" class="form-control" id="incomeSourceAdd" onkeyup="this.value=this.value.replace(/[^A-Za-z]/g,'');"
                          placeholder="Example input"  [(ngModel)]="incomeSource">
                 </div>
 
@@ -376,7 +376,7 @@
                 <!-- Liabilities source -->
                 <div class="md-form form-group mt-5">
                   <label for="liabilitiesSourceAdd">Liabilities Source *</label>
-                  <input type="text" class="form-control" id="liabilitiesSourceAdd"
+                  <input type="text" class="form-control" id="liabilitiesSourceAdd" onkeyup="this.value=this.value.replace(/[^A-Za-z]/g,'');"
                          placeholder="Example input"  [(ngModel)]="liabilitiesSource">
                 </div>
               </div>
