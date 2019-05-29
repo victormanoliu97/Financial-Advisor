@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum  CompaniesTypes {
+public enum CompaniesTypes {
 
     COLLECTIVE_SOCIETIES("COLLECTIVE SOCIETIES"),
     LIMITED_PARTNERSHIPS("LIMITED PARTNERSHIPS"),

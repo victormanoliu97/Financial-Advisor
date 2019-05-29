@@ -4,6 +4,7 @@ import com.ibs.customermanagement.data_tier.dao.CustomerFinancialIncomeDAO;
 import com.ibs.customermanagement.data_tier.repository.CustomerFinancialIncomeRepository;
 import com.ibs.customermanagement.service_tier.mapper.CustomerFinancialIncomeMapper;
 import com.ibs.customermanagement.service_tier.model.CustomerFinancialIncomeDTO;
+import com.ibs.customermanagement.service_tier.utils.GeneralUtills;
 import com.ibs.customermanagement.web_tier.response.BaseRequestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,8 @@ public class CustomerFinancialIncomeServiceImpl implements CustomerFinancialInco
 
     private final CustomerFinancialIncomeDAO customerFinancialIncomeDAO;
     private final CustomerFinancialIncomeRepository customerFinancialIncomeRepository;
+
+    private GeneralUtills generalUtills = new GeneralUtills();
 
     @Autowired
     public CustomerFinancialIncomeServiceImpl(CustomerFinancialIncomeDAO customerFinancialIncomeDAO, CustomerFinancialIncomeRepository customerFinancialIncomeRepository) {
@@ -38,6 +41,9 @@ public class CustomerFinancialIncomeServiceImpl implements CustomerFinancialInco
         if (customerFinancialIncomeDTO == null) {
             return new BaseRequestResponse(HttpStatus.UNPROCESSABLE_ENTITY.value(), HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase());
         }
+        if(!generalUtills.validateIncomeType(customerFinancialIncomeDTO.getIncomeSource())) {
+            return new BaseRequestResponse(HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT.getReasonPhrase());
+        }
         customerFinancialIncomeDAO.save(new CustomerFinancialIncomeMapper().fromDTOToEntity(customerFinancialIncomeDTO));
         return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
     }
@@ -56,6 +62,9 @@ public class CustomerFinancialIncomeServiceImpl implements CustomerFinancialInco
         if(customerFinancialIncomeDTO == null || customerFinancialIncomeDTO.getCustomerId() == 0 || customerFinancialIncomeDTO.getIdFinancialIncome() == 0
                 || customerFinancialIncomeRepository.getAllByCustomerId(customerFinancialIncomeDTO.getCustomerId()) == null) {
             return new BaseRequestResponse(HttpStatus.UNPROCESSABLE_ENTITY.value(), HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase());
+        }
+        if(!generalUtills.validateIncomeType(customerFinancialIncomeDTO.getIncomeSource())) {
+            return new BaseRequestResponse(HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT.getReasonPhrase());
         }
         customerFinancialIncomeDAO.save(new CustomerFinancialIncomeMapper().fromDTOToEntity(customerFinancialIncomeDTO));
         return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
