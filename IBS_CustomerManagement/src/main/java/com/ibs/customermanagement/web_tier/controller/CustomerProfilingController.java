@@ -9,6 +9,8 @@ import com.ibs.customermanagement.web_tier.response.BaseRequestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin
 public class CustomerProfilingController {
@@ -21,7 +23,7 @@ public class CustomerProfilingController {
     }
 
     @GetMapping(value = "/get-profiling/{id}")
-    public CustomerProfilingDTO getCustomerProfiling(@PathVariable("id") Integer customerId) {
+    public List<CustomerProfilingDTO> getCustomerProfiling(@PathVariable("id") Integer customerId) {
         if(customerId == null) {
             throw new UnprocessableEntityException("The requested parameter is null");
         }
@@ -42,12 +44,12 @@ public class CustomerProfilingController {
         if(!id.equals(customerProfilingDTO.getIdCustomer())) {
             throw new ResourceNotFoundException("The id is not the same with id from object");
         }
-        CustomerProfilingDTO profilingDB = customerProfilingService.getCustomerProfiling(id);
+        CustomerProfilingDTO profilingDB = customerProfilingService.getByIdProfiling(id);
         if(profilingDB == null) {
             throw new ResourceNotFoundException("Not found");
         }
         CustomerProfilingMapper customerProfilingMapper = new CustomerProfilingMapper();
         customerProfilingMapper.mergeEntities(profilingDB, customerProfilingDTO);
-        return customerProfilingService.saveCustomerProfiling(profilingDB);
+        return customerProfilingService.updateCustomerProfiling(profilingDB);
     }
 }
