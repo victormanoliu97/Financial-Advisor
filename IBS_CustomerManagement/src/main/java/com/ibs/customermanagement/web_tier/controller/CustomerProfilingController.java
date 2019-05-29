@@ -41,7 +41,7 @@ public class CustomerProfilingController {
 
     @PutMapping(value = "update-profiling/{id}")
     public BaseRequestResponse updateCustomerProfiling(@PathVariable("id") Integer id, @RequestBody CustomerProfilingDTO customerProfilingDTO) {
-        if(!id.equals(customerProfilingDTO.getIdCustomer())) {
+        if(!id.equals(customerProfilingDTO.getIdProfiling())) {
             throw new ResourceNotFoundException("The id is not the same with id from object");
         }
         CustomerProfilingDTO profilingDB = customerProfilingService.getByIdProfiling(id);

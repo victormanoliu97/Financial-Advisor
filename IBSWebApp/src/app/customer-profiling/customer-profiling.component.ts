@@ -39,7 +39,6 @@ export class CustomerProfilingComponent implements OnInit {
   gender: string;
 
   requestResponseMessage: String;
-  profilingAlreadyExists: boolean;
 
   constructor(private cookieService: CookieService, private router: Router, public incomeService: CustomerIncomeService,
               public estateService: CustomerEstatesService, public companyService: CustomerCompaniesService,
@@ -49,6 +48,12 @@ export class CustomerProfilingComponent implements OnInit {
     return !(this.currentProfiling.profession == null || this.currentProfiling.residenceCity == null ||
       this.currentProfiling.workSegment == null || this.currentProfiling.currentJob == null ||
       this.currentProfiling.birthCity == null || this.currentProfiling.birthResidence == null || this.currentProfiling.gender == null);
+   }
+
+   private checkProfilingAddFields() {
+     return !(this.profession == null || this.residenceCity == null ||
+       this.workSegment == null || this.currentJob == null ||
+       this.birthCity == null || this.birthResidence == null || this.gender == null);
    }
 
   ngOnInit() {
@@ -85,5 +90,19 @@ export class CustomerProfilingComponent implements OnInit {
     }
   }
 
+  async addProfiling() {
+    if (this.checkProfilingAddFields() === true) {
+      this.updateProfilingRequestResponse = await this.profilingService.addCustomerProfiling(
+        this.customerId, this.profession, this.residenceCity,
+        this.residenceProvince, this.workSegment, this.currentJob,
+        this.birthCity, this.birthResidence, this.gender);
+    } else {
+      this.updateProfilingRequestResponse.responseCode = 422;
+      this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
+    }
+    if (this.updateProfilingRequestResponse.responseCode === 200) {
+      window.location.reload();
+    }
+  }
 
 }

@@ -37,5 +37,6 @@ public class CustomerProfilingMapper {
         profilingDB.setBirthCity(profilingRequest.getBirthCity());
         profilingDB.setBirthResidence(profilingRequest.getBirthResidence());
         profilingDB.setGender(profilingRequest.getGender());
+        profilingDB.setWorkSegment(profilingRequest.getWorkSegment());
     }
 }

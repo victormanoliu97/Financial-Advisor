@@ -105,8 +105,8 @@
         </div>
       </div>
 
+      <div *ngIf="profiling.length > 0">
       <ng-container *ngFor="let index of profiling">
-        <div *ngIf="index.idProfiling > 0">
           <p-panel>
             <p-header> {{loggedUserName}} profiling
               <button type="button" class="btn btn-info" (click)="currentProfiling=index;"
@@ -190,8 +190,84 @@
 
             </div>
           </p-panel>
-        </div>
       </ng-container>
+      </div>
+
+      <!-- Render this only if the customer has no profiling -->
+      <div *ngIf="profiling.length === 0">
+        <p-panel>
+          <p-header> {{loggedUserName}} profiling </p-header>
+          <div class="ui-g ui-fluid">
+            <!-- Profession -->
+            <div class="ui-g-12 ui-md-4">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-briefcase"></i></span>
+                <input type="text" pInputText placeholder="Profession" [(ngModel)]="profession">
+              </div>
+            </div>
+
+            <!-- Residence City -->
+            <div class="ui-g-12 ui-md-4">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-address-book"></i></span>
+                <input type="text" pInputText placeholder="Residence City" [(ngModel)]="residenceCity">
+              </div>
+            </div>
+
+            <!-- Residence Province -->
+            <div class="ui-g-12 ui-md-4">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-address-book"></i></span>
+                <input type="text" pInputText placeholder="Residence Province" [(ngModel)]="residenceProvince">
+              </div>
+            </div>
+
+            <!-- Work Segment -->
+            <div class="ui-g-12 ui-md-4">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-building"></i></span>
+                <input type="text" pInputText placeholder="Work Segment" [(ngModel)]="workSegment">
+              </div>
+            </div>
+
+            <!-- Current Job -->
+            <div class="ui-g-12 ui-md-4">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-briefcase"></i></span>
+                <input type="text" pInputText placeholder="Current Job" [(ngModel)]="currentJob">
+              </div>
+            </div>
+
+            <!-- Birth City -->
+            <div class="ui-g-12 ui-md-4">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-birthday-cake"></i></span>
+                <input type="text" pInputText placeholder="Birth City" [(ngModel)]="birthCity">
+              </div>
+            </div>
+
+            <!-- Birth Province -->
+            <div class="ui-g-12 ui-md-4">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-birthday-cake"></i></span>
+                <input type="text" pInputText placeholder="Birth Residence" [(ngModel)]="birthResidence">
+              </div>
+            </div>
+
+            <!-- Gender -->
+            <div class="ui-g-12 ui-md-4">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon"><i class="fa fa-venus-mars"></i></span>
+                <input type="text" pInputText placeholder="Gender" [(ngModel)]="gender">
+              </div>
+            </div>
+            <br/>
+            <br/>
+            <button type="button" class="btn btn-primary" (click)="addProfiling()"
+                    style="width: 100%;"><i class="fa fa-edit"></i></button>
+          </div>
+        </p-panel>
+      </div>
 
 
     </div>
