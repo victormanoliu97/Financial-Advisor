@@ -16,7 +16,9 @@ import {MessageConstants} from '../shared/models/constant/message-constants';
 })
 export class EstatesCompaniesComponent implements OnInit {
   estates: CustomerEstate[];
+  selectedEstate: CustomerEstate;
   companies: CustomerCompanies[];
+  selectedCompany: CustomerCompanies;
 
   customerId: number = Number(this.cookieService.get('Id'));
   loggedUserName: string;
@@ -25,8 +27,6 @@ export class EstatesCompaniesComponent implements OnInit {
   estateDescription: string;
   estateType: string;
   estateValue: number;
-
-  companyName: string;
 
   requestResponseMessage: string;
   closeResult: string;
@@ -38,9 +38,11 @@ export class EstatesCompaniesComponent implements OnInit {
   updateCompanyRequestResponse: GenericResponse;
   addCompanyRequestResponse: GenericResponse;
   deleteCompanyRequestResponse: GenericResponse;
-  companyDescription: string;
-  companyType: string;
-  companyRevenue: number;
+
+  companyNameAdd: string;
+  companyDescriptionAdd: string;
+  companyTypeAdd: string;
+  companyRevenueAdd: number;
 
 
   constructor(private cookieService: CookieService, public modalService: NgbModal, private router: Router,
@@ -64,21 +66,34 @@ export class EstatesCompaniesComponent implements OnInit {
       this.updateCompanyRequestResponse.responseCode = 0;
       this.addCompanyRequestResponse.responseCode = 0;
       this.addEstateRequestResponse.responseCode = 0;
+      this.selectedEstate = new CustomerEstate();
+      this.selectedCompany = new CustomerCompanies();
     }
   }
 
   private checkEstateFieldsValid() {
+    return !(this.selectedEstate.estateName == null || this.selectedEstate.estateType == null || this.selectedEstate.estateValue == null);
+  }
+
+  private checkEstateAddFieldsValid() {
     return !(this.estateName == null || this.estateType == null || this.estateValue == null);
   }
 
   private checkCompanyFieldsValid() {
-    return !(this.companyName == null || this.companyType == null || this.companyRevenue == null);
+    return !(this.selectedCompany.companyName == null || this.selectedCompany.companyType == null
+      || this.selectedCompany.companyRevenue == null);
+  }
+
+  private checkCompanyAddFieldsValid() {
+    return !(this.companyNameAdd == null || this.companyTypeAdd == null
+      || this.companyRevenueAdd == null);
   }
 
   async updateEstate(estateId: number) {
     if (this.checkEstateFieldsValid() === true) {
-      this.updateEstateRequestResponse = await this.estateService.updateCustomerEstate(estateId, this.estateName, this.estateDescription,
-        this.estateType, this.estateValue, this.customerId);
+      this.updateEstateRequestResponse = await this.estateService.updateCustomerEstate(estateId,
+        this.selectedEstate.estateName, this.selectedEstate.estateDescription,
+        this.selectedEstate.estateType, this.selectedEstate.estateValue, this.customerId);
     } else {
       this.updateEstateRequestResponse.responseCode = 422;
       this.updateEstateRequestResponse.responseMessage = MessageConstants.MISSING_FIELDS;
@@ -93,8 +108,8 @@ export class EstatesCompaniesComponent implements OnInit {
   async updateCompany(idCompany: number) {
     if (this.checkCompanyFieldsValid() === true) {
       this.updateCompanyRequestResponse = await this.companyService.updateCustomerCompany(idCompany,
-        this.companyName, this.companyDescription,
-        this.companyDescription, this.companyRevenue, this.customerId);
+        this.selectedCompany.companyName, this.selectedCompany.companyDescription,
+        this.selectedCompany.companyDescription, this.selectedCompany.companyRevenue, this.customerId);
     } else {
       this.updateCompanyRequestResponse.responseCode = 422;
       this.updateCompanyRequestResponse.responseMessage = MessageConstants.MISSING_FIELDS;
@@ -121,9 +136,9 @@ export class EstatesCompaniesComponent implements OnInit {
   }
 
   async addCompany() {
-    if (this.checkCompanyFieldsValid() === true) {
-      this.addCompanyRequestResponse = await this.companyService.addCustomerCompany(this.companyName, this.companyDescription,
-        this.companyType, this.companyRevenue, this.customerId);
+    if (this.checkCompanyAddFieldsValid() === true) {
+      this.addCompanyRequestResponse = await this.companyService.addCustomerCompany(this.companyNameAdd, this.companyDescriptionAdd,
+        this.companyTypeAdd, this.companyRevenueAdd, this.customerId);
     } else {
       this.addCompanyRequestResponse.responseCode = 422;
       this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
@@ -134,14 +149,14 @@ export class EstatesCompaniesComponent implements OnInit {
   }
 
   async addEstate() {
-    if (this.checkEstateFieldsValid() === true) {
+    if (this.checkEstateAddFieldsValid() === true) {
       this.addEstateRequestResponse = await this.estateService.addCustomerEstate(this.estateName, this.estateDescription,
       this.estateType, this.estateValue, this.customerId);
     } else {
       this.addEstateRequestResponse.responseCode = 422;
       this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
     }
-    if(this.addEstateRequestResponse.responseCode === 200) {
+    if (this.addEstateRequestResponse.responseCode === 200) {
       window.location.reload();
     }
   }

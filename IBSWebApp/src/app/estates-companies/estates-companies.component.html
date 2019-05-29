@@ -38,7 +38,7 @@
         <div class="hr"></div>
       </li>
       <li class="has-children">
-        <a href="#">Review Account Statistics</a>
+        <a href="/statistics">Review Account Statistics</a>
       </li>
       <li class="has-children">
       </li>
@@ -101,167 +101,215 @@
       </div>
 
       <ngb-tabset>
+        <!-- Estates Tab !-->
         <ngb-tab title="Estates">
           <ng-template ngbTabContent>
-            <ngb-accordion [closeOthers]="true" activeIds="static-1">
-              <ng-container *ngFor="let index of estates">
-                <ngb-panel id="static-1" type="secondary">
-
-                  <ng-template ngbPanelTitle>
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">{{index.estateName}}</div>
-                      <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
-                    </div>
-                  </ng-template>
-                  <ng-template ngbPanelContent>
-                    <!-- Estate Name !-->
-                    <div class="md-form form-group mt-5">
-                      <label for="estateName">Estate Name *</label>
-                      <input type="text" class="form-control" id="estateName" ngModel="{{index.estateName}}" [(ngModel)]="estateName"  />
-                    </div>
-
-                    <!-- Estate Description !-->
-                    <div class="md-form form-group mt-5">
-                      <label for="estateDescription">Estate Description</label>
-                      <input type="text" class="form-control" id="estateDescription" ngModel="{{index.estateDescription}}"
-                             [(ngModel)]="estateDescription">
-                    </div>
-
-                    <!-- Estate Type !-->
-                    <div class="md-form form-group mt-5">
-                      <label for="estateType">Estate Type *</label>
-                      <input type="text" class="form-control" id="estateType" ngModel="{{index.estateType}}"
-                             [(ngModel)]="estateType">
-                    </div>
-
-                    <!-- Estate Value !-->
-                    <div class="md-form form-group mt-5">
-                      <label for="estateValue">Estate Value *</label>
-                      <input type="text" class="form-control" id="estateValue" ngModel="{{index.estateValue}}"
-                             [(ngModel)]="estateValue" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
-                    </div>
-
-                    <br>
-                    <ngb-alert *ngIf="updateEstateRequestResponse.responseCode == 200" type="success"
-                               (close)="updateEstateRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-                    <ngb-alert
-                      *ngIf="updateEstateRequestResponse.responseCode != 200 && updateEstateRequestResponse.responseCode > 0"
-                      type="danger"
-                      (close)="updateEstateRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-
-                    <button class="btn btn-success" style="width: 40%; float:left"
-                            (click)="updateEstate(index.estateId)"><i class="fa fa-save"></i>
-                    </button>
-                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(delete_estate_content)"><i class="fa fa-trash"></i>
-                    </button>
-
-                  </ng-template>
-
-                </ngb-panel>
-
-                <ng-template #delete_estate_content let-modal>
-                  <div class="modal-header">
-                    <h4 class="modal-title" id="modal-basic-title">Delete Income</h4>
-                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+            <ng-container *ngFor="let index of estates">
+              <div class="widget half local">
+                <div class="widget-content">
+                  <div class="width-graph">
+                    <h4>Estate Name:{{index.estateName}}</h4>
                   </div>
-                  <div class="modal-body">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <h3>Are you sure you want to delete this estate?</h3>
-                      </div>
-                    </div>
+                  <div class="width-graph">
+                    <h4>Estate Description:{{index.estateDescription}}</h4>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" style="width: 100%;"
-                            (click)="deleteEstate(index.estateId)"><i class="fa fa-trash"></i>
-                    </button>
+                  <div class="width-graph">
+                    <h4>Estate Type:{{index.estateType}}</h4>
                   </div>
-                </ng-template>
+                  <div class="width-graph">
+                    <h4>Estate Value:{{index.estateValue}}</h4>
+                  </div>
+                  <div style="clear:both;"></div>
+                  <div class="traverse text-center">
+                    <button class="btn btn-primary" style="width: 40%; float:left" (click)="open(update_estate); selectedEstate=index;"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(delete_estate); selectedEstate=index;"><i class="fa fa-trash"></i></button>
+                  </div>
+                </div>
+                <br>
+              </div>
+            </ng-container>
+            <ng-template #update_estate let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title-update-liability">Update Liability</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
 
-              </ng-container>
-            </ngb-accordion>
+                  <!-- Estate Name !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="estateName">Estate Name *</label>
+                    <input type="text" class="form-control" id="estateName" value="{{selectedEstate.estateName}}"
+                           [(ngModel)]="selectedEstate.estateName" name="estateName">
+                  </div>
+
+                  <!-- Estate Description !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="estateDescription">Estate Description</label>
+                    <input type="text" class="form-control" id="estateDescription" value="{{selectedEstate.estateDescription}}"
+                           [(ngModel)]="selectedEstate.estateName" name="estateDescription">
+                  </div>
+
+                  <!-- Estate Type !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="estateType">Estate Type *</label>
+                    <input type="text" class="form-control" id="estateType" value="{{selectedEstate.estateType}}"
+                           [(ngModel)]="selectedEstate.estateType" name="estateType">
+                  </div>
+
+                  <!-- Estate Value !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="estateValue">Estate Value *</label>
+                    <input type="text" class="form-control" id="estateValue" value="{{selectedEstate.estateValue}}" onkeyup="this.value=this.value.replace(/[^\d]/,'')"
+                           [(ngModel)]="selectedEstate.estateValue" name="estateValue">
+                  </div>
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" style="width: 100%;"
+                        (click)="updateEstate(selectedEstate.estateId)"><i class="fa fa-edit"></i>
+                </button>
+              </div>
+
+              <br>
+              <ngb-alert *ngIf="updateEstateRequestResponse.responseCode == 200" type="success"
+                         (close)="updateEstateRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+              <ngb-alert
+                *ngIf="updateEstateRequestResponse.responseCode != 200 && updateEstateRequestResponse.responseCode > 0"
+                type="danger"
+                (close)="updateEstateRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+            </ng-template>
+
+            <ng-template #delete_estate let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title-delete-liability">Delete Estate</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <div class="input-group">
+                    <h3>Are you sure you want to delete this estate?</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" style="width: 100%;"
+                        (click)="deleteEstate(selectedEstate.estateId)"><i class="fa fa-trash"></i>
+                </button>
+              </div>
+            </ng-template>
+
           </ng-template>
         </ngb-tab>
 
+        <!-- Companies Tab !-->
         <ngb-tab title="Companies">
           <ng-template ngbTabContent>
-            <ngb-accordion [closeOthers]="true" activeIds="static-1">
-              <ng-container *ngFor="let index of companies">
-                <ngb-panel id="static-70" type="secondary">
-                  <ng-template ngbPanelTitle>
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex p-2" style="font-weight: bold; color: #1c2128;">{{index.companyName}}</div>
-                      <div class="d-flex p-2"><i class="material-icons">arrow_drop_down</i></div>
-                    </div>
-                  </ng-template>
-
-                  <ng-template ngbPanelContent>
-                    <!-- Company Name -->
-                    <div class="md-form form-group mt-5">
-                      <label for="companyName">Company Name *</label>
-                      <input type="text" class="form-control" id="companyName" ngModel="{{index.companyName}}" [(ngModel)]="companyName">
-                    </div>
-
-                    <!-- Company Description -->
-                    <div class="md-form form-group mt-5">
-                      <label for="companyDescription">Company Description</label>
-                      <input type="text" class="form-control" id="companyDescription" ngModel="{{index.companyDescription}}" [(ngModel)]="companyDescription">
-                    </div>
-
-                    <!-- Company Type -->
-                    <div class="md-form form-group mt-5">
-                      <label for="companyType">Company Type</label>
-                      <input type="text" class="form-control" id="companyType" ngModel="{{index.companyType}}" [(ngModel)]="companyType">
-                    </div>
-
-                    <!-- Company Revenue -->
-                    <div class="md-form form-group mt-5">
-                      <label for="companyRevenue">Company Revenue</label>
-                      <input type="text" class="form-control" id="companyRevenue" ngModel="{{index.companyRevenue}}" [(ngModel)]="companyRevenue" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
-                    </div>
-
-                    <br>
-                    <ngb-alert *ngIf="updateCompanyRequestResponse.responseCode == 200" type="success"
-                               (close)="updateCompanyRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-                    <ngb-alert
-                      *ngIf="updateCompanyRequestResponse.responseCode != 200 && updateCompanyRequestResponse.responseCode > 0"
-                      type="danger"
-                      (close)="updateCompanyRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
-
-                    <button class="btn btn-success" style="width: 40%; float:left"
-                            (click)="updateCompany(index.idCompany)"><i class="fa fa-save"></i>
-                    </button>
-                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(delete_company_content)"><i class="fa fa-trash"></i>
-                    </button>
-
-                  </ng-template>
-                </ngb-panel>
-
-                <ng-template #delete_company_content let-modal>
-                  <div class="modal-header">
-                    <h4 class="modal-title" id="modal-basic-title-company">Delete Company</h4>
-                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+            <ng-container *ngFor="let index of companies">
+              <div class="widget half local">
+                <div class="widget-content">
+                  <div class="width-graph">
+                    <h4>Company Name:{{index.companyName}}</h4>
                   </div>
-                  <div class="modal-body">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <h3>Are you sure you want to delete this company?</h3>
-                      </div>
-                    </div>
+                  <div class="width-graph">
+                    <h4>Company Description:{{index.companyDescription}}</h4>
                   </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" style="width: 100%;"
-                            (click)="deleteCompany(index.idCompany)"><i class="fa fa-trash"></i>
-                    </button>
+                  <div class="width-graph">
+                    <h4>Company Type:{{index.companyType}}</h4>
                   </div>
-                </ng-template>
+                  <div class="width-graph">
+                    <h4>Company Revenue:{{index.companyRevenue}}</h4>
+                  </div>
+                  <div style="clear:both;"></div>
+                  <div class="traverse text-center">
+                    <button class="btn btn-primary" style="width: 40%; float:left" (click)="open(update_company); selectedCompany=index;"><i class="fa fa-edit"></i></button>
+                    <button class="btn btn-danger" style="width: 40%; float:right" (click)="open(delete_company); selectedCompany=index;"><i class="fa fa-trash"></i></button>
+                  </div>
+                </div>
+                <br>
+              </div>
+            </ng-container>
+            <ng-template #update_company let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title-update-company">Update Company</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
 
-              </ng-container>
-            </ngb-accordion>
+                  <!-- Company Name !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="companyName">Company Name *</label>
+                    <input type="text" class="form-control" id="companyName" value="{{selectedCompany.companyName}}"
+                           [(ngModel)]="selectedCompany.companyName" name="companyName">
+                  </div>
+
+                  <!-- Company Description !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="companyDescription">Company Description</label>
+                    <input type="text" class="form-control" id="companyDescription" value="{{selectedCompany.companyDescription}}"
+                           [(ngModel)]="selectedCompany.companyDescription" name="companyDescription">
+                  </div>
+
+                  <!-- Company Type !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="companyType">Estate Type *</label>
+                    <input type="text" class="form-control" id="companyType" value="{{selectedCompany.companyType}}"
+                           [(ngModel)]="selectedCompany.companyType" name="companyType">
+                  </div>
+
+                  <!-- Company Revenue !-->
+                  <div class="md-form form-group mt-5">
+                    <label for="companyRevenue">Company Revenue *</label>
+                    <input type="text" class="form-control" id="companyRevenue" value="{{selectedCompany.companyRevenue}}" onkeyup="this.value=this.value.replace(/[^\d]/,'')"
+                           [(ngModel)]="selectedCompany.companyRevenue" name="companyRevenue">
+                  </div>
+
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" style="width: 100%;"
+                        (click)="updateCompany(selectedCompany.idCompany)"><i class="fa fa-edit"></i>
+                </button>
+              </div>
+
+              <br>
+              <ngb-alert *ngIf="updateCompanyRequestResponse.responseCode == 200" type="success"
+                         (close)="updateCompanyRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+              <ngb-alert
+                *ngIf="updateCompanyRequestResponse.responseCode != 200 && updateCompanyRequestResponse.responseCode > 0"
+                type="danger"
+                (close)="updateCompanyRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+            </ng-template>
+
+            <ng-template #delete_company let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title-delete-company">Delete Company</h4>
+                <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <div class="input-group">
+                    <h3>Are you sure you want to delete this company?</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" style="width: 100%;"
+                        (click)="deleteCompany(selectedCompany.idCompany)"><i class="fa fa-trash"></i>
+                </button>
+              </div>
+            </ng-template>
+
           </ng-template>
         </ngb-tab>
 
@@ -287,25 +335,25 @@
                 <!-- Company Name -->
                 <div class="md-form form-group mt-5">
                   <label for="companyName">Company Name *</label>
-                  <input type="text" class="form-control" id="companyNameAdd" [(ngModel)]="companyName">
+                  <input type="text" class="form-control" id="companyNameAdd" [(ngModel)]="companyNameAdd">
                 </div>
 
                 <!-- Company Description -->
                 <div class="md-form form-group mt-5">
                   <label for="companyDescription">Company Description</label>
-                  <input type="text" class="form-control" id="companyDescriptionAdd" [(ngModel)]="companyDescription">
+                  <input type="text" class="form-control" id="companyDescriptionAdd" [(ngModel)]="companyDescriptionAdd">
                 </div>
 
                 <!-- Company Type -->
                 <div class="md-form form-group mt-5">
                   <label for="companyType">Company Type</label>
-                  <input type="text" class="form-control" id="companyTypeAdd"[(ngModel)]="companyType">
+                  <input type="text" class="form-control" id="companyTypeAdd" [(ngModel)]="companyTypeAdd">
                 </div>
 
                 <!-- Company Revenue -->
                 <div class="md-form form-group mt-5">
                   <label for="companyRevenue">Company Revenue</label>
-                  <input type="text" class="form-control" id="companyRevenueAdd" [(ngModel)]="companyRevenue" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                  <input type="text" class="form-control" id="companyRevenueAdd" [(ngModel)]="companyRevenueAdd" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
                 </div>
               </div>
             </div>

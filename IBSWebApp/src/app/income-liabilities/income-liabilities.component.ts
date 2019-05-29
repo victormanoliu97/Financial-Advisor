@@ -74,14 +74,23 @@ export class IncomeLiabilitiesComponent implements OnInit {
     return !(this.selectedIncome.incomeAmount == null || this.selectedIncome.incomeSource == null);
   }
 
+  private checkIncomeAddFieldsValid() {
+    return !(this.incomeAmount == null || this.incomeSource == null);
+  }
+
   private checkLiabilityFieldsValid() {
     return !(this.selectedLiability.liabilitiesSource == null || this.selectedLiability.liabilitiesAmount == null);
   }
 
+  private checkLiabilityAddFieldsValid() {
+    return !(this.liabilitiesSource == null || this.liabilitiesAmount == null);
+  }
+
   async updateIncome(incomeId: number) {
     if (this.checkIncomeFieldsValid() === true) {
-      this.updateIncomeRequestResponse = await this.incomeService.updateCustomerIncome(this.selectedIncome.incomeAmount, this.selectedIncome.incomeSource,
-        this.selectedIncome.compressibleCosts, this.selectedIncome.nonCompressibleCosts, incomeId, this.customerId);
+      this.updateIncomeRequestResponse = await this.incomeService.updateCustomerIncome(this.selectedIncome.incomeAmount,
+        this.selectedIncome.incomeSource, this.selectedIncome.compressibleCosts,
+        this.selectedIncome.nonCompressibleCosts, incomeId, this.customerId);
     } else {
       this.updateIncomeRequestResponse.responseCode = 422;
       this.requestResponseMessage = MessageConstants.MISSING_FIELDS;
@@ -125,7 +134,7 @@ export class IncomeLiabilitiesComponent implements OnInit {
   }
 
   async addIncome() {
-    if (this.checkIncomeFieldsValid() === true) {
+    if (this.checkIncomeAddFieldsValid() === true) {
       this.addIncomeRequestResponse = await this.incomeService.addCustomerIncome(this.incomeAmount, this.incomeSource,
         this.compressibleCosts, this.nonCompressibleCosts, this.customerId);
     } else {
@@ -139,7 +148,7 @@ export class IncomeLiabilitiesComponent implements OnInit {
   }
 
   async addLiability() {
-    if (this.checkLiabilityFieldsValid() === true) {
+    if (this.checkLiabilityAddFieldsValid() === true) {
       this.addLiabilityRequestResponse = await this.liabilityService.addCustomerLiability(this.liabilitiesAmount,
         this.liabilitiesSource, this.customerId);
     } else {
