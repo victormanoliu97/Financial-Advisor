@@ -12,4 +12,9 @@ public class CustomerProfilingDTO {
     private String profession;
     private String residenceCity;
     private String residenceProvince;
+    private String workSegment;
+    private String currentJob;
+    private String birthCity;
+    private String birthResidence;
+    private String gender;
 }

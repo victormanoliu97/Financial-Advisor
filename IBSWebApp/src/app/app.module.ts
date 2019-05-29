@@ -9,8 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { IndexMainComponent } from './index-main/index-main.component';
 import { CustomerPanelComponent } from './customer-panel/customer-panel.component';
-import { UserProfilingComponent } from './user-profiling/user-profiling.component';
-import {ChartModule, InputTextModule} from 'primeng/primeng';
+import {ChartModule, InputTextModule, PanelModule} from 'primeng/primeng';
 import {DropdownModule} from 'primeng/dropdown';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 import {TooltipModule} from 'ngx-bootstrap';
@@ -19,16 +18,17 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { EstatesCompaniesComponent } from './estates-companies/estates-companies.component';
 import { AccountStatisticsComponent } from './account-statistics/account-statistics.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CustomerProfilingComponent } from './customer-profiling/customer-profiling.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexMainComponent,
     CustomerPanelComponent,
-    UserProfilingComponent,
     IncomeLiabilitiesComponent,
     EstatesCompaniesComponent,
     AccountStatisticsComponent,
+    CustomerProfilingComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +43,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ChartModule,
     DropdownModule,
     BrowserAnimationsModule,
+    PanelModule,
   ],
   providers: [AuthModule, CookieService],
   bootstrap: [AppComponent]

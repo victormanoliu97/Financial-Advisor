@@ -31,7 +31,11 @@ public class CustomerProfilingMapper {
         profilingDB.setIdCustomer(profilingRequest.getIdCustomer());
         profilingDB.setIdProfiling(profilingRequest.getIdProfiling());
         profilingDB.setProfession(profilingRequest.getProfession());
+        profilingDB.setCurrentJob(profilingRequest.getCurrentJob());
         profilingDB.setResidenceCity(profilingRequest.getResidenceCity());
         profilingDB.setResidenceProvince(profilingRequest.getResidenceProvince());
+        profilingDB.setBirthCity(profilingRequest.getBirthCity());
+        profilingDB.setBirthResidence(profilingRequest.getBirthResidence());
+        profilingDB.setGender(profilingRequest.getGender());
     }
 }

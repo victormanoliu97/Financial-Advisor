@@ -1,6 +1,7 @@
 package com.ibs.customermanagement.service_tier.utils;
 
 import com.ibs.customermanagement.service_tier.constants.CompaniesTypes;
+import com.ibs.customermanagement.service_tier.constants.JobTypes;
 import com.ibs.customermanagement.service_tier.constants.IncomeTypes;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ public class GeneralUtills {
 
     private ArrayList<IncomeTypes> incomeTypes = new ArrayList<>(Arrays.asList(IncomeTypes.values()));
     private ArrayList<CompaniesTypes> companiesTypes = new ArrayList<>(Arrays.asList(CompaniesTypes.values()));
+    private ArrayList<JobTypes> jobtypes = new ArrayList<>(Arrays.asList(JobTypes.values()));
 
     public String generateIban() {
         StringBuilder stringBuilder = new StringBuilder();
@@ -27,4 +29,6 @@ public class GeneralUtills {
     public boolean validateCompanyType(String companyType) {
         return companiesTypes.contains(companyType);
     }
+
+    public boolean validateJobType(String jobType) {return jobtypes.contains(jobType); }
 }

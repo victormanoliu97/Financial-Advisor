@@ -10,4 +10,6 @@ export class MessageConstants {
   public static COMPANY_TYPE_INVALID = 'You need to specify a valid company type';
 
   public static MISSING_FIELDS = 'Mandatory fields must be completed first';
+
+  public static PROFILING_UPDATE_SUCCESSFUL = 'Your profiling has been updated successfully';
 }

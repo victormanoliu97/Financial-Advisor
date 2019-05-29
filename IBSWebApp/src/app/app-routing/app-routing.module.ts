@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from '../auth/login/login.component';
 import {IndexMainComponent} from '../index-main/index-main.component';
-import {UserProfilingComponent} from '../user-profiling/user-profiling.component';
 import {CustomerPanelComponent} from '../customer-panel/customer-panel.component';
 import {IncomeLiabilitiesComponent} from '../income-liabilities/income-liabilities.component';
 import {EstatesCompaniesComponent} from '../estates-companies/estates-companies.component';
 import {AccountStatisticsComponent} from '../account-statistics/account-statistics.component';
+import {CustomerProfilingComponent} from '../customer-profiling/customer-profiling.component';
 
 const routes: Routes = [
   {
@@ -18,8 +18,8 @@ const routes: Routes = [
     component: IndexMainComponent
   },
   {
-    path: 'user-profiling',
-    component: UserProfilingComponent
+    path: 'customer-profiling',
+    component: CustomerProfilingComponent
   },
   {
     path: 'income',

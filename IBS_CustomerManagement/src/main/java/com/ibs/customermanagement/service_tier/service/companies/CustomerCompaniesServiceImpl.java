@@ -4,6 +4,7 @@ import com.ibs.customermanagement.data_tier.dao.CustomerFinancialCompaniesDAO;
 import com.ibs.customermanagement.data_tier.repository.CustomerFinancialCompaniesRepository;
 import com.ibs.customermanagement.service_tier.mapper.CustomerCompaniesMapper;
 import com.ibs.customermanagement.service_tier.model.CustomerCompaniesDTO;
+import com.ibs.customermanagement.service_tier.utils.GeneralUtills;
 import com.ibs.customermanagement.web_tier.response.BaseRequestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,8 @@ public class CustomerCompaniesServiceImpl implements CustomerCompaniesService {
 
     private final CustomerFinancialCompaniesDAO customerFinancialCompaniesDAO;
     private final CustomerFinancialCompaniesRepository companiesRepository;
+
+    private GeneralUtills generalUtills = new GeneralUtills();
 
     @Autowired
     public CustomerCompaniesServiceImpl(CustomerFinancialCompaniesDAO customerFinancialCompaniesDAO, CustomerFinancialCompaniesRepository companiesRepository) {
@@ -38,6 +41,9 @@ public class CustomerCompaniesServiceImpl implements CustomerCompaniesService {
         if(companiesDTO == null) {
             return new BaseRequestResponse(HttpStatus.UNPROCESSABLE_ENTITY.value(), HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase());
         }
+        if(!generalUtills.validateCompanyType(companiesDTO.getCompanyType())) {
+            return new BaseRequestResponse(HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT.getReasonPhrase());
+        }
         customerFinancialCompaniesDAO.save(new CustomerCompaniesMapper().fromDtoToEntity(companiesDTO));
         return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
     }
@@ -58,6 +64,9 @@ public class CustomerCompaniesServiceImpl implements CustomerCompaniesService {
         }
         if(companiesRepository.getByIdCompany(companiesDTO.getIdCompany()) == null) {
            return new BaseRequestResponse(HttpStatus.NOT_FOUND.value(), HttpStatus.NOT_FOUND.getReasonPhrase());
+        }
+        if(!generalUtills.validateCompanyType(companiesDTO.getCompanyType())) {
+            return new BaseRequestResponse(HttpStatus.CONFLICT.value(), HttpStatus.CONFLICT.getReasonPhrase());
         }
         customerFinancialCompaniesDAO.save(new CustomerCompaniesMapper().fromDtoToEntity(companiesDTO));
         return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
