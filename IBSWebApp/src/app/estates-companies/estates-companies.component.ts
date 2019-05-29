@@ -8,6 +8,8 @@ import {CustomerEstatesService} from '../services/customer-estates.service';
 import {CustomerCompaniesService} from '../services/customer-companies.service';
 import {GenericResponse} from '../shared/models/responses/generic-response';
 import {MessageConstants} from '../shared/models/constant/message-constants';
+import {CustomerIncome} from '../shared/models/income/customer-income';
+import {CustomerIncomeService} from '../services/customer-income.service';
 
 @Component({
   selector: 'app-estates-companies',
@@ -15,6 +17,7 @@ import {MessageConstants} from '../shared/models/constant/message-constants';
   styleUrls: ['./estates-companies.component.css']
 })
 export class EstatesCompaniesComponent implements OnInit {
+  incomes: CustomerIncome[];
   estates: CustomerEstate[];
   selectedEstate: CustomerEstate;
   companies: CustomerCompanies[];
@@ -46,7 +49,8 @@ export class EstatesCompaniesComponent implements OnInit {
 
 
   constructor(private cookieService: CookieService, public modalService: NgbModal, private router: Router,
-              public estateService: CustomerEstatesService, public companyService: CustomerCompaniesService) { }
+              public estateService: CustomerEstatesService, public companyService: CustomerCompaniesService,
+              public incomeService: CustomerIncomeService) { }
 
   ngOnInit() {
     if (this.cookieService.get('Id') === '') {
@@ -56,6 +60,7 @@ export class EstatesCompaniesComponent implements OnInit {
       this.loggedUserName = this.cookieService.get('Name');
       this.estateService.getCustomerEstates(this.customerId).then(estates => this.estates = estates);
       this.companyService.getCustomerCompanies(this.customerId).then(companies => this.companies = companies);
+      this.incomeService.getCustomerIncomes(this.customerId).then(incomes => this.incomes = incomes);
       this.updateEstateRequestResponse = new GenericResponse();
       this.addEstateRequestResponse = new GenericResponse();
       this.deleteEstateRequestResponse = new GenericResponse();

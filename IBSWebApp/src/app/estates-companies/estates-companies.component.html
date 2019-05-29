@@ -86,16 +86,31 @@
           </div>
           <div class="chart quarter">
             <span class="label">Incomes/Liabilities</span><br/><br/>
-            <h2>0%</h2>
+            <div *ngIf="incomes.length > 0">
+              <h2>100%</h2>
+            </div>
+            <div *ngIf="incomes.length === 0">
+              <h2>0%</h2>
+            </div>
           </div>
           <div class="chart quarter">
             <span class="label">Real Estates</span>
             <br/><br/>
-            <h2>0%</h2>
+            <div *ngIf="estates.length === 0">
+              <h2>0%</h2>
+            </div>
+            <div *ngIf="estates.length > 0">
+              <h2>100%</h2>
+            </div>
           </div>
           <div class="chart quarter">
             <span class="label">Companies</span><br/><br/>
-            <h2>0%</h2>
+            <div *ngIf="companies.length === 0">
+              <h2>0%</h2>
+            </div>
+            <div *ngIf="companies.length > 0">
+              <h2>100%</h2>
+            </div>
           </div>
         </div>
       </div>

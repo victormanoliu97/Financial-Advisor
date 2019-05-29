@@ -9,6 +9,10 @@ import {Router} from '@angular/router';
 import {CustomerLiability} from '../shared/models/liabilities/customer-liability';
 import {CustomerLiabilitiesService} from '../services/customer-liabilities.service';
 import {IncomeTypes} from '../shared/models/constant/income-types';
+import {CustomerEstatesService} from '../services/customer-estates.service';
+import {CustomerCompaniesService} from '../services/customer-companies.service';
+import {CustomerEstate} from '../shared/models/estate/customer-estate';
+import {CustomerCompanies} from '../shared/models/companies/customer-companies';
 
 @Component({
   selector: 'app-income-liabilities',
@@ -18,6 +22,8 @@ import {IncomeTypes} from '../shared/models/constant/income-types';
 export class IncomeLiabilitiesComponent implements OnInit {
   incomes: CustomerIncome[];
   liabilities: CustomerLiability[];
+  estates: CustomerEstate[];
+  companies: CustomerCompanies[];
 
   customerId: number = Number(this.cookieService.get('Id'));
   loggedUserName: string;
@@ -48,7 +54,9 @@ export class IncomeLiabilitiesComponent implements OnInit {
 
 
   constructor(private cookieService: CookieService, private incomeService: CustomerIncomeService,
-              private liabilityService: CustomerLiabilitiesService, public modalService: NgbModal, private router: Router) { }
+              private liabilityService: CustomerLiabilitiesService, public modalService: NgbModal, private router: Router,
+              public estateService: CustomerEstatesService,
+              public companyService: CustomerCompaniesService) { }
 
   ngOnInit() {
     if (this.cookieService.get('Id') === '') {
@@ -58,6 +66,8 @@ export class IncomeLiabilitiesComponent implements OnInit {
       this.loggedUserName = this.cookieService.get('Name');
       this.incomeService.getCustomerIncomes(this.customerId).then(incomes => this.incomes = incomes);
       this.liabilityService.getCustomerLiabilities(this.customerId).then(liabilities => this.liabilities = liabilities);
+      this.estateService.getCustomerEstates(this.customerId).then(estates => this.estates = estates);
+      this.companyService.getCustomerCompanies(this.customerId).then(companies => this.companies = companies);
       this.addIncomeRequestResponse = new GenericResponse();
       this.updateIncomeRequestResponse = new GenericResponse();
       this.addLiabilityRequestResponse = new GenericResponse();
