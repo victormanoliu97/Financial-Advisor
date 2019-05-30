@@ -1,8 +1,8 @@
 export class CustomerIncome {
-  idFinancialIncome: Number;
+  idFinancialIncome: number;
   incomeAmount: number;
   incomeSource: string;
   compressibleCosts: number;
   nonCompressibleCosts: number;
-  customerId: Number;
+  customerId: number;
 }

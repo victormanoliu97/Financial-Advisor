@@ -1,6 +1,6 @@
 export class CustomerLiability {
-  idFinancialLiability: Number;
+  idFinancialLiability: number;
   liabilitiesAmount: number;
   liabilitiesSource: string;
-  customerId: Number;
+  customerId: number;
 }

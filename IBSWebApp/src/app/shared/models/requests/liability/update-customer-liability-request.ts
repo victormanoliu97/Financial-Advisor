@@ -1,6 +1,6 @@
 export class UpdateCustomerLiabilityRequest {
-  idFinancialLiability: Number;
-  liabilitiesAmount: Number;
-  liabilitiesSource: String;
-  customerId: Number;
+  idFinancialLiability: number;
+  liabilitiesAmount: number;
+  liabilitiesSource: string;
+  customerId: number;
 }
