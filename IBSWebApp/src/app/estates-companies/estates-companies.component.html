@@ -7,23 +7,22 @@
         </a>
       <li>
       <li class="current">
-        <a href="#">Home</a>
+        <a href="/customer-panel">Home</a>
       </li>
 
       <li class="admin">
         <a href="#" title="admin-only" class="tooltip-right"
-           data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My
-          Objectives</a>
+           data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My Objectives</a>
       </li>
 
       <li class="spacer">Profiling
         <div class="hr"></div>
       </li>
       <li class="has-children">
-        <a href="#">Fill your profile</a>
+        <a href="/customer-profiling">Fill your profile</a>
         <ul class="sub-menu">
           <li>
-            <a href="#">General profiling</a>
+            <a href="/customer-profiling">General profiling</a>
           </li>
           <li>
             <a href="/income">Incomes/Liabilities</a>
@@ -82,7 +81,12 @@
         <div class="widget-content text-center">
           <div class="chart quarter">
             <span class="label">General</span><br/><br/>
-            <h2>0%</h2>
+            <div *ngIf="profiling.length > 0">
+              <h2>100%</h2>
+            </div>
+            <div *ngIf="profiling.length === 0">
+              <h2>0%</h2>
+            </div>
           </div>
           <div class="chart quarter">
             <span class="label">Incomes/Liabilities</span><br/><br/>
@@ -328,14 +332,24 @@
           </ng-template>
         </ngb-tab>
 
+
         <ngb-tab title="Add Estate/Company">
-          <ng-template ngbTabContent>
-            <br>
-            <button type="button" (click)="open(add_estate)" class="btn btn-primary"><i class="fa fa-plus"> Add Estate</i></button>
-            <br>
-            <br>
-            <button type="button" (click)="open(add_company)" class="btn btn-primary"><i class="fa fa-plus"> Add Company</i></button>
-          </ng-template>
+          <div *ngIf="profiling.length > 0">
+            <ng-template ngbTabContent>
+              <br>
+              <button type="button" (click)="open(add_estate)" class="btn btn-primary"><i class="fa fa-plus"> Add Estate</i></button>
+              <br>
+              <br>
+              <button type="button" (click)="open(add_company)" class="btn btn-primary"><i class="fa fa-plus"> Add Company</i></button>
+            </ng-template>
+          </div>
+          <div *ngIf="profiling.length == 0">
+            <ng-template ngbTabContent>
+            <div class="alert alert-danger">
+              You need to fill your general profiling first
+            </div>
+            </ng-template>
+          </div>
 
           <ng-template #add_company let-modal>
             <div class="modal-header">

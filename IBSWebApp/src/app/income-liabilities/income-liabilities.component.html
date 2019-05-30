@@ -20,10 +20,10 @@
         <div class="hr"></div>
       </li>
       <li class="has-children">
-        <a href="#">Fill your profile</a>
+        <a href="/customer-profiling">Fill your profile</a>
         <ul class="sub-menu">
           <li>
-            <a href="#">General profiling</a>
+            <a href="/customer-profiling">General profiling</a>
           </li>
           <li>
             <a href="/income">Incomes/Liabilities</a>
@@ -82,7 +82,12 @@
         <div class="widget-content text-center">
           <div class="chart quarter">
             <span class="label">General</span><br/><br/>
-            <h2>0%</h2>
+            <div *ngIf="profiling.length > 0">
+              <h2>100%</h2>
+            </div>
+            <div *ngIf="profiling.length === 0">
+              <h2>0%</h2>
+            </div>
           </div>
           <div class="chart quarter">
             <span class="label">Incomes/Liabilities</span><br/><br/>

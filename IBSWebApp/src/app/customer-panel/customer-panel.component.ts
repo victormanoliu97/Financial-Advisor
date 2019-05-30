@@ -10,6 +10,8 @@ import {CustomerEstate} from '../shared/models/estate/customer-estate';
 import {CustomerEstatesService} from '../services/customer-estates.service';
 import {CustomerCompaniesService} from '../services/customer-companies.service';
 import {CustomerCompanies} from '../shared/models/companies/customer-companies';
+import {CustomerProfilingService} from '../services/customer-profiling.service';
+import {CustomerProfiling} from '../shared/models/profiling/customer-profiling';
 
 @Component({
   selector: 'app-customer-panel',
@@ -21,6 +23,7 @@ export class CustomerPanelComponent implements OnInit {
   incomes: CustomerIncome[];
   estates: CustomerEstate[];
   companies: CustomerCompanies[];
+  profiling: CustomerProfiling[];
   deleteBankAccountRequestResponse: GenericResponse;
   customerId: number = Number(this.cookieService.get('Id'));
   loggedUserName: string;
@@ -28,7 +31,8 @@ export class CustomerPanelComponent implements OnInit {
   constructor(private cookieService: CookieService, private bankAccountService: CustomerBankAccountsService,
               private router: Router, public incomeService: CustomerIncomeService,
               public estateService: CustomerEstatesService,
-              public companyService: CustomerCompaniesService) { }
+              public companyService: CustomerCompaniesService,
+              public profilingService: CustomerProfilingService) { }
 
   ngOnInit() {
     if (this.cookieService.get('Id') === '') {
@@ -42,6 +46,7 @@ export class CustomerPanelComponent implements OnInit {
       this.incomeService.getCustomerIncomes(this.customerId).then(incomes => this.incomes = incomes);
       this.estateService.getCustomerEstates(this.customerId).then(estates => this.estates = estates);
       this.companyService.getCustomerCompanies(this.customerId).then(companies => this.companies = companies);
+      this.profilingService.getCustomerProfiling(this.customerId).then(profiling => this.profiling = profiling);
     }
   }
 

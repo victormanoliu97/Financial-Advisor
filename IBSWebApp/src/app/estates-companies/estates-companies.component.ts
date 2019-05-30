@@ -10,6 +10,8 @@ import {GenericResponse} from '../shared/models/responses/generic-response';
 import {MessageConstants} from '../shared/models/constant/message-constants';
 import {CustomerIncome} from '../shared/models/income/customer-income';
 import {CustomerIncomeService} from '../services/customer-income.service';
+import {CustomerProfilingService} from '../services/customer-profiling.service';
+import {CustomerProfiling} from '../shared/models/profiling/customer-profiling';
 
 @Component({
   selector: 'app-estates-companies',
@@ -21,6 +23,7 @@ export class EstatesCompaniesComponent implements OnInit {
   estates: CustomerEstate[];
   selectedEstate: CustomerEstate;
   companies: CustomerCompanies[];
+  profiling: CustomerProfiling[];
   selectedCompany: CustomerCompanies;
 
   customerId: number = Number(this.cookieService.get('Id'));
@@ -50,7 +53,8 @@ export class EstatesCompaniesComponent implements OnInit {
 
   constructor(private cookieService: CookieService, public modalService: NgbModal, private router: Router,
               public estateService: CustomerEstatesService, public companyService: CustomerCompaniesService,
-              public incomeService: CustomerIncomeService) { }
+              public incomeService: CustomerIncomeService,
+              public profilingService: CustomerProfilingService) { }
 
   ngOnInit() {
     if (this.cookieService.get('Id') === '') {
@@ -61,6 +65,7 @@ export class EstatesCompaniesComponent implements OnInit {
       this.estateService.getCustomerEstates(this.customerId).then(estates => this.estates = estates);
       this.companyService.getCustomerCompanies(this.customerId).then(companies => this.companies = companies);
       this.incomeService.getCustomerIncomes(this.customerId).then(incomes => this.incomes = incomes);
+      this.profilingService.getCustomerProfiling(this.customerId).then(profiling => this.profiling = profiling);
       this.updateEstateRequestResponse = new GenericResponse();
       this.addEstateRequestResponse = new GenericResponse();
       this.deleteEstateRequestResponse = new GenericResponse();

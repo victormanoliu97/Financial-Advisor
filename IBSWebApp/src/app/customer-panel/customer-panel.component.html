@@ -7,7 +7,7 @@
         </a>
       <li>
       <li class="current">
-        <a href="#">Home</a>
+        <a href="/customer-panel">Home</a>
       </li>
 
       <li class="admin">
@@ -16,17 +16,30 @@
 
       <li class="spacer">Profiling<div class="hr"></div></li>
       <li class="has-children">
-        <a href="#">Fill your profile</a>
+        <a href="/customer-profiling">Fill your profile</a>
         <ul class="sub-menu">
           <li>
-            <a href="#">General profiling</a>
+            <a href="/customer-profiling">General profiling</a>
           </li>
+
+          <div *ngIf="profiling.length > 0">
           <li>
             <a href="/income">Incomes/Liabilities</a>
           </li>
           <li>
             <a href="/estates">Estates/Companies</a>
           </li>
+          </div>
+
+          <div *ngIf="profiling.length === 0">
+            <li>
+              <a data-tooltip="You need to fill your general profiling first." title="Income not available" disabled="true"><span class="lock"></span>Incomes/Liabilities </a>
+            </li>
+            <li>
+              <a data-tooltip="You need to fill your general profiling first." title="Estate not available" disabled="true"><span class="lock"></span>Estates/Companies</a>
+            </li>
+          </div>
+
         </ul>
       </li>
 
@@ -72,7 +85,12 @@
         <div class="widget-content text-center">
           <div class="chart quarter">
             <span class="label">General</span><br /><br />
-            <h2>0%</h2>
+            <div *ngIf="profiling.length == 0">
+              <h2>0%</h2>
+            </div>
+            <div *ngIf="profiling.length > 0">
+              <h2>100 %</h2>
+            </div>
           </div>
           <div class="chart quarter">
             <span class="label">Incomes/Liabilities</span><br /><br />

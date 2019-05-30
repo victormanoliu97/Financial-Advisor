@@ -61,7 +61,8 @@ export class CustomerProfilingService {
 
     console.log('Id Prof ' + idProfiling);
 
-    return this.http.put(this.updateCustomerProfilingUrl + `${idProfiling}`, request, {headers: this.serverService.requestHeaders}).pipe(map((result: GenericResponse) => {
+    return this.http.put(this.updateCustomerProfilingUrl + `${idProfiling}`, request,
+      {headers: this.serverService.requestHeaders}).pipe(map((result: GenericResponse) => {
       return result;
     })).toPromise();
   }
