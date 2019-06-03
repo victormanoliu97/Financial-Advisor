@@ -10,3 +10,43 @@ connection = pymysql.connect(
     charset="utf8mb4",
     cursorclass=pymysql.cursors.DictCursor
 )
+
+def getAllIncome():
+    with connection.cursor() as cursor:
+        querystring = "select income from `t_ibs_customer_financial_objectives`"
+        cursor.execute(querystring)
+        result = cursor.fetchall()
+        return result
+
+
+def getAllObjValue():
+    with connection.cursor() as cursor:
+        querystring = "select objective_value from `t_ibs_customer_financial_objectives`"
+        cursor.execute(querystring)
+        result = cursor.fetchall()
+        return result
+
+
+def getAllYears():
+    with connection.cursor() as cursor:
+        querystring = "select years from `t_ibs_customer_financial_objectives`"
+        cursor.execute(querystring)
+        result = cursor.fetchall()
+        return result
+
+
+def getAllPossible():
+    with connection.cursor() as cursor:
+        querystring = "select possible from `t_ibs_customer_financial_objectives`"
+        cursor.execute(querystring)
+        result = cursor.fetchall()
+        return result
+
+
+def insertObjective(customerId, income, objectiveValue, years, possible):
+    with connection.cursor() as cursor:
+        querystring = "insert into `t_ibs_customer_financial_objectives`(`id_customer`, `income`, `objective_value`, `years`, `possible`)" \
+                      " values(%s, %s, %s, %s, %s)"
+        cursor.execute(querystring, (customerId, income, objectiveValue, years, possible))
+        connection.commit()
+

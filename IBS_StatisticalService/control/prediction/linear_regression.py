@@ -1,64 +1,22 @@
-import pymysql.cursors
-import pymysql
-import json
 import numpy as np
 from sklearn.linear_model import LinearRegression
 
-connection = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="victor",
-    db="ibs_local_schema",
-    charset="utf8mb4",
-    cursorclass=pymysql.cursors.DictCursor
-)
+import control.database.databaseManager as dm
 
 
-def getAllIncome():
-    with connection.cursor() as cursor:
-        querystring = "select income from `test_objective`"
-        cursor.execute(querystring)
-        result = cursor.fetchall()
-        return result
-
-
-def getAllObjValue():
-    with connection.cursor() as cursor:
-        querystring = "select obj_value from `test_objective`"
-        cursor.execute(querystring)
-        result = cursor.fetchall()
-        return result
-
-
-def getAllYears():
-    with connection.cursor() as cursor:
-        querystring = "select years from `test_objective`"
-        cursor.execute(querystring)
-        result = cursor.fetchall()
-        return result
-
-
-def getAllPossible():
-    with connection.cursor() as cursor:
-        querystring = "select possible from `test_objective`"
-        cursor.execute(querystring)
-        result = cursor.fetchall()
-        return result
-
-
-def createX():
+def createXTestData():
     incomes = []
     objValues = []
     years = []
     x = [[]]
 
-    for i in getAllIncome():
+    for i in dm.getAllIncome():
         incomes.append(i["income"])
 
-    for i in getAllObjValue():
-        objValues.append(i["obj_value"])
+    for i in dm.getAllObjValue():
+        objValues.append(i["objective_value"])
 
-    for i in getAllYears():
+    for i in dm.getAllYears():
         years.append(i["years"])
 
     for i in range(0, len(incomes)):
@@ -71,8 +29,11 @@ def createX():
     return x
 
 
-def createXPredict():
-    x = [[], [100, 5000.0, 2], [200, 25000.0, 1], [300.0, 3600.0, 1], [100, 100, 1]]
+def createXPredict(income, objectiveValue, years):
+    x = [[]]
+
+    x1 = [income, objectiveValue, years]
+    x.append(x1)
 
     for i in x:
         if not i:
@@ -80,21 +41,22 @@ def createXPredict():
 
     return x
 
-def createY():
+
+def createYTestData():
     y = []
-    for i in getAllPossible():
+    for i in dm.getAllPossible():
         y.append(i["possible"])
 
     return y
 
 
-def multiple_linear_regression():
-    x = createX()
-    y = createY()
+def multiple_linear_regression(income, objectiveValue, years):
+    x = createXTestData()
+    y = createYTestData()
 
     model = LinearRegression().fit(x, y)
 
-    y_pred = model.predict(np.array(createXPredict()))
+    y_pred = model.predict(np.array(createXPredict(income, objectiveValue, years)))
 
     result = []
     for i in y_pred:
@@ -103,4 +65,3 @@ def multiple_linear_regression():
     return result
 
 
-print(multiple_linear_regression())

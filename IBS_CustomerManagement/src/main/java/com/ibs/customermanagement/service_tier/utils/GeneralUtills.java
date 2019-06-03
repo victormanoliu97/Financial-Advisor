@@ -4,15 +4,16 @@ import com.ibs.customermanagement.service_tier.constants.CompaniesTypes;
 import com.ibs.customermanagement.service_tier.constants.JobTypes;
 import com.ibs.customermanagement.service_tier.constants.IncomeTypes;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class GeneralUtills {
 
-    private ArrayList<IncomeTypes> incomeTypes = new ArrayList<>(Arrays.asList(IncomeTypes.values()));
-    private ArrayList<CompaniesTypes> companiesTypes = new ArrayList<>(Arrays.asList(CompaniesTypes.values()));
-    private ArrayList<JobTypes> jobtypes = new ArrayList<>(Arrays.asList(JobTypes.values()));
+    private List<String> incomeTypes = Stream.of(IncomeTypes.values()).map(IncomeTypes::getIncomeType).collect(Collectors.toList());
+    private List<String> companiesTypes = Stream.of(CompaniesTypes.values()).map(CompaniesTypes::getCompanyType).collect(Collectors.toList());
+    private List<String> jobTypes = Stream.of(JobTypes.values()).map(JobTypes::getJobType).collect(Collectors.toList());
 
     public String generateIban() {
         StringBuilder stringBuilder = new StringBuilder();
@@ -30,5 +31,5 @@ public class GeneralUtills {
         return companiesTypes.contains(companyType);
     }
 
-    public boolean validateJobType(String jobType) {return jobtypes.contains(jobType); }
+    public boolean validateJobType(String jobType) {return jobTypes.contains(jobType); }
 }
