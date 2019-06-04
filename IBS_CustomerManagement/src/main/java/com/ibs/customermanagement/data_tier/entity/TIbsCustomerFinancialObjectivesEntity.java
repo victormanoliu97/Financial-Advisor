@@ -25,6 +25,10 @@ public class TIbsCustomerFinancialObjectivesEntity {
     private double income;
 
     @Basic
+    @Column(name = "objective_name")
+    private String objectiveName;
+
+    @Basic
     @Column(name = "objective_value")
     private double objectiveValue;
 

@@ -16,6 +16,7 @@ public class CustomerFinancialObjectiveRequestDTO {
     private int id;
     private Integer customerId;
     private double income;
+    private String objectiveName;
     private double objectiveValue;
     private int years;
 
@@ -25,6 +26,7 @@ public class CustomerFinancialObjectiveRequestDTO {
         try {
             responseJson.put("customerId", customerId)
                     .put("income", income)
+                    .put("objectiveName", objectiveName)
                     .put("objectiveValue", objectiveValue)
                     .put("years", years);
         } catch (JSONException e) {

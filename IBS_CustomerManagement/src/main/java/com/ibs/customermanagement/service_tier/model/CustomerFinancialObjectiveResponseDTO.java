@@ -11,6 +11,7 @@ public class CustomerFinancialObjectiveResponseDTO {
     private int id;
     private Integer customerId;
     private double income;
+    private String objectiveName;
     private double objectiveValue;
     private int years;
     private Integer possible;

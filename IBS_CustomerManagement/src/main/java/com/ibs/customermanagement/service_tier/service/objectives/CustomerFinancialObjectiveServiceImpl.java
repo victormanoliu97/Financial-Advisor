@@ -1,6 +1,12 @@
 package com.ibs.customermanagement.service_tier.service.objectives;
 
 import com.ibs.customermanagement.data_tier.dao.CustomerFinancialObjectivesDAO;
+import com.ibs.customermanagement.data_tier.entity.TIbsCustomersCustomerFinancialEstatesEntity;
+import com.ibs.customermanagement.data_tier.entity.TIbsCustomersCustomerFinancialIncomeEntity;
+import com.ibs.customermanagement.data_tier.entity.TIbsCustomersCustomerFinancialLiabilitiesEntity;
+import com.ibs.customermanagement.data_tier.repository.CustomerFinancialEstatesRepository;
+import com.ibs.customermanagement.data_tier.repository.CustomerFinancialIncomeRepository;
+import com.ibs.customermanagement.data_tier.repository.CustomerFinancialLiabilitiesRepository;
 import com.ibs.customermanagement.data_tier.repository.CustomerFinancialObjectivesRepository;
 import com.ibs.customermanagement.service_tier.mapper.CustomerFinancialObjectiveMapper;
 import com.ibs.customermanagement.service_tier.model.CustomerFinancialObjectiveRequestDTO;
@@ -19,13 +25,19 @@ public class CustomerFinancialObjectiveServiceImpl implements CustomerFinancialO
 
     private final CustomerFinancialObjectivesRepository customerFinancialObjectivesRepository;
     private final CustomerFinancialObjectivesDAO customerFinancialObjectivesDAO;
+    private final CustomerFinancialIncomeRepository customerFinancialIncomeRepository;
+    private final CustomerFinancialLiabilitiesRepository customerFinancialLiabilitiesRepository;
+    private final CustomerFinancialEstatesRepository customerFinancialEstatesRepository;
 
     private RequestSender requestSender = new RequestSender();
 
     @Autowired
-    public CustomerFinancialObjectiveServiceImpl(CustomerFinancialObjectivesRepository customerFinancialObjectivesRepository, CustomerFinancialObjectivesDAO customerFinancialObjectivesDAO) {
+    public CustomerFinancialObjectiveServiceImpl(CustomerFinancialObjectivesRepository customerFinancialObjectivesRepository, CustomerFinancialObjectivesDAO customerFinancialObjectivesDAO, CustomerFinancialIncomeRepository customerFinancialIncomeRepository, CustomerFinancialLiabilitiesRepository customerFinancialLiabilitiesRepository, CustomerFinancialEstatesRepository customerFinancialEstatesRepository) {
         this.customerFinancialObjectivesRepository = customerFinancialObjectivesRepository;
         this.customerFinancialObjectivesDAO = customerFinancialObjectivesDAO;
+        this.customerFinancialIncomeRepository = customerFinancialIncomeRepository;
+        this.customerFinancialLiabilitiesRepository = customerFinancialLiabilitiesRepository;
+        this.customerFinancialEstatesRepository = customerFinancialEstatesRepository;
     }
 
     @Override
@@ -41,6 +53,15 @@ public class CustomerFinancialObjectiveServiceImpl implements CustomerFinancialO
         if(objectiveDTO == null) {
             return new BaseRequestResponse(HttpStatus.UNPROCESSABLE_ENTITY.value(), HttpStatus.UNPROCESSABLE_ENTITY.getReasonPhrase());
         }
+        Double customerIncomeAmount = customerFinancialIncomeRepository.getAllByCustomerId(objectiveDTO.getCustomerId()).stream().mapToDouble(TIbsCustomersCustomerFinancialIncomeEntity::getIncomeAmount).sum();
+        Double compressibleCosts = customerFinancialIncomeRepository.getAllByCustomerId(objectiveDTO.getCustomerId()).stream().mapToDouble(TIbsCustomersCustomerFinancialIncomeEntity::getCompressibleCosts).sum();
+        Double nonCompressibleCosts = customerFinancialIncomeRepository.getAllByCustomerId(objectiveDTO.getCustomerId()).stream().mapToDouble(TIbsCustomersCustomerFinancialIncomeEntity::getNonCompressibleCosts).sum();
+        Double customerLiabilitiesAmount = customerFinancialLiabilitiesRepository.getAllByCustomerId(objectiveDTO.getCustomerId()).stream().mapToDouble(TIbsCustomersCustomerFinancialLiabilitiesEntity::getLiabilitiesAmount).sum();
+        Double customerEstatesRevenueAmount = customerFinancialEstatesRepository.getAllByCustomerId(objectiveDTO.getCustomerId()).stream().mapToDouble(TIbsCustomersCustomerFinancialEstatesEntity::getEstateValue).sum();
+
+        double finalAmount = (customerIncomeAmount + customerEstatesRevenueAmount) - (compressibleCosts + nonCompressibleCosts + customerLiabilitiesAmount);
+        objectiveDTO.setIncome(finalAmount);
+
         requestSender.sendObjectiveRequest(objectiveDTO.toString());
         return new BaseRequestResponse(HttpStatus.OK.value(), HttpStatus.OK.getReasonPhrase());
     }
