@@ -1,0 +1,157 @@
+<div class="container">
+  <div class="sidebar">
+    <ul>
+      <li class="logo">
+        <a>
+          <img src="https://cdn4.iconfinder.com/data/icons/top-search-3/128/_Bank_bank_account_banking_-128.png" />
+        </a>
+      <li>
+      <li class="current">
+        <a href="/customer-panel">Home</a>
+      </li>
+
+      <li class="admin">
+        <a href="/objectives" title="admin-only" class="tooltip-right" data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My Objectives</a>
+      </li>
+
+      <li class="spacer">Profiling<div class="hr"></div></li>
+      <li class="has-children">
+        <a href="/customer-profiling">Fill your profile</a>
+        <ul class="sub-menu">
+          <li>
+            <a href="/customer-profiling">General profiling</a>
+          </li>
+
+          <div *ngIf="profiling.length > 0">
+            <li>
+              <a href="/income">Incomes/Liabilities</a>
+            </li>
+            <li>
+              <a href="/estates">Estates/Companies</a>
+            </li>
+          </div>
+
+          <div *ngIf="profiling.length === 0">
+            <li>
+              <a data-tooltip="You need to fill your general profiling first." title="Income not available" disabled="true"><span class="lock"></span>Incomes/Liabilities </a>
+            </li>
+            <li>
+              <a data-tooltip="You need to fill your general profiling first." title="Estate not available" disabled="true"><span class="lock"></span>Estates/Companies</a>
+            </li>
+          </div>
+
+        </ul>
+      </li>
+
+      <li class="spacer">Statistics<div class="hr"></div></li>
+      <li class="has-children">
+        <a href="/statistics">Review Account Statistics</a>
+      </li>
+      <li class="has-children">
+      </li>
+      <li class="has-children">
+        <a href="#">Financial Instruments</a>
+        <ul class="sub-menu">
+          <li>
+            <a href="#">Stocks</a>
+          </li>
+          <li>
+            <a href="#">Forex</a>
+          </li>
+          <li>
+            <a href="#">Cryptocurrencies</a>
+          </li>
+        </ul>
+      </li>
+      <li class="spacer"><div class="hr"></div></li>
+      <li>
+        <a (click)="logout()" class="tooltip-right" data-tooltip="Ready to leave? :(">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="header">
+      <span class="label"><strong><a>{{loggedUserName}}</a></strong></span>
+      <span class="pipe"></span>
+      &nbsp;<span class="label">Dashboard</span>
+      <div class="menu">
+        <a class="faux wiggle-bug tooltip-bottom" data-tooltip="Report Bugs or Concerns." title="Report a Bug"><span class="bug"></span></a>
+        <a>Support</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="widget totals">
+        <h4 class="widget-title"><span data-tooltip="Analytical information about your profiling completion.">Profiling Completion Analysis</span> <a href="#" class="tooltip-left button" data-tooltip="Attempt to reload Analytical data.">Reload Data</a></h4>
+        <div class="widget-content text-center">
+          <div class="chart quarter">
+            <span class="label">General</span><br /><br />
+            <div *ngIf="profiling.length == 0">
+              <h2>0%</h2>
+            </div>
+            <div *ngIf="profiling.length > 0">
+              <h2>100 %</h2>
+            </div>
+          </div>
+          <div class="chart quarter">
+            <span class="label">Incomes/Liabilities</span><br /><br />
+            <div *ngIf="incomes.length > 0">
+              <h2>100%</h2>
+            </div>
+            <div *ngIf="incomes.length === 0">
+              <h2>0%</h2>
+            </div>
+          </div>
+          <div class="chart quarter">
+            <span class="label">Real Estates</span>
+            <br /><br />
+            <div *ngIf="estates.length === 0">
+              <h2>0%</h2>
+            </div>
+            <div *ngIf="estates.length > 0">
+              <h2>100%</h2>
+            </div>
+          </div>
+          <div class="chart quarter">
+            <span class="label">Companies</span><br /><br />
+            <div *ngIf="companies.length === 0">
+              <h2>0%</h2>
+            </div>
+            <div *ngIf="companies.length > 0">
+              <h2>100%</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <table class="table table-hover table-bordered">
+        <thead style="background-color: #3B78E7">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Value</th>
+          <th scope="col">Years</th>
+          <th scope="col">Possible</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let index of objectives">
+            <td>{{index.objectiveName}}</td>
+            <td>{{index.objectiveValue}}</td>
+            <td>{{index.years}}</td>
+            <div *ngIf="index.possible == 0">
+              <i class="fa fa-exclamation" style="color: #e5e552; font-size: 25px;"></i>
+            </div>
+            <div *ngIf="index.possible < 0">
+              <i class="fa fa-times" style="color: red; font-size: 25px;"></i>
+            </div>
+            <div *ngIf="index.possible >= 1">
+              <i class="fa fa-check-circle" style="display: inline; color: green; font-size: 25px;"></i>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+
