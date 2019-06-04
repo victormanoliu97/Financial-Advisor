@@ -43,10 +43,10 @@ def getAllPossible():
         return result
 
 
-def insertObjective(customerId, income, objectiveValue, years, possible):
+def insertObjective(customerId, income, objectiveName, objectiveValue, years, possible):
     with connection.cursor() as cursor:
-        querystring = "insert into `t_ibs_customer_financial_objectives`(`id_customer`, `income`, `objective_value`, `years`, `possible`)" \
-                      " values(%s, %s, %s, %s, %s)"
-        cursor.execute(querystring, (customerId, income, objectiveValue, years, possible))
+        querystring = "insert into `t_ibs_customer_financial_objectives`(`id_customer`, `income`, `objective_name`, `objective_value`, `years`, `possible`)" \
+                      " values(%s, %s, %s, %s, %s, %s)"
+        cursor.execute(querystring, (customerId, income, objectiveName, objectiveValue, years, possible))
         connection.commit()
 

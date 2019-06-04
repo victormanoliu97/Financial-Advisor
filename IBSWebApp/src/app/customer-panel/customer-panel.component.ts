@@ -57,4 +57,11 @@ export class CustomerPanelComponent implements OnInit {
     }
   }
 
+  logout() {
+    this.cookieService.delete('Id');
+    this.cookieService.delete('Name');
+    this.cookieService.delete('token');
+    this.router.navigate(['login']);
+  }
+
 }

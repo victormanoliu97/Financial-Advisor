@@ -19,6 +19,7 @@ import { EstatesCompaniesComponent } from './estates-companies/estates-companies
 import { AccountStatisticsComponent } from './account-statistics/account-statistics.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CustomerProfilingComponent } from './customer-profiling/customer-profiling.component';
+import { CustomerObjectivesComponent } from './customer-objectives/customer-objectives.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CustomerProfilingComponent } from './customer-profiling/customer-profil
     EstatesCompaniesComponent,
     AccountStatisticsComponent,
     CustomerProfilingComponent,
+    CustomerObjectivesComponent,
   ],
   imports: [
     BrowserModule,

@@ -11,9 +11,12 @@
       </li>
 
       <li class="admin">
-        <a href="#" title="admin-only" class="tooltip-right"
-           data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My
-          Objectives</a>
+        <div *ngIf="incomes.length == 0">
+          <a title="admin-only" class="tooltip-right" data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My Objectives</a>
+        </div>
+        <div *ngIf="incomes.length > 0">
+          <a href="/objectives" title="admin-only">My Objectives</a>
+        </div>
       </li>
 
       <li class="spacer">Profiling
@@ -60,7 +63,7 @@
         <div class="hr"></div>
       </li>
       <li>
-        <a href="#" class="tooltip-right" data-tooltip="Ready to leave? :(">Logout</a>
+        <a (click)="logout()" class="tooltip-right" data-tooltip="Ready to leave? :(">Logout</a>
       </li>
     </ul>
   </div>

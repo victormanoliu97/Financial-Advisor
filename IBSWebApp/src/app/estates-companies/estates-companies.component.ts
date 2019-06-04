@@ -196,4 +196,11 @@ export class EstatesCompaniesComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
+  logout() {
+    this.cookieService.delete('Id');
+    this.cookieService.delete('Name');
+    this.cookieService.delete('token');
+    this.router.navigate(['login']);
+  }
 }
