@@ -1,2 +1,2 @@
-# Intelligent-Banking-System
+# Financial Advisor
 Project for the Bachelor Degree
