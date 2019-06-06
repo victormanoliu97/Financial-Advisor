@@ -47,11 +47,6 @@ namespace IBS_Authentification_BusinessLayer.Repository
                 loginResponse.FirstName = foundCustomer.First_Name;
                 loginResponse.LastName = foundCustomer.Last_Name;
                 loginResponse.CNP = foundCustomer.CNP;
-                loginResponse.BirthDate = foundCustomer.Birth_Date;
-                loginResponse.Age = foundCustomer.Age;
-                loginResponse.Street = foundCustomer.Street;
-                loginResponse.City = foundCustomer.City;
-                loginResponse.Country = foundCustomer.City;
             }
 
             return loginResponse;
@@ -78,11 +73,7 @@ namespace IBS_Authentification_BusinessLayer.Repository
             customerToAdd.First_Name = request.FirstName;
             customerToAdd.Last_Name = request.LastName;
             customerToAdd.CNP = request.Cnp;
-            customerToAdd.Birth_Date = request.BirthDate;
             customerToAdd.Age = request.Age;
-            customerToAdd.Street = request.Street;
-            customerToAdd.City = request.City;
-            customerToAdd.Country = request.Country;
             _appDbContext.T_IBS_CUSTOMERS.Add(customerToAdd);
             _appDbContext.SaveChanges();
 

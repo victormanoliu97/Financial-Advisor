@@ -1,37 +1,31 @@
 using System;
 using Newtonsoft.Json.Linq;
+using Raven.Client;
 
 namespace IBS_Authentification_BusinessLayer.AuthResponses
 {
     public class RegisterRequestResponse
     {
-        public int CustomerId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string CNP { get; set; }
-        public DateTime BirthDate { get; set; }
-        public int Age { get; set; }
-        public string Street { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
         
-        public int StatusCode { get; set; }
+        public int ResponseCode { get; set; }
+        public string ResponseMessage { get; set; }
         
         
         public override string ToString()
         {
             dynamic jsonObject = new JObject();
-            jsonObject.CustomerId = CustomerId;
-            jsonObject.FirstName = FirstName;
-            jsonObject.LastName = LastName;
-            jsonObject.CNP = CNP;
-            jsonObject.BirthDate = BirthDate;
-            jsonObject.Age = Age;
-            jsonObject.Street = Street;
-            jsonObject.City = City;
-            jsonObject.Country = Country;
-            jsonObject.StatusCode = StatusCode;
+            jsonObject.responseCode = ResponseCode;
+            jsonObject.responseMessage = ResponseMessage;
             return jsonObject.ToString(Newtonsoft.Json.Formatting.None);
+        }
+
+        public JsonObject toJson()
+        {
+            dynamic jsonObject = new JObject();
+            jsonObject.responseCode = ResponseCode;
+            jsonObject.responseMessage = ResponseMessage;
+            return jsonObject;
+
         }
     }
 }

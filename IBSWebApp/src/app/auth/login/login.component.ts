@@ -15,6 +15,8 @@ import {sha256} from 'js-sha256';
 export class LoginComponent implements OnInit {
 
   loggedUser: Customer;
+  email: string;
+  password: string;
 
   constructor(private loginService: LoginService, private router: Router,
               private cookieService: CookieService) { }

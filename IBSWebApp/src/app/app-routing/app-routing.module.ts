@@ -10,6 +10,7 @@ import {CustomerProfilingComponent} from '../customer-profiling/customer-profili
 import {CustomerObjectivesComponent} from '../customer-objectives/customer-objectives.component';
 import {StocksComponent} from '../stocks/stocks.component';
 import {ForexComponent} from '../forex/forex.component';
+import {RegisterComponent} from '../auth/register/register.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
     path: 'statistics',
     component: AccountStatisticsComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: 'stocks',

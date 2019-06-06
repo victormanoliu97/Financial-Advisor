@@ -1,4 +1,5 @@
 using IBS_Authentification_BusinessLayer.AuthRequests;
+using IBS_Authentification_BusinessLayer.AuthResponses;
 using IBS_Authentification_BusinessLayer.Repository;
 
 namespace IBS_Authentification_BusinessLayer.Service.Register
@@ -12,13 +13,15 @@ namespace IBS_Authentification_BusinessLayer.Service.Register
             _authRepository = authRepository;
         }
 
-        public void RegisterUser(RegisterAccountRequest request)
+        public RegisterRequestResponse RegisterUser(RegisterAccountRequest request)
         {
-            if (request == null) return;
+            if (request == null) return new RegisterRequestResponse {ResponseCode = 422, ResponseMessage = "Null Request"};
             if (_authRepository.UserAlreadyExists(request.Email) == false)
             {
                 _authRepository.RegisterAccount(request);
+                return new RegisterRequestResponse {ResponseCode = 200, ResponseMessage = "Ok"};
             }
+            return new RegisterRequestResponse {ResponseCode = 500, ResponseMessage = "Internal Server Error"};
         }
     }
 }
