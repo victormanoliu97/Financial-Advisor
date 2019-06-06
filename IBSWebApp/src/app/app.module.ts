@@ -20,6 +20,8 @@ import { AccountStatisticsComponent } from './account-statistics/account-statist
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CustomerProfilingComponent } from './customer-profiling/customer-profiling.component';
 import { CustomerObjectivesComponent } from './customer-objectives/customer-objectives.component';
+import { StocksComponent } from './stocks/stocks.component';
+import { ForexComponent } from './forex/forex.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { CustomerObjectivesComponent } from './customer-objectives/customer-obje
     AccountStatisticsComponent,
     CustomerProfilingComponent,
     CustomerObjectivesComponent,
+    StocksComponent,
+    ForexComponent,
   ],
   imports: [
     BrowserModule,

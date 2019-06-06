@@ -8,6 +8,8 @@ import {EstatesCompaniesComponent} from '../estates-companies/estates-companies.
 import {AccountStatisticsComponent} from '../account-statistics/account-statistics.component';
 import {CustomerProfilingComponent} from '../customer-profiling/customer-profiling.component';
 import {CustomerObjectivesComponent} from '../customer-objectives/customer-objectives.component';
+import {StocksComponent} from '../stocks/stocks.component';
+import {ForexComponent} from '../forex/forex.component';
 
 const routes: Routes = [
   {
@@ -37,6 +39,14 @@ const routes: Routes = [
   {
     path: 'statistics',
     component: AccountStatisticsComponent
+  },
+  {
+    path: 'stocks',
+    component: StocksComponent
+  },
+  {
+    path: 'forex',
+    component: ForexComponent
   },
   {
     path: 'objectives',

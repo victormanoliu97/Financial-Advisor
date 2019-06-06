@@ -55,16 +55,13 @@
       <li class="has-children">
       </li>
       <li class="has-children">
-        <a href="#">Financial Instruments</a>
+        <a>Financial Instruments</a>
         <ul class="sub-menu">
           <li>
-            <a href="#">Stocks</a>
+            <a href="/stocks">Stocks</a>
           </li>
           <li>
-            <a href="#">Forex</a>
-          </li>
-          <li>
-            <a href="#">Cryptocurrencies</a>
+            <a href="/forex">Forex</a>
           </li>
         </ul>
       </li>
@@ -86,7 +83,7 @@
     </div>
     <div class="main">
       <div class="widget totals">
-        <h4 class="widget-title"><span data-tooltip="Analytical information about your profiling completion.">Profiling Completion Analysis</span> <a href="#" class="tooltip-left button" data-tooltip="Attempt to reload Analytical data.">Reload Data</a></h4>
+        <h4 class="widget-title"><span data-tooltip="Analytical information about your profiling completion.">Profiling Completion Analysis</span> <a (click)="reloadData()" class="tooltip-left button" data-tooltip="Attempt to reload Analytical data.">Reload Data</a></h4>
         <div class="widget-content text-center">
           <div class="chart quarter">
             <span class="label">General</span><br /><br />

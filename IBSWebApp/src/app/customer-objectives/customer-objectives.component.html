@@ -50,16 +50,13 @@
       <li class="has-children">
       </li>
       <li class="has-children">
-        <a href="#">Financial Instruments</a>
+        <a>Financial Instruments</a>
         <ul class="sub-menu">
           <li>
-            <a href="#">Stocks</a>
+            <a href="/stocks">Stocks</a>
           </li>
           <li>
-            <a href="#">Forex</a>
-          </li>
-          <li>
-            <a href="#">Cryptocurrencies</a>
+            <a href="/forex">Forex</a>
           </li>
         </ul>
       </li>
@@ -81,7 +78,7 @@
     </div>
     <div class="main">
       <div class="widget totals">
-        <h4 class="widget-title"><span data-tooltip="Analytical information about your profiling completion.">Profiling Completion Analysis</span> <a href="#" class="tooltip-left button" data-tooltip="Attempt to reload Analytical data.">Reload Data</a></h4>
+        <h4 class="widget-title"><span data-tooltip="Analytical information about your profiling completion.">Profiling Completion Analysis</span> <a (click)="reloadData()" class="tooltip-left button" data-tooltip="Attempt to reload Analytical data.">Reload Data</a></h4>
         <div class="widget-content text-center">
           <div class="chart quarter">
             <span class="label">General</span><br /><br />
@@ -124,32 +121,96 @@
       </div>
 
       <!-- Content -->
-      <table class="table table-hover table-bordered">
-        <thead style="background-color: #3B78E7">
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Value</th>
-          <th scope="col">Years</th>
-          <th scope="col">Possible</th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let index of objectives">
-            <td>{{index.objectiveName}}</td>
-            <td>{{index.objectiveValue}}</td>
-            <td>{{index.years}}</td>
-            <div *ngIf="index.possible == 0">
-              <i class="fa fa-exclamation" style="color: #e5e552; font-size: 25px;"></i>
+      <ngb-tabset>
+        <ngb-tab title="View">
+          <ng-template ngbTabContent>
+            <br>
+            <table class="table table-hover table-bordered">
+              <thead style="background-color: #3B78E7">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Value</th>
+                <th scope="col">Years</th>
+                <th scope="col">Possible</th>
+                <th scope="col">Operations</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let index of objectives">
+                <td>{{index.objectiveName}}</td>
+                <td>{{index.objectiveValue}}</td>
+                <td>{{index.years}}</td>
+                <div *ngIf="index.possible == 0">
+                  <i class="fa fa-exclamation" style="color: #e5e552; font-size: 25px;"></i>
+                </div>
+                <div *ngIf="index.possible < 0">
+                  <i class="fa fa-times" style="color: red; font-size: 25px;"></i>
+                </div>
+                <div *ngIf="index.possible >= 1">
+                  <i class="fa fa-check-circle" style="display: inline; color: green; font-size: 25px;"></i>
+                </div>
+                <td><i class="fa fa-trash" (click)="deleteObjective(index.id)" style="display: inline; color: dodgerblue; font-size: 25px;"></i></td>
+              </tr>
+              </tbody>
+            </table>
+          </ng-template>
+        </ngb-tab>
+
+        <ngb-tab title="Add Objective">
+          <br>
+          <ng-template ngbTabContent>
+            <br>
+            <button type="button" (click)="open(add_objective)" class="btn btn-primary"><i class="fa fa-plus"> Add Objective</i></button>
+          </ng-template>
+
+          <ng-template #add_objective let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-add-liability">Add Objective</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-            <div *ngIf="index.possible < 0">
-              <i class="fa fa-times" style="color: red; font-size: 25px;"></i>
+
+            <div class="modal-body">
+              <div class="form-group">
+
+                <!-- Objective Name -->
+                <div class="md-form form-group mt-5">
+                  <label for="objectiveName">Objective Name *</label>
+                  <input type="text" class="form-control" id="objectiveName" onkeyup="this.value=this.value.replace(/[^A-Za-z]/g,'');"
+                         placeholder="Example input"  [(ngModel)]="objectiveName">
+                </div>
+
+                <!-- Objective value -->
+                <div class="md-form form-group mt-5">
+                  <label for="objectiveValue">Objective Value *</label>
+                  <input type="text" class="form-control" id="objectiveValue"
+                         [(ngModel)]="objectiveValue" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                </div>
+
+                <!-- Objective years -->
+                <div class="md-form form-group mt-5">
+                  <label for="objectiveYears">Years *</label>
+                  <input type="text" class="form-control" id="objectiveYears"
+                         [(ngModel)]="objectiveYears" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                </div>
+
+              </div>
             </div>
-            <div *ngIf="index.possible >= 1">
-              <i class="fa fa-check-circle" style="display: inline; color: green; font-size: 25px;"></i>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" style="width: 100%;"
+                      (click)="addObjective()"><i class="fa fa-save"></i>
+              </button>
             </div>
-          </tr>
-        </tbody>
-      </table>
+
+            <ngb-alert
+              *ngIf="addObjectiveRequestResponse.responseCode != 200 && addObjectiveRequestResponse.responseCode > 0"
+              type="danger"
+              (close)="addObjectiveRequestResponse.responseCode = 0">  {{requestResponseMessage}} </ngb-alert>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
 
     </div>
   </div>

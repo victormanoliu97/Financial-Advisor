@@ -12,7 +12,7 @@
 
       <li class="admin">
         <div *ngIf="incomes.length == 0">
-        <a title="admin-only" class="tooltip-right" data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My Objectives</a>
+          <a title="admin-only" class="tooltip-right" data-tooltip="Only available when you completed all the profiling sections"><span class="lock"></span> My Objectives</a>
         </div>
         <div *ngIf="incomes.length > 0">
           <a href="/objectives" title="admin-only">My Objectives</a>
@@ -28,12 +28,12 @@
           </li>
 
           <div *ngIf="profiling.length > 0">
-          <li>
-            <a href="/income">Incomes/Liabilities</a>
-          </li>
-          <li>
-            <a href="/estates">Estates/Companies</a>
-          </li>
+            <li>
+              <a href="/income">Incomes/Liabilities</a>
+            </li>
+            <li>
+              <a href="/estates">Estates/Companies</a>
+            </li>
           </div>
 
           <div *ngIf="profiling.length === 0">
@@ -107,7 +107,7 @@
             <span class="label">Real Estates</span>
             <br /><br />
             <div *ngIf="estates.length === 0">
-            <h2>0%</h2>
+              <h2>0%</h2>
             </div>
             <div *ngIf="estates.length > 0">
               <h2>100%</h2>
@@ -124,28 +124,45 @@
           </div>
         </div>
       </div>
-      <ng-container *ngFor="let index of bankAccounts">
-      <div class="widget half local">
-        <div class="widget-content">
-          <div class="width-graph">
-            <h4>IBAN:{{index.iban}}</h4>
-          </div>
-          <div class="width-graph">
-            <h4>Account type:{{index.accountType}}</h4>
-          </div>
-          <div class="width-graph">
-            <h4>Current Sold:{{index.currentSold}}</h4>
-          </div>
-          <div class="width-graph">
-            <h4>Loaned ammount:{{index.loanAmount}}</h4>
-          </div>
-          <div style="clear:both;"></div>
-          <div class="traverse text-center">
-            <button type="button" class="btn btn-danger" style="width: 100%;" (click)="deleteBankAccount(index.idAccount)">Delete</button>
-          </div>
-        </div>
-      </div>
-      </ng-container>
+
+      <!-- Content -->
+      <table class="table table-hover table-bordered">
+        <thead style="background-color: #3B78E7">
+        <tr>
+          <th scope="col">From</th>
+          <th scope="col">To</th>
+          <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let index of forexCurrencies">
+          <td>RON</td>
+          <td>EGP</td>
+          <td>{{index.EGP}}</td>
+        </tr>
+        <tr *ngFor="let index of forexCurrencies">
+          <td>RON</td>
+          <td>EUR</td>
+          <td>{{index.EUR}}</td>
+        </tr>
+        <tr *ngFor="let index of forexCurrencies">
+          <td>RON</td>
+          <td>CHF</td>
+          <td>{{index.CHF}}</td>
+        </tr>
+        <tr *ngFor="let index of forexCurrencies">
+          <td>RON</td>
+          <td>USD</td>
+          <td>{{index.USD}}</td>
+        </tr>
+        <tr *ngFor="let index of forexCurrencies">
+          <td>RON</td>
+          <td>QAR</td>
+          <td>{{index.QAR}}</td>
+        </tr>
+        </tbody>
+      </table>
+
     </div>
   </div>
 </div>

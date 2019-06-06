@@ -112,4 +112,7 @@ export class CustomerProfilingComponent implements OnInit {
     this.router.navigate(['login']);
   }
 
+  reloadData() {
+    window.location.reload();
+  }
 }

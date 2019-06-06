@@ -203,4 +203,8 @@ export class EstatesCompaniesComponent implements OnInit {
     this.cookieService.delete('token');
     this.router.navigate(['login']);
   }
+
+  reloadData() {
+    window.location.reload();
+  }
 }
