@@ -1,9 +1,10 @@
 using IBS_Authentification_BusinessLayer.AuthRequests;
+using IBS_Authentification_BusinessLayer.AuthResponses;
 
 namespace IBS_Authentification_BusinessLayer.Service.Register
 {
     public interface IRegisterService
     {
-        void RegisterUser(RegisterAccountRequest request);
+        RegisterRequestResponse RegisterUser(RegisterAccountRequest request);
     }
 }
