@@ -1,0 +1,12 @@
+<div class="section-background">
+  <div class="login">
+    <h1 class="title">Welcome!</h1>
+    <input type="text" placeholder="First Name" [(ngModel)]="firstName" />
+    <input type="text" placeholder="Last Name" [(ngModel)]="lastName" />
+    <input type="text" placeholder="CNP" [(ngModel)]="cnp" />
+    <input type="number" placeholder="Age" [(ngModel)]="age" />
+    <input type="text"  placeholder="email" [(ngModel)]="email"/>
+    <input type="password" placeholder="password" [(ngModel)]="password" />
+    <button type="submit" class="btn btn-primary btn-block btn-large" (click)="register();">Register</button>
+  </div>
+</div>
